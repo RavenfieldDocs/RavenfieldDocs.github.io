@@ -83,9 +83,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'RavenfieldDocs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -97,7 +97,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/RavenfieldDocs/RavenfieldDocs.github.io',
             label: 'GitHub',
             position: 'right',
           },
@@ -110,8 +110,20 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Get started with mutator',
+                to: '/docs/intro-mutator',
+              },
+              {
+                label: 'Get started with weapon making',
+                to: '/docs/intro-weapon',
+              },
+              {
+                label: 'Get started with vehicle making',
+                to: '/docs/intro-vehicle',
+              },
+              {
+                label: 'Get started with map making',
+                to: '/docs/intro-map',
               },
             ],
           },
@@ -119,17 +131,9 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
+                href: 'https://discord.gg/ravenfield',
+              }
             ],
           },
           {
@@ -141,12 +145,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/RavenfieldDocs/RavenfieldDocs.github.io',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Ravenfield Copyright © ${new Date().getFullYear()} Steelraven7. RavenfieldDocs Community is by community. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
