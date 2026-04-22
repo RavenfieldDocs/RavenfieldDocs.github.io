@@ -111,19 +111,19 @@ const config = {
             items: [
               {
                 label: 'Get started with mutator',
-                to: '/docs/intro-mutator',
+                to: '/docs/intro/mutator',
               },
               {
                 label: 'Get started with weapon making',
-                to: '/docs/intro-weapon',
+                to: '/docs/intro/weapon',
               },
               {
                 label: 'Get started with vehicle making',
-                to: '/docs/intro-vehicle',
+                to: '/docs/intro/vehicle',
               },
               {
                 label: 'Get started with map making',
-                to: '/docs/intro-map',
+                to: '/docs/intro/map',
               },
             ],
           },
