@@ -90,10 +90,9 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
             position: 'left',
             label: 'Docs',
+            to: '/docs/category/introduction/'
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
