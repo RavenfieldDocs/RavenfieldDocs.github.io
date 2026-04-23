@@ -59,7 +59,7 @@ Represents a weapon in the game. Handles shooting, reloading, ammo, recoil, spre
 | `recoilRandomKickback` | `float` | The random kickback variance applied when firing. |
 | `recoilKickbackProneMultiplier` | `float` | The multiplier applied to kickback when the user is prone. |
 | `recoilSnapMagnitude` | `float` | The magnitude of the recoil snap animation. |
-| `recoilSnapFrequency` | `float` | The frequency of the recoil snap animation. |
+| `recoilSnapFrequency` | `float` | The frequency of the recoil snap animation. Note: Currently returns `recoilSnapMagnitude` due to a bug in the game's source code. |
 | `recoilSnapDuration` | `float` | The duration of the recoil snap animation. |
 | `recoilSnapProneMultiplier` | `float` | The multiplier applied to snap when the user is prone. |
 | `baseSpread` | `float` | The base spread value of this weapon. |
@@ -109,7 +109,7 @@ Shoots this weapon. If force is true, ignores the CanFire() check. Returns true 
 
 ### Shoot
 
-Shoots this weapon without checking CanFire().
+Shoots this weapon, respecting the `CanFire()` check.
 
 [return: bool]
 `true` if shot was fired.
@@ -245,3 +245,15 @@ Sets the weapon's projectile prefab.
 | `Mortar` | Mortar. |
 | `Melee` | Melee weapon. |
 | `SemiAutoRifle` | Semi-automatic rifle. |
+
+### WFollowupSpread
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `maxSpreadAim` | `float` | Maximum followup spread while aiming. |
+| `maxSpreadHip` | `float` | Maximum followup spread from the hip. |
+| `spreadDissipateTime` | `float` | The time it takes for followup spread to dissipate. |
+| `spreadGain` | `float` | The amount of followup spread gained per shot. |
+| `proneMultiplier` | `float` | Multiplier for followup spread gain while prone. |
+| `spreadStayTime` | `float` | The time followup spread stays at its maximum before dissipating. |
+

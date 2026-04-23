@@ -195,7 +195,7 @@ Marks a smoke target as deployed.
 | `team` | `int` | The team index (0 or 1). |
 | `index` | `int` | The index of the smoke target. |
 
-[return: SmokeTarget]
+[return: int]
 The deployed smoke target.
 
 ### AITickIsThrottled
@@ -214,7 +214,7 @@ A debug string describing AI tick statistics.
 
 ### ActorsCanSeeEachOther
 
-Checks if two actors on opposing teams have line of sight to each other.
+Checks if two actors have line of sight to each other.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|

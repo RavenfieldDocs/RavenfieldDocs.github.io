@@ -12,10 +12,10 @@ Represents a spawn point in the game world. Handles spawning of vehicles, turret
 | `transform` | `Transform` | The Transform of this SpawnPoint. |
 | `capturePoint` | [CapturePoint](./CapturePoint.md) | Returns the CapturePoint if this SpawnPoint is one, otherwise nil. |
 | `defaultOwner` | `Team` | The default owning team of this spawn point. |
-| `name` | `string` | The short name of this spawn point. |
-| `neighbours` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors connected to this point, ignoring one way connections. |
-| `neighboursIncoming` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can attack this point, respecting one way connections. |
-| `neighboursOutgoing` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can be attacked from point, respecting one way connections. |
+| `name` | `string` | The short name of this spawn point (maps to `shortName` in C#). |
+| `neighours` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors connected to this point, ignoring one way connections. |
+| `neighoursIncoming` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can attack this point, respecting one way connections. |
+| `neighoursOutgoing` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can be attacked from point, respecting one way connections. |
 | `owner` | `Team` | The current owning team of this spawn point. |
 | `spawnpointContainer` | `Transform` | Container transform for spawn point positions. |
 | `spawnPosition` | `Vector3` | The spawn position of this point. |
@@ -105,11 +105,11 @@ Gets an available vehicle matching the filter with priority output.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `filter` | `VehicleFilter` | Filter to apply to vehicles. |
-| `priority` | `byte` | Output priority of the returned vehicle. |
 | `passengers` | `int` | Required number of passenger seats (default: -1). |
 
-[return: Vehicle]
-The available vehicle matching the filter, or nil.
+[return: Vehicle, byte]
+1. The available vehicle matching the filter, or nil.
+2. The output priority of the returned vehicle.
 
 ### GetAvailableRoamingVehicle
 

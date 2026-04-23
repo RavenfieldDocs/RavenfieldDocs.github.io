@@ -25,7 +25,7 @@ Represents a vehicle in the game world. Handles seating, damage, health, burning
 | `maxHealth` | `float` | Maximum health. |
 | `isBurning` | `bool` | Whether the vehicle is currently burning. |
 | `isFull` | `bool` | Whether all seats are occupied. |
-| `isEmpty` | `bool` | Whether all seats are empty. |
+| `isEmpty` | `bool` | Whether all seats are empty (currently return true if the vehicle is full due to source code bug). |
 | `isInWater` | `bool` | Whether the vehicle is in water. |
 | `rigidbody` | `Rigidbody` | The vehicle's rigidbody component. |
 | `isTurret` | `bool` | Returns `true` if vehicle is marked as a Turret. |
@@ -84,31 +84,37 @@ Returns a string representation of the vehicle.
 | `onClaimedBySquad` | `ScriptEvent<Squad>` | Invoked whenever a squad claims this vehicle. |
 | `onClaimDropped` | `ScriptEvent<Squad>` | Invoked whenever a squad drops their claim over this vehicle. |
 
-## Static Fields
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `New` | `Engine` | Creates a new Engine instance. |
-
-## Enums
-
-### Engine
+## Engine
 
 Represents the engine of a vehicle.
 
-| Value | Description |
-|-------|-------------|
-| `controlAudio` | `bool` - Whether to control engine audio. |
-| `enabled` | `bool` - Whether the engine is enabled. |
-| `ignitionClip` | `AudioClip` - The ignition sound clip. |
-| `pitchGainSpeed` | `float` - How quickly pitch changes with speed. |
-| `power` | `float` - Engine power. |
-| `powerGainSpeed` | `float` - How quickly power changes. |
-| `shiftForwardClip` | `AudioClip` - The shift forward sound clip. |
-| `shiftReverseClip` | `AudioClip` - The shift reverse sound clip. |
-| `targetPitch` | `float` - Target engine pitch. |
-| `targetThrottle` | `float` - Target throttle value. |
-| `throttleGainSpeed` | `float` - How quickly throttle changes. |
+### Constructor
+
+| Signature | Description |
+|-----------|-------------|
+| `Engine()` | Creates a new Engine instance. |
+
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `controlAudio` | `bool` | Whether to control engine audio. |
+| `enabled` | `bool` | Whether the engine is enabled. |
+| `ignitionClip` | `AudioClip` | The ignition sound clip. |
+| `pitchGainSpeed` | `float` | How quickly pitch changes with speed. |
+| `power` | `float` | Engine power. |
+| `powerGainSpeed` | `float` | How quickly power changes. |
+| `shiftForwardClip` | `AudioClip` | The shift forward sound clip. |
+| `shiftReverseClip` | `AudioClip` | The shift reverse sound clip. |
+| `targetPitch` | `float` | Target engine pitch. |
+| `targetThrottle` | `float` | Target throttle value. |
+| `throttleGainSpeed` | `float` | How quickly throttle changes. |
+
+### Methods
+
+| Method | Description |
+|--------|-------------|
 | `PlayIgnitionSound` | Plays the ignition sound. |
 | `PlayShiftForwardSound` | Plays the shift forward sound. |
 | `PlayShiftReverseSound` | Plays the shift reverse sound. |
