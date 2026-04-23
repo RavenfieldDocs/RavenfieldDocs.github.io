@@ -18,7 +18,7 @@ Represents a vehicle in the game world. Handles seating, damage, health, burning
 | `playerDistance` | `float` | The distance from this vehicle to the nearest player. |
 | `playerIsInside` | `bool` | Whether a player is inside this vehicle. |
 | `hasDriver` | `bool` | Whether the vehicle has a driver. |
-| `driver` | `Actor` | The actor currently driving this vehicle. |
+| `driver` | [Actor](./Actor.md) | The actor currently driving this vehicle. |
 | `isTrackedByMissile` | `bool` | `true` while one or more missiles are tracking this vehicle. |
 | `isBeingLocked` | `bool` | `true` while one or more target tracking weapons are locking onto this vehicle. |
 | `health` | `float` | Current health. |

@@ -23,8 +23,8 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `closestEnemyDistance` | `float` | The distance to the closest enemy. |
 | `actorIndex` | `int` | The index of this actor in the actor manager. |
 | `teamActorIndex` | `int` | The index of this actor within its team. |
-| `accessoryRenderer` | `List<Renderer>` | Renderers for accessories on the animated model. |
-| `accessoryRagdollRenderer` | `List<Renderer>` | Renderers for accessories on the ragdoll model. |
+| `accessoryRenderer` | `Renderer[]` | Renderers for accessories on the animated model. |
+| `accessoryRagdollRenderer` | `Renderer[]` | Renderers for accessories on the ragdoll model. |
 | `deathTimestamp` | `float` | The game time when this actor died. |
 | `health` | `float` | Current health (default 100). |
 | `maxHealth` | `float` | Maximum health (default 100). |
@@ -55,8 +55,8 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `movementSpeedMultiplier` | `float` | Multiplier for movement speed (default 1). |
 | `ladder` | `Ladder` | The ladder the actor is currently on, or `null`. |
 | `ladderHeight` | `float` | Current height on the ladder. |
-| `activeWeapon` | `Weapon` | The currently unholstered weapon, or `null`. |
-| `weapons` | `Weapon[]` | Array of 5 weapons in loadout slots. |
+| `activeWeapon` | [Weapon](./Weapon.md) | The currently unholstered weapon, or `null`. |
+| `weapons` | [Weapon](./Weapon.md)[] | Array of 5 weapons in loadout slots. |
 | `activeWeaponSlot` | `int` | Index of the currently active weapon slot (0-4). |
 | `hasAmmoBox` | `bool` | Whether the actor has an ammo box in their loadout. |
 | `ammoBoxSlot` | `int` | The slot index of the ammo box. |

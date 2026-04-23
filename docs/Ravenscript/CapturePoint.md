@@ -24,9 +24,9 @@ Represents a capture point (flag) in the game world. Handles capture progress, t
 | `owner` | `Team` | The current owner of this spawn point. |
 | `spawnpointContainer` | `Transform` | The container for spawn points. |
 | `spawnPosition` | `Vector3` | The spawn position of this spawn point. |
-| `neighbours` | `SpawnPoint[]` | Gets all neighbors connected to this point, ignoring one way connections. |
-| `neighboursIncoming` | `SpawnPoint[]` | Gets all neighbors that can attack this point, respecting one way connections. |
-| `neighboursOutgoing` | `SpawnPoint[]` | Gets all neighbors that can be attacked from this point, respecting one way connections. |
+| `neighbours` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors connected to this point, ignoring one way connections. |
+| `neighboursIncoming` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can attack this point, respecting one way connections. |
+| `neighboursOutgoing` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can be attacked from this point, respecting one way connections. |
 | `turretSpawners` | `TurretSpawner[]` | The turret spawners at this spawn point. |
 | `vehicleSpawners` | `VehicleSpawner[]` | The vehicle spawners at this spawn point. |
 

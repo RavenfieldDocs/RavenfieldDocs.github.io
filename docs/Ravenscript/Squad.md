@@ -8,12 +8,12 @@ Represents a squad of actors in the game world. Handles squad orders, formations
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `order` | `Order` | The current order assigned to this squad. |
-| `attackTarget` | `Actor` | Squadmates will always prioritize firing at their squad's attackTarget if they are able to. Attack targets always override the current rules-of-engagement. If the attack target dies, this value will automatically be set to nil. |
-| `members` | `Actor[]` | The current members of this squad. |
-| `leader` | `Actor` | The current leader of this squad. |
+| `order` | [Order](./Order.md) | The current order assigned to this squad. |
+| `attackTarget` | [Actor](./Actor.md) | Squadmates will always prioritize firing at their squad's attackTarget if they are able to. Attack targets always override the current rules-of-engagement. If the attack target dies, this value will automatically be set to nil. |
+| `members` | [Actor](./Actor.md)[] | The current members of this squad. |
+| `leader` | [Actor](./Actor.md) | The current leader of this squad. |
 | `hasPlayerLeader` | `bool` | Returns `true` if the squad leader is a player. |
-| `squadVehicle` | `Vehicle` | The vehicle claimed by this squad. |
+| `squadVehicle` | [Vehicle](./Vehicle.md) | The vehicle claimed by this squad. |
 | `claimedLandingZone` | `HelicopterLandingZone` | The landing zone currently claimed by this squad. |
 | `hasLandingZoneClaim` | `bool` | Returns `true` if this squad has a landing zone claim. |
 | `isPerformingLanding` | `bool` | Returns `true` if the squad is performing a landing or has landed a helicopter. Also see `hasLanded`. |
@@ -166,7 +166,7 @@ Cancels a landing and takes off.
 
 Drops all transported passengers. Any passengers on mounted weapons will stay in the vehicle. Returns the dropped passengers.
 
-[return: array\<AiActorController>]
+[return: AiActorController[]]
 The dropped passengers.
 
 ## Static Methods
@@ -177,7 +177,7 @@ Creates a new squad with the specified actors. NOTE: The Player actor will be ig
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actors` | `array<Actor>` | The actors to include in the new squad. |
+| `actors` | Actor[] | The actors to include in the new squad. |
 
 [return: Squad]
 The newly created squad.

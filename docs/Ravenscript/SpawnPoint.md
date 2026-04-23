@@ -10,12 +10,12 @@ Represents a spawn point in the game world. Handles spawning of vehicles, turret
 |----------|------|-------------|
 | `gameObject` | `GameObject` | The GameObject attached to this SpawnPoint. |
 | `transform` | `Transform` | The Transform of this SpawnPoint. |
-| `capturePoint` | `CapturePoint` | Returns the CapturePoint if this SpawnPoint is one, otherwise null. |
+| `capturePoint` | [CapturePoint](./CapturePoint.md) | Returns the CapturePoint if this SpawnPoint is one, otherwise null. |
 | `defaultOwner` | `Team` | The default owning team of this spawn point. |
 | `name` | `string` | The short name of this spawn point. |
-| `neighours` | `SpawnPoint[]` | Gets all neighbors connected to this point, ignoring one way connections. |
-| `neighoursIncoming` | `SpawnPoint[]` | Gets all neighbors that can attack this point, respecting one way connections. |
-| `neighoursOutgoing` | `SpawnPoint[]` | Gets all neighbors that can be attacked from point, respecting one way connections. |
+| `neighours` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors connected to this point, ignoring one way connections. |
+| `neighoursIncoming` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can attack this point, respecting one way connections. |
+| `neighoursOutgoing` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can be attacked from point, respecting one way connections. |
 | `owner` | `Team` | The current owning team of this spawn point. |
 | `spawnpointContainer` | `Transform` | Container transform for spawn point positions. |
 | `spawnPosition` | `Vector3` | The spawn position of this point. |

@@ -9,9 +9,9 @@ Represents a squad order in the game, defining movement objectives, target posit
 | Property | Type | Description |
 |----------|------|-------------|
 | `type` | `OrderType` | The type of this order. |
-| `source` | `SpawnPoint` | The spawn point this order originated from. |
-| `target` | `SpawnPoint` | The spawn point this order targets. |
-| `targetSquad` | `Squad` | The squad currently targeted by this order. |
+| `source` | [SpawnPoint](./SpawnPoint.md) | The spawn point this order originated from. |
+| `target` | [SpawnPoint](./SpawnPoint.md) | The spawn point this order targets. |
+| `targetSquad` | [Squad](./Squad.md) | The squad currently targeted by this order. |
 | `hasOverrideTargetPosition` | `bool` | Returns `true` if an override target position is set. |
 | `overrideTargetPosition` | `Vector3` | The override target position for this order. |
 | `basePriority` | `int` | The priority of this order when not assigned to any squads. |

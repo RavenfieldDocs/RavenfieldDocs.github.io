@@ -9,17 +9,17 @@ Manages all actors, vehicles, spawn points, squads, ladders, damage zones, and t
 | Property | Type | Description |
 |----------|------|-------------|
 | `isInitialized` | `bool` | Whether the actor manager has been initialized for the current game. |
-| `vehicles` | `List<Vehicle>` | All vehicles currently in the game. |
-| `spawnPoints` | `SpawnPoint[]` | All spawn points in the current level. |
-| `actors` | `List<Actor>` | All actors currently in the game. |
-| `player` | `Actor` | The player-controlled actor. |
-| `actorData` | `List<ActorData>` | Data associated with each actor. |
-| `squadsOnTeam` | `List<Squad>[]` | Squads organized by team (index 0 or 1). |
-| `ladders` | `List<Ladder>` | All ladders in the current level. |
-| `damageZones` | `List<DamageZone>` | All damage zones in the current level. |
-| `speedLimitZones` | `List<SpeedLimitZone>` | All speed limit zones in the current level. |
-| `activeTriggers` | `List<TriggerVolume.RuntimeData>` | Active trigger volumes. |
-| `triggerStates` | `List<TriggerVolumeActorState>` | States for active trigger volumes. |
+| `vehicles` | [Vehicle](./Vehicle.md)[] | All vehicles currently in the game. |
+| `spawnPoints` | [SpawnPoint](./SpawnPoint.md)[] | All spawn points in the current level. |
+| `actors` | [Actor](./Actor.md)[] | All actors currently in the game. |
+| `player` | [Actor](./Actor.md) | The player-controlled actor. |
+| `actorData` | `ActorData[]` | Data associated with each actor. |
+| `squadsOnTeam` | [Squad](./Squad.md)[][] | Squads organized by team (index 0 or 1). |
+| `ladders` | `Ladder[]` | All ladders in the current level. |
+| `damageZones` | `DamageZone[]` | All damage zones in the current level. |
+| `speedLimitZones` | `SpeedLimitZone[]` | All speed limit zones in the current level. |
+| `activeTriggers` | `TriggerVolume.RuntimeData[]` | Active trigger volumes. |
+| `triggerStates` | `TriggerVolumeActorState[]` | States for active trigger volumes. |
 | `actorCanHearEnemy` | `bool[]` | Whether each actor can hear enemy actors. |
 | `bloodParticleLifetime` | `float` | Lifetime of blood particles in seconds. |
 | `bloodParticleSpeedMultiplier` | `float` | Speed multiplier for blood particles. |

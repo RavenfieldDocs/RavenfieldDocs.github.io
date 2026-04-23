@@ -8,8 +8,8 @@ Represents a weapon in the game. Handles shooting, reloading, ammo, recoil, spre
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `user` | `Actor` | The actor currently using this weapon. |
-| `killCredit` | `Actor` | The actor that gets damage/kill credits from this weapon. Automatically set to whoever equips this weapon, but can be overridden if required. |
+| `user` | [Actor](./Actor.md) | The actor currently using this weapon. |
+| `killCredit` | [Actor](./Actor.md) | The actor that gets damage/kill credits from this weapon. Automatically set to whoever equips this weapon, but can be overridden if required. |
 | `weaponEntry` | `WeaponEntry` | The weapon entry this weapon was instantiated from. |
 | `useMaxAmmoPerReload` | `bool` | Whether maxAmmoPerReload is applied when reloading. |
 | `maxAmmoPerReload` | `int` | Max ammo that can be added when reloading. Requires useMaxAmmoPerReload to be true to be applied. |
@@ -76,9 +76,9 @@ Represents a weapon in the game. Handles shooting, reloading, ammo, recoil, spre
 | `isCharged` | `bool` | True if fire input has been held long enough to fire the weapon. |
 | `useChargeTime` | `bool` | When true, the weapon must charge before firing. Requires the fire button to be held for chargeTime seconds before firing. |
 | `chargeTime` | `float` | The time in seconds required to charge the weapon before firing. |
-| `activeSubWeapon` | `Weapon` | Get the currently active Sub Weapon from the alternativeWeapons list. |
+| `activeSubWeapon` | [Weapon](./Weapon.md) | Get the currently active Sub Weapon from the alternativeWeapons list. |
 | `activeSubWeaponIndex` | `int` | Get the currently active Sub Weapon index. |
-| `alternativeWeapons` | `Weapon[]` | All sub weapons attached to this weapon. |
+| `alternativeWeapons` | [Weapon](./Weapon.md)[] | All sub weapons attached to this weapon. |
 | `uiSprite` | `Sprite` | The sprite used to represent this weapon in UI. |
 | `activeSightModeIndex` | `int` | The index of the currently active sight mode. |
 | `thirdPersonOffset` | `Vector3` | The offset of the third person weapon model. |
