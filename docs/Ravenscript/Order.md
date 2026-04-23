@@ -9,36 +9,15 @@ Represents a squad order in the game, defining movement objectives, target posit
 | Property | Type | Description |
 |----------|------|-------------|
 | `type` | `OrderType` | The type of this order. |
-| `source` | [SpawnPoint](./SpawnPoint.md) | The spawn point this order originated from. |
-| `target` | [SpawnPoint](./SpawnPoint.md) | The spawn point this order targets. |
-| `targetSquad` | [Squad](./Squad.md) | The squad currently targeted by this order. |
+| `sourcePoint` | [SpawnPoint](./SpawnPoint.md) | The spawn point this order originated from. |
+| `targetPoint` | [SpawnPoint](./SpawnPoint.md) | The spawn point this order targets. |
 | `hasOverrideTargetPosition` | `bool` | Returns `true` if an override target position is set. |
-| `overrideTargetPosition` | `Vector3` | The override target position for this order. |
 | `basePriority` | `int` | The priority of this order when not assigned to any squads. |
-| `modifierMultiplier` | `int` | The multiplier applied to priority modifiers. |
-| `waypoints` | `Vector3[]` | The waypoints for this order. |
+| `priority` | `int` | The current priority of the order, modified by any squads it is currently assigned to. |
 | `uniqueID` | `int` | This value is unique to every active order. |
-| `requiredVehicleFilter` | `VehicleFilter` | The vehicle filter required for this order. |
-| `canWalk` | `bool` | Returns `true` if there is a land connection between source and target. |
 | `isIssuedByPlayer` | `bool` | Returns `true` if this order was created by the player via the tactics view. |
 
 ## Methods
-
-### SetTargetSquad
-
-Sets the target squad for this order.
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `squad` | `Squad` | The squad to set as the target. |
-
-### SetWaypoints
-
-Sets the waypoints for this order.
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `waypoints` | `Vector3[]` | The waypoints to set. |
 
 ### SetOverrideTargetPosition
 
@@ -48,55 +27,16 @@ Sets an override target position. Gives full control over exactly where the squa
 |-----------|------|-------------|
 | `position` | `Vector3` | The override target position. |
 
+### GetOverrideTargetPosition
+
+Returns the current override target position.
+
+[return: Vector3]
+The override target position.
+
 ### DropOverrideTargetPosition
 
 Drops the active override target position.
-
-### ModifyPriority
-
-Modifies the priority of this order for a specific squad.
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `squad` | `Squad` | The squad to modify the priority for. |
-| `modifier` | `int` | The priority modifier value. |
-
-### ResetPriorityModifier
-
-Resets the priority modifier for a specific squad.
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `squad` | `Squad` | The squad to reset the priority modifier for. |
-
-### GetPriority
-
-Returns the current priority of the order, modified by any squads it is currently assigned to.
-
-[return: int]
-The current priority value.
-
-### IsEnabled
-
-Returns `true` if this order is currently enabled and can be assigned to squads.
-
-[return: bool]
-Whether the order is enabled.
-
-### SetEnabled
-
-Sets whether this order is enabled.
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `enabled` | `bool` | Whether the order should be enabled. |
-
-### ResolveCurrentTargetPosition
-
-Resolves the current target position for this order.
-
-[return: Vector3]
-The current target position.
 
 ### Create
 
@@ -135,3 +75,17 @@ Convenience function that creates a move order to the specified override target 
 
 [return: Order]
 The newly created move order.
+
+## Enums
+
+### OrderType
+
+| Value | Description |
+|-------|-------------|
+| `Attack` | An attack order. |
+| `Defend` | A defend order. |
+| `Roam` | A roam order. |
+| `Repair` | A repair order. |
+| `Move` | A move order. |
+| `PatrolBase` | A patrol base order. |
+| `PatrolWaypoints` | A patrol waypoints order. |
