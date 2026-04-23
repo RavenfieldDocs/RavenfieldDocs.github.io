@@ -58,7 +58,7 @@ Repairs the vehicle by the specified health amount.
 |-----------|------|-------------|
 | `amount` | `float` | The amount of health to restore. |
 
-[return: Doc]
+[return: bool]
 `true` if the vehicle was healed (not already at max health).
 
 ### GetEmptySeat

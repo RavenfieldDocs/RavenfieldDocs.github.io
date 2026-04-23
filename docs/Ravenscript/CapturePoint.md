@@ -40,7 +40,7 @@ Returns true if the capture point is under attack.
 
 Returns a random spawn point position from the contested spawn point container.
 
-[return: Doc]
+[return: Vector3]
 A random position within the contested spawn point container.
 
 ## Events

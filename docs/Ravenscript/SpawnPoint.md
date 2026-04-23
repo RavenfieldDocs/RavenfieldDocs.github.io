@@ -10,12 +10,12 @@ Represents a spawn point in the game world. Handles spawning of vehicles, turret
 |----------|------|-------------|
 | `gameObject` | `GameObject` | The GameObject attached to this SpawnPoint. |
 | `transform` | `Transform` | The Transform of this SpawnPoint. |
-| `capturePoint` | [CapturePoint](./CapturePoint.md) | Returns the CapturePoint if this SpawnPoint is one, otherwise null. |
+| `capturePoint` | [CapturePoint](./CapturePoint.md) | Returns the CapturePoint if this SpawnPoint is one, otherwise nil. |
 | `defaultOwner` | `Team` | The default owning team of this spawn point. |
 | `name` | `string` | The short name of this spawn point. |
-| `neighours` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors connected to this point, ignoring one way connections. |
-| `neighoursIncoming` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can attack this point, respecting one way connections. |
-| `neighoursOutgoing` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can be attacked from point, respecting one way connections. |
+| `neighbours` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors connected to this point, ignoring one way connections. |
+| `neighboursIncoming` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can attack this point, respecting one way connections. |
+| `neighboursOutgoing` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can be attacked from point, respecting one way connections. |
 | `owner` | `Team` | The current owning team of this spawn point. |
 | `spawnpointContainer` | `Transform` | Container transform for spawn point positions. |
 | `spawnPosition` | `Vector3` | The spawn position of this point. |
@@ -96,7 +96,7 @@ Gets an available vehicle matching the filter.
 | `passengers` | `int` | Required number of passenger seats (default: -1). |
 
 [return: Vehicle]
-The available vehicle matching the filter, or null.
+The available vehicle matching the filter, or nil.
 
 ### GetAvailableVehicle
 
@@ -109,7 +109,7 @@ Gets an available vehicle matching the filter with priority output.
 | `passengers` | `int` | Required number of passenger seats (default: -1). |
 
 [return: Vehicle]
-The available vehicle matching the filter, or null.
+The available vehicle matching the filter, or nil.
 
 ### GetAvailableRoamingVehicle
 

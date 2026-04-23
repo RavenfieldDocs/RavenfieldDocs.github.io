@@ -11,7 +11,6 @@ Use these methods to get the player state.
 | `team` | `Team` | The player's team. |
 | `enemyTeam` | `Team` | The enemy team. |
 | `isSpectator` | `bool` | Returns `true` if the player is spectating. |
-| `nighvisionEnabled` | `bool` | |
 | `nightvisionEnabled` | `bool` | Returns `true` if night vision is enabled. |
 | `allowMouseLook` | `bool` | Setting this value to `false` prevents the player from looking around. |
 | `allowAutoWaveRespawn` | `bool` | Controls if player can auto-respawn at the next wave by pressing fire or selecting a new spawn point. |
@@ -159,145 +158,145 @@ Controls if player can exit vehicles.
 
 Returns the player's team.
 
-[return: Doc]
+[return: Team]
 `Team`
 
 ### GetEnemyTeam
 
 Returns the enemy team.
 
-[return: Doc]
+[return: Team]
 `Team`
 
 ### GetIsSpectator
 
 Returns `true` if the player is spectating.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetNighvisionEnabled
 
 Returns `true` if night vision is enabled.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetNightvisionEnabled
 
 Returns `true` if night vision is enabled.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetAllowMouseLook
 
 Returns whether mouse look is allowed.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetSquad
 
 Get the player squad.
 
-[return: Doc]
+[return: Squad]
 `Squad`
 
 ### GetActor
 
 Get the player actor. This is the same as using `ActorManager.playerActor`.
 
-[return: Doc]
+[return: Actor]
 `Actor`
 
 ### GetActorIsGrounded
 
 Returns `true` if the player character controller is on the ground.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetUseHelicopterAutoHoverMode
 
 Returns whether helicopter auto-hover mode is enabled.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetSelectedLoadout
 
 Returns the player's currently selected loadout.
 
-[return: Doc]
+[return: LoadoutSet]
 `LoadoutSet`
 
 ### GetAllowAutoWaveRespawn
 
 Returns whether auto-respawn at the next wave is allowed.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetInputEnabled
 
 Returns whether player input is enabled.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetMovementEnabled
 
 Returns whether player infantry movement is active.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetMovementInputEnabled
 
 Returns whether player can control infantry/vehicle movement.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetAllowKick
 
 Returns whether kicking is allowed.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetAllowJump
 
 Returns whether jumping is allowed.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetAllowChangeStance
 
 Returns whether changing stances is allowed.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetAllowLean
 
 Returns whether leaning is allowed.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetAllowSprint
 
 Returns whether sprinting is allowed.
 
-[return: Doc]
+[return: bool]
 `bool`
 
 ### GetAllowExitVehicle
 
 Returns whether exiting vehicles is allowed.
 
-[return: Doc]
+[return: bool]
 `bool`

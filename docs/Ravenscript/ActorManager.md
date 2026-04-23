@@ -53,7 +53,7 @@ Registers a trigger volume and returns its index.
 |-----------|------|-------------|
 | `volume` | `TriggerVolume` | The trigger volume to register. |
 
-[return: Doc]
+[return: int]
 The index of the registered trigger volume.
 
 ### TryResolveOfficialVehicleByName
@@ -65,7 +65,7 @@ Attempts to find a built-in vehicle by name.
 | `name` | `string` | The name of the vehicle prefab. |
 | `result` | `VehicleInfo` | The resolved vehicle info, if found. |
 
-[return: Doc]
+[return: bool]
 `true` if the vehicle was found, `false` otherwise.
 
 ### RegisterDamageZone
@@ -168,7 +168,7 @@ Registers a smoke target at a position.
 | `lifetime` | `float` | How long the smoke target lasts. |
 | `ignoreSmokeSpacing` | `bool` | Whether to ignore minimum spacing checks. |
 
-[return: Doc]
+[return: bool]
 `true` if the smoke target was registered, `false` otherwise.
 
 ### GetSmokeTargetInRange
@@ -183,7 +183,7 @@ Finds a smoke target within range that hasn't been deployed yet.
 | `i` | `int` | The index of the found smoke target (output). |
 | `targetPosition` | `Vector3` | The position of the found smoke target (output). |
 
-[return: Doc]
+[return: bool]
 `true` if a smoke target was found, `false` otherwise.
 
 ### CompleteSmokeTarget
@@ -195,21 +195,21 @@ Marks a smoke target as deployed.
 | `team` | `int` | The team index (0 or 1). |
 | `index` | `int` | The index of the smoke target. |
 
-[return: Doc]
+[return: int]
 The deployed smoke target.
 
 ### AITickIsThrottled
 
 Returns whether AI ticking is currently throttled.
 
-[return: Doc]
+[return: bool]
 `true` if AI ticking is throttled, `false` otherwise.
 
 ### GetAITickStatusString
 
 Returns a debug string with AI tick statistics.
 
-[return: Doc]
+[return: string]
 A debug string describing AI tick statistics.
 
 ### ActorsCanSeeEachOther
@@ -221,7 +221,7 @@ Checks if two actors have line of sight to each other.
 | `a` | `Actor` | The first actor. |
 | `b` | `Actor` | The second actor. |
 
-[return: Doc]
+[return: bool]
 `true` if both actors can see each other, `false` otherwise.
 
 ### ActorCanSeePlayer
@@ -232,7 +232,7 @@ Checks if an actor can see the player.
 |-----------|------|-------------|
 | `a` | `Actor` | The actor to check. |
 
-[return: Doc]
+[return: bool]
 `true` if the actor can see the player, `false` otherwise.
 
 ### ActorsDistance
@@ -244,7 +244,7 @@ Gets the cached distance between two actors on opposing teams.
 | `a` | `Actor` | The first actor. |
 | `b` | `Actor` | The second actor. |
 
-[return: Doc]
+[return: float]
 The distance between the two actors.
 
 ### ActorDistanceToPlayer
@@ -255,7 +255,7 @@ Gets the distance from an actor to the player.
 |-----------|------|-------------|
 | `a` | `Actor` | The actor to check. |
 
-[return: Doc]
+[return: float]
 The distance from the actor to the player.
 
 ### GetNextTargetOfActor
@@ -266,8 +266,8 @@ Gets the current target actor for an actor.
 |-----------|------|-------------|
 | `actor` | `Actor` | The actor to check. |
 
-[return: Doc]
-The target actor, or `null` if no target.
+[return: Actor?]
+The target actor, or `nil` if no target.
 
 ### ApplyGlobalTeamSkin
 
@@ -325,7 +325,7 @@ Gets all bones recursively from a root bone.
 |-----------|------|-------------|
 | `rootBone` | `Transform` | The root bone to start from. |
 
-[return: Doc]
+[return: Transform[]]
 An array of all bone transforms found recursively.
 
 ### SetGlobalTeamSkin
@@ -345,7 +345,7 @@ Checks if an actor can currently hear enemy actors.
 |-----------|------|-------------|
 | `actor` | `Actor` | The actor to check. |
 
-[return: Doc]
+[return: bool]
 `true` if the actor can hear enemy actors, `false` otherwise.
 
 ### SetAlive
@@ -372,7 +372,7 @@ Checks if all actors on a team are dead.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Doc]
+[return: bool]
 `true` if all actors on the team are dead, `false` otherwise.
 
 ### ActorsOnTeam
@@ -383,7 +383,7 @@ Gets all actors on a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Doc]
+[return: Actor[]]
 A list of all actors on the specified team.
 
 ### AliveActorsOnTeam
@@ -394,15 +394,15 @@ Gets all alive actors on a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Doc]
+[return: Actor[]]
 A list of all alive actors on the specified team.
 
 ### RandomSpawnPoint
 
 Gets a random spawn point.
 
-[return: Doc]
-A random spawn point, or `null` if none exist.
+[return: SpawnPoint?]
+A random spawn point, or `nil` if none exist.
 
 ### RandomSpawnPointForTeam
 
@@ -412,8 +412,8 @@ Gets a random spawn point owned by a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Doc]
-A random spawn point owned by the specified team, or `null` if none exist.
+[return: SpawnPoint?]
+A random spawn point owned by the specified team, or `nil` if none exist.
 
 ### RandomFrontlineSpawnPointForTeam
 
@@ -423,8 +423,8 @@ Gets a random spawn point on the frontline for a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Doc]
-A random frontline spawn point for the specified team, or `null` if none exist.
+[return: SpawnPoint?]
+A random frontline spawn point for the specified team, or `nil` if none exist.
 
 ### TeamHasAnySpawnPoint
 
@@ -434,7 +434,7 @@ Checks if a team has any spawn points.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Doc]
+[return: bool]
 `true` if the team has spawn points, `false` otherwise.
 
 ### ClosestSpawnPoint
@@ -445,8 +445,8 @@ Gets the closest spawn point to a position.
 |-----------|------|-------------|
 | `position` | `Vector3` | The position to search from. |
 
-[return: Doc]
-The closest spawn point, or `null` if none exist.
+[return: SpawnPoint?]
+The closest spawn point, or `nil` if none exist.
 
 ### ClosestLandingZone
 
@@ -456,8 +456,8 @@ Gets the closest landing zone to a position.
 |-----------|------|-------------|
 | `position` | `Vector3` | The position to search from. |
 
-[return: Doc]
-The closest landing zone, or `null` if none exist.
+[return: LandingZone?]
+The closest landing zone, or `nil` if none exist.
 
 ### ClosestSpawnPointOwnedBy
 
@@ -468,8 +468,8 @@ Gets the closest spawn point owned by a specific team.
 | `position` | `Vector3` | The position to search from. |
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Doc]
-The closest spawn point owned by the specified team, or `null` if none exist.
+[return: SpawnPoint?]
+The closest spawn point owned by the specified team, or `nil` if none exist.
 
 ### RandomEnemySpawnPoint
 
@@ -479,14 +479,14 @@ Gets a random spawn point not owned by a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Doc]
-A random spawn point not owned by the specified team, or `null` if none exist.
+[return: SpawnPoint?]
+A random spawn point not owned by the specified team, or `nil` if none exist.
 
 ### AliveActors
 
 Gets all alive actors.
 
-[return: Doc]
+[return: Actor[]]
 A list of all alive actors.
 
 ### AliveActorsInRange
@@ -498,7 +498,7 @@ Gets all alive actors within a range of a position.
 | `point` | `Vector3` | The position to search from. |
 | `range` | `float` | The search range. |
 
-[return: Doc]
+[return: Actor[]]
 A list of all alive actors within range.
 
 ### ActorsInRange
@@ -510,7 +510,7 @@ Gets all actors (alive or dead) within a range of a position.
 | `point` | `Vector3` | The position to search from. |
 | `range` | `float` | The search range. |
 
-[return: Doc]
+[return: Actor[]]
 A list of all actors within range.
 
 ### VehiclesInRange
@@ -522,7 +522,7 @@ Gets all vehicles within a range of a position.
 | `point` | `Vector3` | The position to search from. |
 | `range` | `float` | The search range. |
 
-[return: Doc]
+[return: Vehicle[]]
 A list of all vehicles within range.
 
 ### RegisterProjectile
@@ -549,7 +549,7 @@ Copies the loadout from an actor.
 |-----------|------|-------------|
 | `actor` | `Actor` | The actor to copy the loadout from. |
 
-[return: Doc]
+[return: LoadoutSet]
 The copied loadout set.
 
 ### GetLadderWithNode
@@ -560,8 +560,8 @@ Finds a ladder that uses a specific graph node.
 |-----------|------|-------------|
 | `graphNode` | `GraphNode` | The graph node to search for. |
 
-[return: Doc]
-The ladder using the specified graph node, or `null` if not found.
+[return: Ladder?]
+The ladder using the specified graph node, or `nil` if not found.
 
 ### RegisterLadder
 
@@ -618,7 +618,7 @@ Creates an explosion at a position.
 | `damageRating` | `Vehicle.ArmorRating` | The armor damage rating. |
 | `reduceFriendlyDamage` | `bool` | Whether to reduce damage to friendly actors. |
 
-[return: Doc]
+[return: bool]
 `true` if the explosion was created, `false` otherwise.
 
 ### Explode
@@ -630,7 +630,7 @@ Creates an explosion at a position using ExplosionInfo.
 | `info` | `ExplosionInfo` | The explosion information. |
 | `reduceFriendlyDamage` | `bool` | Whether to reduce damage to friendly actors. |
 
-[return: Doc]
+[return: bool]
 `true` if the explosion was created, `false` otherwise.
 
 ### EvaluateExplosionDamage
@@ -643,7 +643,7 @@ Evaluates the damage from an explosion at a point.
 | `point` | `Vector3` | The point to evaluate damage at. |
 | `ignoreLevelGeometry` | `bool` | Whether to ignore level geometry blocking. |
 
-[return: Doc]
+[return: DamageInfo]
 The evaluated damage info.
 
 ### EvaluateLastExplosionDamage
@@ -655,7 +655,7 @@ Evaluates damage from the last explosion at a point.
 | `point` | `Vector3` | The point to evaluate damage at. |
 | `ignoreLevelGeometry` | `bool` | Whether to ignore level geometry blocking. |
 
-[return: Doc]
+[return: DamageInfo]
 The evaluated damage info.
 
 ### MakeActorsFleeFrom
@@ -702,7 +702,7 @@ Gets all squads on a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Doc]
+[return: Squad[]]
 A list of all squads on the specified team.
 
 ### OnExitGameScene

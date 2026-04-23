@@ -104,14 +104,14 @@ Shoots this weapon. If force is true, ignores the CanFire() check. Returns true 
 |-----------|------|-------------|
 | `force` | `bool` | If true, ignores the CanFire() check. |
 
-[return: Doc]
+[return: bool]
 `true` if shot was fired.
 
 ### Shoot
 
 Shoots this weapon without checking CanFire().
 
-[return: Doc]
+[return: bool]
 `true` if shot was fired.
 
 ### LockWeapon
@@ -142,7 +142,7 @@ Add a subweapon to this parent weapon, returning the subweapon index.
 |-----------|------|-------------|
 | `subWeapon` | `Weapon` | The sub weapon to add. |
 
-[return: Doc]
+[return: int]
 The index of the added sub weapon.
 
 ### RemoveSubWeapon
@@ -181,14 +181,14 @@ Makes the weapon visible.
 
 Matches a weapon role based on the weapon's current stats.
 
-[return: Doc]
+[return: WeaponRole]
 The matched weapon role.
 
 ### GetProjectilePrefab
 
 Returns the weapon's projectile prefab.
 
-[return: Doc]
+[return: GameObject]
 The projectile prefab.
 
 ### SetProjectilePrefab

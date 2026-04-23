@@ -22,7 +22,7 @@ Casts a ray through the scene until it collides with a target.
 | `range` | `float` | Look no further than this [meters]. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: RaycastHit?]
 `RaycastHit` or `nil`.
 
 ### RaycastAll
@@ -35,7 +35,7 @@ Casts a ray through the scene registering all collisions with target objects.
 | `range` | `float` | Look no further than this [meters]. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: RaycastHit[]]
 `RaycastHit[]`.
 
 ### Linecast
@@ -48,7 +48,7 @@ Casts a ray from start to end until it collides with a target.
 | `end` | `Vector3` | The end position of the line. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: RaycastHit?]
 `RaycastHit` or `nil`.
 
 ### Spherecast
@@ -62,7 +62,7 @@ Casts a sphere ray from start to end until it collides with a target.
 | `range` | `float` | Look no further than this [meters]. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: RaycastHit?]
 `RaycastHit` or `nil`.
 
 ### SpherecastAll
@@ -76,7 +76,7 @@ Casts a sphere ray from start to end until it collides with a target.
 | `range` | `float` | Look no further than this [meters]. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: RaycastHit[]]
 `RaycastHit[]`.
 
 ### RaycastActor
@@ -90,7 +90,7 @@ Casts a ray, returning the first hit actor.
 | `blockedByGeometry` | `bool` | Whether the ray should be blocked by geometry. |
 | `blockedByVehicles` | `bool` | Whether the ray should be blocked by vehicles. |
 
-[return: Doc]
+[return: Actor?]
 `Actor` or `nil`.
 
 ### CheckBox
@@ -104,7 +104,7 @@ Checks if a box overlaps with any colliders.
 | `orientation` | `Quaternion` | The rotation of the box. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: bool]
 `bool`.
 
 ### OverlapBox
@@ -118,7 +118,7 @@ Finds all colliders overlapping a box.
 | `orientation` | `Quaternion` | The rotation of the box. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: Collider[]]
 `Collider[]`.
 
 ### CheckCapsule
@@ -132,7 +132,7 @@ Checks if a capsule overlaps with any colliders.
 | `radius` | `float` | The radius of the capsule. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: bool]
 `bool`.
 
 ### OverlapCapsule
@@ -146,7 +146,7 @@ Finds all colliders overlapping a capsule.
 | `radius` | `float` | The radius of the capsule. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: Collider[]]
 `Collider[]`.
 
 ### CheckSphere
@@ -159,7 +159,7 @@ Checks if a sphere overlaps with any colliders.
 | `radius` | `float` | The radius of the sphere. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: bool]
 `bool`.
 
 ### OverlapSphere
@@ -172,5 +172,5 @@ Finds all colliders overlapping a sphere.
 | `radius` | `float` | The radius of the sphere. |
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
-[return: Doc]
+[return: Collider[]]
 `Collider[]`.

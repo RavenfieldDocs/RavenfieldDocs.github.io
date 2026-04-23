@@ -53,9 +53,9 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `visibilityDistanceModifier` | `float` | Modifies the distance at which this actor can be seen. |
 | `attackersIgnoreEngagementRules` | `bool` | Whether attackers ignore normal engagement rules for this actor. |
 | `movementSpeedMultiplier` | `float` | Multiplier for movement speed (default 1). |
-| `ladder` | `Ladder` | The ladder the actor is currently on, or `null`. |
+| `ladder` | `Ladder` | The ladder the actor is currently on, or `nil`. |
 | `ladderHeight` | `float` | Current height on the ladder. |
-| `activeWeapon` | [Weapon](./Weapon.md) | The currently unholstered weapon, or `null`. |
+| `activeWeapon` | [Weapon](./Weapon.md) | The currently unholstered weapon, or `nil`. |
 | `weapons` | [Weapon](./Weapon.md)[] | Array of 5 weapons in loadout slots. |
 | `activeWeaponSlot` | `int` | Index of the currently active weapon slot (0-4). |
 | `hasAmmoBox` | `bool` | Whether the actor has an ammo box in their loadout. |
@@ -68,7 +68,7 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `smokeScreenSlot` | `int` | The slot index of the smoke screen. |
 | `aiControlled` | `bool` | Whether this actor is controlled by AI. |
 | `needsResupply` | `bool` | Whether the actor needs resupply (ammo low). |
-| `seat` | `Seat` | The seat the actor is currently occupying, or `null`. |
+| `seat` | `Seat` | The seat the actor is currently occupying, or `nil`. |
 | `skinnedRenderer` | `SkinnedMeshRenderer` | The skinned mesh renderer for the animated model. |
 | `skinnedRendererRagdoll` | `SkinnedMeshRenderer` | The skinned mesh renderer for the ragdoll model. |
 | `weaponImposterRenderers` | `Dictionary<Weapon, Renderer[]>` | Maps weapons to their imposter renderer arrays. |
@@ -98,7 +98,7 @@ Spawns the actor at the specified position and rotation with an optional forced 
 |-----------|------|-------------|
 | `position` | `Vector3` | The spawn position. |
 | `rotation` | `Quaternion` | The spawn rotation. |
-| `forcedLoadout` | `WeaponManager.LoadoutSet` | Optional forced loadout. If null, uses the game mode's default. |
+| `forcedLoadout` | `WeaponManager.LoadoutSet` | Optional forced loadout. If nil, uses the game mode's default. |
 
 ### Kill
 
@@ -289,7 +289,7 @@ Applies damage to the actor.
 |-----------|------|-------------|
 | `info` | `DamageInfo` | The damage info. |
 
-[return: Doc]
+[return: bool]
 `true` if damage was applied, `false` if the actor was invulnerable or already dead.
 
 ### OnBalanceSetManually
