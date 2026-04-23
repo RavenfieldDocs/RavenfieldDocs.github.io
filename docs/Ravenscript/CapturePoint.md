@@ -26,7 +26,7 @@ Represents a capture point (flag) in the game world. Handles capture progress, t
 | `spawnPosition` | `Vector3` | The spawn position of this spawn point. |
 | `neighbours` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors connected to this point, ignoring one way connections. |
 | `neighboursIncoming` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can attack this point, respecting one way connections. |
-| `neighboursOutgoing` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can be attacked from this point, respecting one way connections. |
+| `neighboursOutgoing` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can be attacked from point, respecting one way connections. |
 | `turretSpawners` | `TurretSpawner[]` | The turret spawners at this spawn point. |
 | `vehicleSpawners` | `VehicleSpawner[]` | The vehicle spawners at this spawn point. |
 
@@ -47,5 +47,5 @@ A random position within the contested spawn point container.
 
 | Event | Signature | Description |
 |-------|-----------|-------------|
-| `onCapturePointCaptured` | `(capturePoint, newOwner)` | Invoked when a capture point is captured, i.e. when its owner is set to Team.Blue or Team.Red. |
-| `onCapturePointNeutralized` | `(capturePoint, previousOwner)` | Invoked when a capture point is neutralized, i.e. when its owner is set to Team.Neutral. |
+| `onCapturePointCaptured` | `(capturePoint, newOwner)` | Invoked when a capture point is captured.[..] IE when it's owner is set to Team.Blue or Team.Red. |
+| `onCapturePointNeutralized` | `(capturePoint, previousOwner)` | Invoked when a capture point is neutralized[..] IE when it's owner is set to Team.Neutral. |
