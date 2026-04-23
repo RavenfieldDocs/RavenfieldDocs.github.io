@@ -6,9 +6,9 @@ Use these methods to interact with Unity's physics engine.
 
 ## Properties
 
-| Name | Type | Description |
-| --- | --- | --- |
-| gravity | Vector3 | The gravity applied to physics objects. |
+| Property | Type | Description |
+|----------|------|-------------|
+| `gravity` | `Vector3` | The gravity applied to physics objects. |
 
 ## Methods
 
@@ -17,148 +17,160 @@ Use these methods to interact with Unity's physics engine.
 Casts a ray through the scene until it collides with a target.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| ray | Ray | Test for collisions along this ray. |
-| range | float | Look no further than this [meters]. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `ray` | `Ray` | Test for collisions along this ray. |
+| `range` | `float` | Look no further than this [meters]. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** RaycastHit or nil
+[return: Doc]
+`RaycastHit` or `nil`.
 
 ### RaycastAll
 
 Casts a ray through the scene registering all collisions with target objects.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| ray | Ray | Test for collisions along this ray. |
-| range | float | Look no further than this [meters]. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `ray` | `Ray` | Test for collisions along this ray. |
+| `range` | `float` | Look no further than this [meters]. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** array\<RaycastHit>
+[return: Doc]
+`RaycastHit[]`.
 
 ### Linecast
 
 Casts a ray from start to end until it collides with a target.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| start | Vector3 | The start position of the line. |
-| end | Vector3 | The end position of the line. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `start` | `Vector3` | The start position of the line. |
+| `end` | `Vector3` | The end position of the line. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** RaycastHit or nil
+[return: Doc]
+`RaycastHit` or `nil`.
 
 ### Spherecast
 
 Casts a sphere ray from start to end until it collides with a target.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| ray | Ray | The ray to cast. |
-| radius | float | The radius of the sphere. |
-| range | float | Look no further than this [meters]. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `ray` | `Ray` | The ray to cast. |
+| `radius` | `float` | The radius of the sphere. |
+| `range` | `float` | Look no further than this [meters]. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** RaycastHit or nil
+[return: Doc]
+`RaycastHit` or `nil`.
 
 ### SpherecastAll
 
 Casts a sphere ray from start to end until it collides with a target.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| ray | Ray | The ray to cast. |
-| radius | float | The radius of the sphere. |
-| range | float | Look no further than this [meters]. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `ray` | `Ray` | The ray to cast. |
+| `radius` | `float` | The radius of the sphere. |
+| `range` | `float` | Look no further than this [meters]. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** RaycastHit or nil
+[return: Doc]
+`RaycastHit[]`.
 
 ### RaycastActor
 
 Casts a ray, returning the first hit actor.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| ray | Ray | The ray to cast. |
-| range | float | Look no further than this [meters]. |
-| blockedByGeometry | bool | Whether the ray should be blocked by geometry. |
-| blockedByVehicles | bool | Whether the ray should be blocked by vehicles. |
+|-----------|------|-------------|
+| `ray` | `Ray` | The ray to cast. |
+| `range` | `float` | Look no further than this [meters]. |
+| `blockedByGeometry` | `bool` | Whether the ray should be blocked by geometry. |
+| `blockedByVehicles` | `bool` | Whether the ray should be blocked by vehicles. |
 
-**Returns:** Actor or nil
+[return: Doc]
+`Actor` or `nil`.
 
 ### CheckBox
 
 Checks if a box overlaps with any colliders.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| center | Vector3 | The center of the box. |
-| halfExtents | Vector3 | Half the size of the box in each dimension. |
-| orientation | Quaternion | The rotation of the box. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `center` | `Vector3` | The center of the box. |
+| `halfExtents` | `Vector3` | Half the size of the box in each dimension. |
+| `orientation` | `Quaternion` | The rotation of the box. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** bool
+[return: Doc]
+`bool`.
 
 ### OverlapBox
 
 Finds all colliders overlapping a box.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| center | Vector3 | The center of the box. |
-| halfExtents | Vector3 | Half the size of the box in each dimension. |
-| orientation | Quaternion | The rotation of the box. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `center` | `Vector3` | The center of the box. |
+| `halfExtents` | `Vector3` | Half the size of the box in each dimension. |
+| `orientation` | `Quaternion` | The rotation of the box. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** array\<Collider>
+[return: Doc]
+`Collider[]`.
 
 ### CheckCapsule
 
 Checks if a capsule overlaps with any colliders.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| start | Vector3 | The start of the capsule. |
-| end | Vector3 | The end of the capsule. |
-| radius | float | The radius of the capsule. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `start` | `Vector3` | The start of the capsule. |
+| `end` | `Vector3` | The end of the capsule. |
+| `radius` | `float` | The radius of the capsule. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** bool
+[return: Doc]
+`bool`.
 
 ### OverlapCapsule
 
 Finds all colliders overlapping a capsule.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| start | Vector3 | The start of the capsule. |
-| end | Vector3 | The end of the capsule. |
-| radius | float | The radius of the capsule. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `start` | `Vector3` | The start of the capsule. |
+| `end` | `Vector3` | The end of the capsule. |
+| `radius` | `float` | The radius of the capsule. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** array\<Collider>
+[return: Doc]
+`Collider[]`.
 
 ### CheckSphere
 
 Checks if a sphere overlaps with any colliders.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| position | Vector3 | The center of the sphere. |
-| radius | float | The radius of the sphere. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `position` | `Vector3` | The center of the sphere. |
+| `radius` | `float` | The radius of the sphere. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** bool
+[return: Doc]
+`bool`.
 
 ### OverlapSphere
 
 Finds all colliders overlapping a sphere.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| position | Vector3 | The center of the sphere. |
-| radius | float | The radius of the sphere. |
-| target | RaycastTarget | Test for collisions with these things. |
+|-----------|------|-------------|
+| `position` | `Vector3` | The center of the sphere. |
+| `radius` | `float` | The radius of the sphere. |
+| `target` | `RaycastTarget` | Test for collisions with these things. |
 
-**Returns:** array\<Collider>
+[return: Doc]
+`Collider[]`.

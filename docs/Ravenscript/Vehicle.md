@@ -2,47 +2,42 @@
 title: Vehicle
 ---
 
+Represents a vehicle in the game world. Handles seating, damage, health, burning, water immersion, missile tracking, and engine audio.
+
 ## Properties
 
-| Name | Type | Description |
-| --- | --- | --- |
-| seats | array\<Seat> |  |
-| name | string |  |
-| minimapBlip | Texture |  |
-| ownerTeam | Team |  |
-| isDead | bool |  |
-| hasCountermeasures | bool |  |
-| canSeePlayer | bool | Returns true if there is a line of sight between the vehicle's lock on point and the player camera. |
-| playerDistance | float |  |
-| playerIsInside | bool |  |
-| hasDriver | bool |  |
-| driver | Actor |  |
-| isTrackedByMissile | bool | True while one or more missiles are tracking this vehicle. |
-| isBeingLocked | bool | True while one or more target tracking weapons are locking onto this vehicle. |
-| health | float |  |
-| maxHealth | float |  |
-| isBurning | bool |  |
-| isFull | bool |  |
-| isEmpty | bool |  |
-| isInWater | bool |  |
-| rigidbody | Rigidbody |  |
-| isTurret | bool | Returns true if vehicle is marked as a Turret. |
-| isCar | bool | Returns true if this vehicle is a Car. If true, you can safely access fields via the Car class API. |
-| isBoat | bool | Returns true if this vehicle is a Boat. If true, you can safely access fields via the Boat class API. |
-| isHelicopter | bool | Returns true if this vehicle is a Helicopter. If true, you can safely access fields via the Helicopter class API. |
-| isAirplane | bool | Returns true if this vehicle is an Airplane. If true, you can safely access fields via the Airplane class API. |
-| avoidanceRadius | float | The radius of the vehicle's specified avoidance size. |
-| spotChanceMultiplier | float |  |
-| engine | Engine |  |
-| isTransportVehicle | bool | Returns true if AIType is set to transport. |
-| vehicleInfo | VehicleInfo |  |
-
-## Events
-
-| Name | Type | Description |
-| --- | --- | --- |
-| onClaimedBySquad | ScriptEvent\<Squad> | Invoked whenever a squad claims this vehicle. |
-| onClaimDropped | ScriptEvent\<Squad> | Invoked whenever a squad drops their claim over this vehicle. |
+| Property | Type | Description |
+|----------|------|-------------|
+| `seats` | `Seat[]` | Array of seats on this vehicle. |
+| `name` | `string` | The vehicle's display name. |
+| `minimapBlip` | `Texture` | The texture shown on the minimap for this vehicle. |
+| `ownerTeam` | `Team` | The team that owns this vehicle. |
+| `isDead` | `bool` | Whether the vehicle is destroyed. |
+| `hasCountermeasures` | `bool` | Whether the vehicle has countermeasures available. |
+| `canSeePlayer` | `bool` | Returns `true` if there is a line of sight between the vehicle's lock on point and the player camera. |
+| `playerDistance` | `float` | The distance from this vehicle to the nearest player. |
+| `playerIsInside` | `bool` | Whether a player is inside this vehicle. |
+| `hasDriver` | `bool` | Whether the vehicle has a driver. |
+| `driver` | `Actor` | The actor currently driving this vehicle. |
+| `isTrackedByMissile` | `bool` | `true` while one or more missiles are tracking this vehicle. |
+| `isBeingLocked` | `bool` | `true` while one or more target tracking weapons are locking onto this vehicle. |
+| `health` | `float` | Current health. |
+| `maxHealth` | `float` | Maximum health. |
+| `isBurning` | `bool` | Whether the vehicle is currently burning. |
+| `isFull` | `bool` | Whether all seats are occupied. |
+| `isEmpty` | `bool` | Whether all seats are empty. |
+| `isInWater` | `bool` | Whether the vehicle is in water. |
+| `rigidbody` | `Rigidbody` | The vehicle's rigidbody component. |
+| `isTurret` | `bool` | Returns `true` if vehicle is marked as a Turret. |
+| `isCar` | `bool` | Returns `true` if this vehicle is a Car. If `true`, you can safely access fields via the Car class API. |
+| `isBoat` | `bool` | Returns `true` if this vehicle is a Boat. If `true`, you can safely access fields via the Boat class API. |
+| `isHelicopter` | `bool` | Returns `true` if this vehicle is a Helicopter. If `true`, you can safely access fields via the Helicopter class API. |
+| `isAirplane` | `bool` | Returns `true` if this vehicle is an Airplane. If `true`, you can safely access fields via the Airplane class API. |
+| `avoidanceRadius` | `float` | The radius of the vehicle's specified avoidance size. |
+| `spotChanceMultiplier` | `float` | Multiplier for the chance this vehicle is spotted by AI. |
+| `engine` | `Engine` | The vehicle's engine component. |
+| `isTransportVehicle` | `bool` | Returns `true` if AIType is set to transport. |
+| `vehicleInfo` | `VehicleInfo` | The vehicle's info asset. |
 
 ## Methods
 
@@ -51,102 +46,71 @@ title: Vehicle
 Damages the vehicle.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| source | Actor | The actor that caused the damage. |
-| amount | float | The amount of damage to deal. |
-
-**Returns:** void
+|-----------|------|-------------|
+| `source` | `Actor` | The actor that caused the damage. |
+| `amount` | `float` | The amount of damage to deal. |
 
 ### Repair
 
-Repairs the vehicle by the specified health amount. Returns true if the vehicle was healed (that is, if it was not already at max health.)
+Repairs the vehicle by the specified health amount.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| amount | float | The amount of health to restore. |
+|-----------|------|-------------|
+| `amount` | `float` | The amount of health to restore. |
 
-**Returns:** bool
+[return: Doc]
+`true` if the vehicle was healed (not already at max health).
 
 ### GetEmptySeat
 
-Get the first available empty seat in the vehicle.
+Gets the first available empty seat in the vehicle.
 
 | Parameter | Type | Description |
-| --- | --- | --- |
-| allowDriverSeat | bool | Whether to allow returning the driver seat. |
-
-**Returns:** Seat
+|-----------|------|-------------|
+| `allowDriverSeat` | `bool` | Whether to allow returning the driver seat. |
 
 ### GetTrackingMissiles
 
 Returns all missile projectiles that are currently tracking this vehicle.
 
-**Returns:** array\<TargetSeekingMissile>
-
 ### ToString
 
 Returns a string representation of the vehicle.
 
-**Returns:** string
+## Events
 
-## Static Methods
+| Event | Signature | Description |
+|-------|-----------|-------------|
+| `onClaimedBySquad` | `ScriptEvent<Squad>` | Invoked whenever a squad claims this vehicle. |
+| `onClaimDropped` | `ScriptEvent<Squad>` | Invoked whenever a squad drops their claim over this vehicle. |
 
-### New
+## Static Fields
 
-Creates a new Engine instance.
+| Field | Type | Description |
+|-------|------|-------------|
+| `New` | `Engine` | Creates a new Engine instance. |
 
-**Returns:** Engine
-
-## Nested Types
+## Enums
 
 ### Engine
 
 Represents the engine of a vehicle.
 
-#### Properties
-
-| Name | Type | Description |
-| --- | --- | --- |
-| controlAudio | bool |  |
-| enabled | bool |  |
-| ignitionClip | AudioClip |  |
-| pitchGainSpeed | float |  |
-| power | float |  |
-| powerGainSpeed | float |  |
-| shiftForwardClip | AudioClip |  |
-| shiftReverseClip | AudioClip |  |
-| targetPitch | float |  |
-| targetThrottle | float |  |
-| throttleGainSpeed | float |  |
-
-#### Methods
-
-##### PlayIgnitionSound
-
-Plays the ignition sound.
-
-**Returns:** void
-
-##### PlayShiftForwardSound
-
-Plays the shift forward sound.
-
-**Returns:** void
-
-##### PlayShiftReverseSound
-
-Plays the shift reverse sound.
-
-**Returns:** void
-
-##### Reset
-
-Resets the engine.
-
-**Returns:** void
-
-##### ToString
-
-Returns a string representation of the engine.
-
-**Returns:** string
+| Value | Description |
+|-------|-------------|
+| `controlAudio` | `bool` - Whether to control engine audio. |
+| `enabled` | `bool` - Whether the engine is enabled. |
+| `ignitionClip` | `AudioClip` - The ignition sound clip. |
+| `pitchGainSpeed` | `float` - How quickly pitch changes with speed. |
+| `power` | `float` - Engine power. |
+| `powerGainSpeed` | `float` - How quickly power changes. |
+| `shiftForwardClip` | `AudioClip` - The shift forward sound clip. |
+| `shiftReverseClip` | `AudioClip` - The shift reverse sound clip. |
+| `targetPitch` | `float` - Target engine pitch. |
+| `targetThrottle` | `float` - Target throttle value. |
+| `throttleGainSpeed` | `float` - How quickly throttle changes. |
+| `PlayIgnitionSound` | Plays the ignition sound. |
+| `PlayShiftForwardSound` | Plays the shift forward sound. |
+| `PlayShiftReverseSound` | Plays the shift reverse sound. |
+| `Reset` | Resets the engine. |
+| `ToString` | Returns a string representation of the engine. |

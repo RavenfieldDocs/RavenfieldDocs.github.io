@@ -23,8 +23,8 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `closestEnemyDistance` | `float` | The distance to the closest enemy. |
 | `actorIndex` | `int` | The index of this actor in the actor manager. |
 | `teamActorIndex` | `int` | The index of this actor within its team. |
-| `accessoryRenderer` | `List\<Renderer>` | Renderers for accessories on the animated model. |
-| `accessoryRagdollRenderer` | `List\<Renderer>` | Renderers for accessories on the ragdoll model. |
+| `accessoryRenderer` | `List<Renderer>` | Renderers for accessories on the animated model. |
+| `accessoryRagdollRenderer` | `List<Renderer>` | Renderers for accessories on the ragdoll model. |
 | `deathTimestamp` | `float` | The game time when this actor died. |
 | `health` | `float` | Current health (default 100). |
 | `maxHealth` | `float` | Maximum health (default 100). |
@@ -71,7 +71,7 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `seat` | `Seat` | The seat the actor is currently occupying, or `null`. |
 | `skinnedRenderer` | `SkinnedMeshRenderer` | The skinned mesh renderer for the animated model. |
 | `skinnedRendererRagdoll` | `SkinnedMeshRenderer` | The skinned mesh renderer for the ragdoll model. |
-| `weaponImposterRenderers` | `Dictionary\<Weapon, Renderer[]>` | Maps weapons to their imposter renderer arrays. |
+| `weaponImposterRenderers` | `Dictionary<Weapon, Renderer[]>` | Maps weapons to their imposter renderer arrays. |
 | `distanceCull` | `bool` | Whether this actor is distance-culled. |
 | `dropsAmmoOnKick` | `bool` | Whether the actor drops an ammo reserve when kicked (default true). |
 | `hasSpawnedAmmoReserve` | `bool` | Whether the ammo reserve has already been spawned. |

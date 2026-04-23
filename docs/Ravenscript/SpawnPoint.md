@@ -2,296 +2,289 @@
 title: SpawnPoint
 ---
 
+Represents a spawn point in the game world. Handles spawning of vehicles, turrets, and actors, as well as capture point logic and neighbor relationships.
+
 ## Properties
 
-| Name | Type | Description |
-|------|------|-------------|
-| `gameObject` | `GameObject` | The GameObject attached to this SpawnPoint |
-| `transform` | `Transform` | The Transform of this SpawnPoint |
-| `capturePoint` | `CapturePoint` | Returns the CapturePoint if this SpawnPoint is one, otherwise null |
-| `defaultOwner` | `Team` | The default owning team of this spawn point |
-| `name` | `string` | The short name of this spawn point |
-| `neighours` | `SpawnPoint[]` | Gets all neighbors connected to this point, ignoring one way connections |
-| `neighoursIncoming` | `SpawnPoint[]` | Gets all neighbors that can attack this point, respecting one way connections |
-| `neighoursOutgoing` | `SpawnPoint[]` | Gets all neighbors that can be attacked from point, respecting one way connections |
-| `owner` | `Team` | The current owning team of this spawn point |
-| `spawnpointContainer` | `Transform` | Container transform for spawn point positions |
-| `spawnPosition` | `Vector3` | The spawn position of this point |
-| `turretSpawners` | `TurretSpawner[]` | Turret spawners associated with this spawn point |
-| `vehicleSpawners` | `VehicleSpawner[]` | Vehicle spawners associated with this spawn point |
-| `landingZones` | `LandingZone[]` | Landing zones associated with this spawn point |
-| `isCapturePoint` | `bool` | Returns true if this is a CapturePoint |
+| Property | Type | Description |
+|----------|------|-------------|
+| `gameObject` | `GameObject` | The GameObject attached to this SpawnPoint. |
+| `transform` | `Transform` | The Transform of this SpawnPoint. |
+| `capturePoint` | `CapturePoint` | Returns the CapturePoint if this SpawnPoint is one, otherwise null. |
+| `defaultOwner` | `Team` | The default owning team of this spawn point. |
+| `name` | `string` | The short name of this spawn point. |
+| `neighours` | `SpawnPoint[]` | Gets all neighbors connected to this point, ignoring one way connections. |
+| `neighoursIncoming` | `SpawnPoint[]` | Gets all neighbors that can attack this point, respecting one way connections. |
+| `neighoursOutgoing` | `SpawnPoint[]` | Gets all neighbors that can be attacked from point, respecting one way connections. |
+| `owner` | `Team` | The current owning team of this spawn point. |
+| `spawnpointContainer` | `Transform` | Container transform for spawn point positions. |
+| `spawnPosition` | `Vector3` | The spawn position of this point. |
+| `turretSpawners` | `TurretSpawner[]` | Turret spawners associated with this spawn point. |
+| `vehicleSpawners` | `VehicleSpawner[]` | Vehicle spawners associated with this spawn point. |
+| `landingZones` | `LandingZone[]` | Landing zones associated with this spawn point. |
+| `isCapturePoint` | `bool` | Returns true if this is a CapturePoint. |
 
 ## Methods
 
-### `AddIncomingNeighbor(spawn)`
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `spawn` | `SpawnPoint` | The spawn point to add as an incoming neighbor |
+### AddIncomingNeighbor
 
 Adds a spawn point as an incoming neighbor.
 
-### `AddOutgoingNeighbor(spawn)`
-
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `spawn` | `SpawnPoint` | The spawn point to add as an outgoing neighbor |
+| `spawn` | `SpawnPoint` | The spawn point to add as an incoming neighbor. |
+
+### AddOutgoingNeighbor
 
 Adds a spawn point as an outgoing neighbor.
 
-### `AddNeighbor(spawn)`
-
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `spawn` | `SpawnPoint` | The spawn point to add as a neighbor |
+| `spawn` | `SpawnPoint` | The spawn point to add as an outgoing neighbor. |
+
+### AddNeighbor
 
 Adds a spawn point as a bidirectional neighbor.
 
-### `FindNearbyStuff()`
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `spawn` | `SpawnPoint` | The spawn point to add as a neighbor. |
+
+### FindNearbyStuff
 
 Finds nearby vehicle spawners and turrets within protect range.
 
-### `SetGhost(isGhost)`
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `isGhost` | `bool` | Whether this is a ghost spawn point |
+### SetGhost
 
 Sets whether this spawn point is a ghost spawn.
 
-### `HasAnyHelicopterLandingZone()`
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `isGhost` | `bool` | Whether this is a ghost spawn point. |
+
+### HasAnyHelicopterLandingZone
 
 Returns true if this spawn point has any helicopter landing zones.
 
-### `CollectHelicopterLandingZones()`
+### CollectHelicopterLandingZones
 
 Collects and initializes all helicopter landing zones for this spawn point.
 
-### `GetAllHelicopterLandingZones()`
+### GetAllHelicopterLandingZones
 
 Returns all helicopter landing zones for this spawn point.
 
-**Returns:** `HelicopterLandingZone[]`
-
-### `GetRandomHelicopterLandingZone()`
+### GetRandomHelicopterLandingZone
 
 Returns a random helicopter landing zone from this spawn point.
 
-**Returns:** `HelicopterLandingZone`
-
-### `FindCoverPoints()`
+### FindCoverPoints
 
 Finds and sorts cover points within protect range of this spawn point.
 
-### `GetAvailableCoverPoint()`
+### GetAvailableCoverPoint
 
 Gets an available cover point, prioritizing cover against enemy neighbors.
 
-**Returns:** `CoverPoint`
-
-### `GetAvailableVehicle(filter, passengers)`
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `filter` | `VehicleFilter` | Filter to apply to vehicles |
-| `passengers` | `int` | Required number of passenger seats (default: -1) |
+### GetAvailableVehicle
 
 Gets an available vehicle matching the filter.
 
-**Returns:** `Vehicle`
-
-### `GetAvailableVehicle(filter, priority, passengers)`
-
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `filter` | `VehicleFilter` | Filter to apply to vehicles |
-| `priority` | `byte` | Output priority of the returned vehicle |
-| `passengers` | `int` | Required number of passenger seats (default: -1) |
+| `filter` | `VehicleFilter` | Filter to apply to vehicles. |
+| `passengers` | `int` | Required number of passenger seats (default: -1). |
+
+[return: Vehicle]
+The available vehicle matching the filter, or null.
+
+### GetAvailableVehicle
 
 Gets an available vehicle matching the filter with priority output.
 
-**Returns:** `Vehicle`
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `filter` | `VehicleFilter` | Filter to apply to vehicles. |
+| `priority` | `byte` | Output priority of the returned vehicle. |
+| `passengers` | `int` | Required number of passenger seats (default: -1). |
 
-### `GetAvailableRoamingVehicle()`
+[return: Vehicle]
+The available vehicle matching the filter, or null.
+
+### GetAvailableRoamingVehicle
 
 Gets an available roaming vehicle from this spawn point.
 
-**Returns:** `Vehicle`
-
-### `FindTurrets()`
+### FindTurrets
 
 Finds nearby turrets within protect range of this spawn point.
 
-### `IsValidDefenseTurret(vehicle)`
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `vehicle` | `Vehicle` | The vehicle to check |
+### IsValidDefenseTurret
 
 Returns true if the vehicle is a valid defense turret for this spawn point.
 
-**Returns:** `bool`
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `vehicle` | `Vehicle` | The vehicle to check. |
 
-### `HasAnyAvailableTurrets()`
+[return: bool]
+`true` if the vehicle is a valid defense turret.
+
+### HasAnyAvailableTurrets
 
 Returns true if there are any available turrets at this spawn point.
 
-**Returns:** `bool`
-
-### `GetAvailableTurret()`
+### GetAvailableTurret
 
 Gets an available turret at this spawn point.
 
-**Returns:** `Vehicle`
-
-### `TransformFacesEnemySpawn(transform)`
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `transform` | `Transform` | The transform to check |
+### TransformFacesEnemySpawn
 
 Returns true if the given transform faces an enemy spawn.
 
-**Returns:** `bool`
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `transform` | `Transform` | The transform to check. |
 
-### `GetSpawnPosition()`
+[return: bool]
+`true` if the transform faces an enemy spawn.
+
+### GetSpawnPosition
 
 Gets the spawn position for this point.
 
-**Returns:** `Vector3`
-
-### `GenerateRandomSpawnPosition()`
+### GenerateRandomSpawnPosition
 
 Generates a random spawn position near this point.
 
-**Returns:** `Vector3`
-
-### `RandomPositionInCaptureZone()`
+### RandomPositionInCaptureZone
 
 Gets a random position within the capture zone.
 
-**Returns:** `Vector3`
-
-### `GetNSpawnPoints(container)`
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `container` | `Transform` | The container to count spawn points in |
+### GetNSpawnPoints
 
 Gets the number of spawn points in a container.
 
-**Returns:** `int`
-
-### `RandomSpawnPointPosition(container)`
-
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `container` | `Transform` | The container to pick a random spawn point from |
+| `container` | `Transform` | The container to count spawn points in. |
+
+[return: int]
+The number of spawn points in the container.
+
+### RandomSpawnPointPosition
 
 Gets a random position from a spawn point container.
 
-**Returns:** `Vector3`
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `container` | `Transform` | The container to pick a random spawn point from. |
 
-### `RandomPatrolPosition()`
+[return: Vector3]
+A random spawn position from the container.
+
+### RandomPatrolPosition
 
 Gets a random patrol position for this spawn point.
 
-**Returns:** `Vector3`
-
-### `IsSafe()`
+### IsSafe
 
 Returns true if this spawn point is safe.
 
-**Returns:** `bool`
-
-### `SetOwner(team, initialOwner)`
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `team` | `int` | The team to set as owner |
-| `initialOwner` | `bool` | Whether this is the initial owner assignment |
+### SetOwner
 
 Sets the owner of this spawn point.
 
-### `IsFrontLine()`
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `team` | `int` | The team to set as owner. |
+| `initialOwner` | `bool` | Whether this is the initial owner assignment. |
+
+### IsFrontLine
 
 Returns true if this spawn point is on the front line (has enemy neighbors).
 
-**Returns:** `bool`
-
-### `AddLandingZone(lz)`
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `lz` | `LandingZone` | The landing zone to add |
+### AddLandingZone
 
 Adds a landing zone to this spawn point.
 
-### `IsInsideCaptureVolume(position)`
-
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `position` | `Vector3` | The position to check |
+| `lz` | `LandingZone` | The landing zone to add. |
+
+### IsInsideCaptureVolume
 
 Returns true if a position is inside the capture volume.
 
-**Returns:** `bool`
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `position` | `Vector3` | The position to check. |
 
-### `GetCaptureRange()`
+[return: bool]
+`true` if the position is inside the capture volume.
+
+### GetCaptureRange
 
 Gets the capture range of this spawn point.
 
-**Returns:** `float`
-
-### `IsInsideProtectRange(position)`
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `position` | `Vector3` | The position to check |
+### IsInsideProtectRange
 
 Returns true if a position is inside the protect range.
 
-**Returns:** `bool`
-
-### `IsInsideTransportDropRange(position)`
-
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `position` | `Vector3` | The position to check |
+| `position` | `Vector3` | The position to check. |
+
+[return: bool]
+`true` if the position is inside the protect range.
+
+### IsInsideTransportDropRange
 
 Returns true if a position is inside the transport drop range.
 
-**Returns:** `bool`
-
-### `GetClosestNavmeshArea(type)`
-
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `type` | `PathfindingBox.Type` | The type of navmesh area to find |
+| `position` | `Vector3` | The position to check. |
+
+[return: bool]
+`true` if the position is inside the transport drop range.
+
+### GetClosestNavmeshArea
 
 Gets the closest navmesh area of the given type.
 
-**Returns:** `uint`
-
-### `IsNeighborTo(other)`
-
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `other` | `SpawnPoint` | The other spawn point to check |
+| `type` | `PathfindingBox.Type` | The type of navmesh area to find. |
+
+[return: uint]
+The navmesh area value.
+
+### IsNeighborTo
 
 Returns true if the other spawn point is a neighbor.
 
-**Returns:** `bool`
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `other` | `SpawnPoint` | The other spawn point to check. |
 
-### `OnAnySpawnContainerChanged()`
+[return: bool]
+`true` if the other spawn point is a neighbor.
+
+### OnAnySpawnContainerChanged
 
 Called when any spawn container is changed.
 
-### `OnNavmeshReady()`
+### OnNavmeshReady
 
 Called when the navmesh is ready.
 
 ## Events
 
-This class has no script events.
+| Event | Signature | Description |
+|-------|-----------|-------------|
+
+## Static Fields
+
+| Field | Type | Description |
+|-------|------|-------------|
