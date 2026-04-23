@@ -17,7 +17,7 @@ Represents a squad of actors in the game world. Handles squad orders, formations
 | `claimedLandingZone` | `HelicopterLandingZone` | The landing zone currently claimed by this squad. |
 | `hasLandingZoneClaim` | `bool` | Returns `true` if this squad has a landing zone claim. |
 | `isPerformingLanding` | `bool` | Returns `true` if the squad is performing a landing or has landed a helicopter. Also see `hasLanded`. |
-| `hasLanded` | `bool` | Returns `true` if the squad has landed their helicopter. |
+| `hasLanded` | `bool` | Returns `true` if the squad has landed their helicopter via scripted landing. |
 | `autoDropTransportedPassengers` | `bool` | When set to true while in transport vehicle, will automatically drop passengers when close to attack point destination. |
 | `onIssueOrderMovement` | `ScriptEvent<Order>` | Invoked whenever the squad leader wants to go to the order objective. Consuming this event prevents the default squad leader movement. |
 
