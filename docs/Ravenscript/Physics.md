@@ -36,7 +36,7 @@ Casts a ray through the scene registering all collisions with target objects.
 | `target` | `RaycastTarget` | Test for collisions with these things. |
 
 [return: RaycastHit[]]
-`RaycastHit[]`.
+An array of RaycastHits that occurred along the ray.
 
 ### Linecast
 
@@ -91,7 +91,7 @@ Casts a ray, returning the first hit actor.
 | `blockedByVehicles` | `bool` | Whether the ray should be blocked by vehicles. |
 
 [return: Actor?]
-`Actor` or `nil`.
+The hit Actor; otherwise nil if no actor was hit or the ray is blocked by other colliders.
 
 ### CheckBox
 
