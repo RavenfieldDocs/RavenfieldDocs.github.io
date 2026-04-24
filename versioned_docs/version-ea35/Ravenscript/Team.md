@@ -1,8 +1,8 @@
 ---
-title: WireGuidedMissileProjectile
+title: Team
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+Enum representing game teams/factions.
 
 ## Properties
 
@@ -23,7 +23,12 @@ Represents a wire-guided missile projectile. Inherits all functionality from [Pr
 
 ## Static Methods
 
-| Method | Signature | Description |
-|--------|-----------|-------------|
-
 ## Enums
+
+### Team
+
+| Value | Description |
+|-------|-------------|
+| `Neutral` | Neutral team (value -1). |
+| `Blue` | Blue team (value 0). |
+| `Red` | Red team (value 1). |

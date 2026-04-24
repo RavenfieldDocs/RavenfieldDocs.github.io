@@ -1,8 +1,8 @@
 ---
-title: WireGuidedMissileProjectile
+title: RigidbodyProjectile
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+A projectile that uses Unity's physics rigidbody system for movement and collision detection. Inherits all functionality from [Projectile](./Projectile.md).
 
 ## Properties
 

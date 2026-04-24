@@ -1,8 +1,8 @@
 ---
-title: WireGuidedMissileProjectile
+title: LoadoutPickStrategy
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+Marker type for [AiActorController](./AiActorController.md) loadout pick strategies.
 
 ## Properties
 
@@ -22,8 +22,5 @@ Represents a wire-guided missile projectile. Inherits all functionality from [Pr
 |-------|------|-------------|
 
 ## Static Methods
-
-| Method | Signature | Description |
-|--------|-----------|-------------|
 
 ## Enums

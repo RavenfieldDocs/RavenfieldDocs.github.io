@@ -1,13 +1,14 @@
 ---
-title: WireGuidedMissileProjectile
+title: Airplane
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+Represents an airplane vehicle in the game.
 
 ## Properties
 
 | Property | Type | Description |
 |----------|------|-------------|
+| `vehicle` | `[Vehicle](./Vehicle.md)` | Returns this airplane as a base `Vehicle`. |
 
 ## Methods
 
@@ -15,15 +16,14 @@ Represents a wire-guided missile projectile. Inherits all functionality from [Pr
 
 | Event | Signature | Description |
 |-------|-----------|-------------|
+|  |  |  |
 
 ## Static Fields
 
 | Field | Type | Description |
 |-------|------|-------------|
+|  |  |  |
 
 ## Static Methods
-
-| Method | Signature | Description |
-|--------|-----------|-------------|
 
 ## Enums

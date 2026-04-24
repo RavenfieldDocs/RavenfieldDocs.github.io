@@ -1,8 +1,8 @@
 ---
-title: WireGuidedMissileProjectile
+title: RocketProjectile
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+Represents a rocket projectile fired by a weapon. Inherits all functionality from [Projectile](./Projectile.md).
 
 ## Properties
 
@@ -27,3 +27,8 @@ Represents a wire-guided missile projectile. Inherits all functionality from [Pr
 |--------|-----------|-------------|
 
 ## Enums
+
+### EnumName
+
+| Value | Description |
+|-------|-------------|

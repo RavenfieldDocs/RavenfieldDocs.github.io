@@ -1,13 +1,14 @@
 ---
-title: WireGuidedMissileProjectile
+title: RectTransform
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+Represents a Unity RectTransform component for UI layout.
 
 ## Properties
 
 | Property | Type | Description |
 |----------|------|-------------|
+| `asTransform` | `[Transform](./Transform.md)` | Returns this RectTransform as a base `Transform`. |
 
 ## Methods
 
@@ -22,8 +23,5 @@ Represents a wire-guided missile projectile. Inherits all functionality from [Pr
 |-------|------|-------------|
 
 ## Static Methods
-
-| Method | Signature | Description |
-|--------|-----------|-------------|
 
 ## Enums

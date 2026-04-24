@@ -1,8 +1,8 @@
 ---
-title: WireGuidedMissileProjectile
+title: ResupplyCrate
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+Represents a resupply crate entity in the game that provides ammunition to nearby players.
 
 ## Properties
 
@@ -22,8 +22,5 @@ Represents a wire-guided missile projectile. Inherits all functionality from [Pr
 |-------|------|-------------|
 
 ## Static Methods
-
-| Method | Signature | Description |
-|--------|-----------|-------------|
 
 ## Enums

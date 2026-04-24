@@ -1,13 +1,14 @@
 ---
-title: WireGuidedMissileProjectile
+title: GrenadeProjectile
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+Represents a grenade projectile. Extends `ExplodingProjectile` with configurable explosion settings.
 
 ## Properties
 
 | Property | Type | Description |
 |----------|------|-------------|
+| `explosionConfiguration` | `ExplodingProjectile.ExplosionConfiguration` | The explosion configuration used when the grenade detonates. |
 
 ## Methods
 
@@ -27,3 +28,8 @@ Represents a wire-guided missile projectile. Inherits all functionality from [Pr
 |--------|-----------|-------------|
 
 ## Enums
+
+### EnumName
+
+| Value | Description |
+|-------|-------------|

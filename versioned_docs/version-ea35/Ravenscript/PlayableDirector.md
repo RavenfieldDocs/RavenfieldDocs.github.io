@@ -1,8 +1,8 @@
 ---
-title: WireGuidedMissileProjectile
+title: PlayableDirector
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+Wrapper for the Unity PlayableDirector component, providing timeline and playable graph control.
 
 ## Properties
 
@@ -15,6 +15,9 @@ Represents a wire-guided missile projectile. Inherits all functionality from [Pr
 
 | Event | Signature | Description |
 |-------|-----------|-------------|
+| `paused` | `()` | Invoked when the playable director is paused. |
+| `stopped` | `()` | Invoked when the playable director stops playing. |
+| `played` | `()` | Invoked when the playable director starts playing. |
 
 ## Static Fields
 

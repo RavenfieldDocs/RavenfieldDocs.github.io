@@ -1,13 +1,14 @@
 ---
-title: WireGuidedMissileProjectile
+title: Transform
 ---
 
-Represents a wire-guided missile projectile. Inherits all functionality from [Projectile](./Projectile.md).
+Represents a transform (position, rotation, and scale) in 3D space.
 
 ## Properties
 
 | Property | Type | Description |
 |----------|------|-------------|
+| `asRectTransform` | `RectTransform` or `nil` | Returns this transform as a rect transform. If unavailable, returns nil. |
 
 ## Methods
 
@@ -22,8 +23,5 @@ Represents a wire-guided missile projectile. Inherits all functionality from [Pr
 |-------|------|-------------|
 
 ## Static Methods
-
-| Method | Signature | Description |
-|--------|-----------|-------------|
 
 ## Enums
