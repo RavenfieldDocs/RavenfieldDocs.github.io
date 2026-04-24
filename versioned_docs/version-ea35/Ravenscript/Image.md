@@ -2,7 +2,7 @@
 title: Image
 ---
 
-Represents a Unity UI Image component in Ravenscript. Inherits from [Graphic](./Graphic.md).
+Represents a Unity UI Image component in Ravenscript. Inherits from `Graphic`.
 
 ## Properties
 
