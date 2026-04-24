@@ -19,14 +19,14 @@ Represents a spawner for vehicles in the game world. Handles spawning vehicles o
 
 Get the active vehicle prefab of this spawner. Please note that the current value depends on which team owns the spawner's parent spawn point.
 
-[return: GameObject]
+[return: [GameObject](./GameObject.md)]
 The active vehicle prefab, or nil.
 
 ### GetPrefabVehicle
 
 Gets the Vehicle component from the active prefab.
 
-[return: Vehicle]
+[return: [Vehicle](./Vehicle.md)]
 The Vehicle component, or nil.
 
 ### GetPrefab
@@ -38,7 +38,7 @@ Get the vehicle prefab for the specified team and type.
 | `team` | `WTeam` | The team to get the prefab for. |
 | `type` | `VehicleSpawnType` | The type of vehicle to get. |
 
-[return: GameObject]
+[return: [GameObject](./GameObject.md)]
 The vehicle prefab for the specified team and type.
 
 ### SpawnIsBlocked
@@ -52,7 +52,7 @@ Returns true if the spawn is currently blocked.
 
 Force spawns the active vehicle type. Does not check if the spawn area is clear or if the previous vehicle is still alive.
 
-[return: Vehicle]
+[return: [Vehicle](./Vehicle.md)]
 The spawned vehicle.
 
 ### SpawnVehicle
@@ -66,7 +66,7 @@ Spawns a vehicle of the specified type.
 | `position` | `Vector3` | The position to spawn at. |
 | `rotation` | `Quaternion` | The rotation to spawn with. |
 
-[return: Vehicle]
+[return: [Vehicle](./Vehicle.md)]
 The spawned vehicle.
 
 ### SpawnVehicle
@@ -76,11 +76,11 @@ Spawns a vehicle using the specified vehicle info.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `team` | `WTeam` | The team to spawn the vehicle for. |
-| `vehicleInfo` | `VehicleInfo` | The vehicle info to spawn. |
+| `vehicleInfo` | [VehicleInfo](./VehicleInfo.md) | The vehicle info to spawn. |
 | `position` | `Vector3` | The position to spawn at. |
 | `rotation` | `Quaternion` | The rotation to spawn with. |
 
-[return: Vehicle]
+[return: [Vehicle](./Vehicle.md)]
 The spawned vehicle.
 
 ### SpawnVehicleImposter
@@ -90,11 +90,11 @@ Spawns a vehicle imposter. A vehicle imposter only contains the renderers of the
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `team` | `WTeam` | The team to spawn the imposter for. |
-| `vehicleInfo` | `VehicleInfo` | The vehicle info to spawn. |
+| `vehicleInfo` | [VehicleInfo](./VehicleInfo.md) | The vehicle info to spawn. |
 | `position` | `Vector3` | The position to spawn at. |
 | `rotation` | `Quaternion` | The rotation to spawn with. |
 
-[return: GameObject]
+[return: [GameObject](./GameObject.md)]
 The spawned vehicle imposter.
 
 ## Events

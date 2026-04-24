@@ -29,7 +29,7 @@ Converts a `WeaponSlot` to a `WeaponManager.WeaponSlot`.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `self` | `[WeaponSlot](./WeaponSlot.md)` | The weapon slot to convert. |
+| `self` | [WeaponSlot](./WeaponSlot.md) | The weapon slot to convert. |
 
 [return: WeaponManager.WeaponSlot]
 The converted weapon manager slot.

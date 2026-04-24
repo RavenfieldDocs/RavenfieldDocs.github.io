@@ -19,10 +19,10 @@ Finds all pathfinding nodes of a given type within a sphere.
 |-----------|------|-------------|
 | `center` | `Vector3` | The center of the sphere. |
 | `radius` | `float` | The radius of the sphere. |
-| `type` | `PathfindingNodeType` | The type of pathfinding nodes to find. |
+| `type` | [PathfindingNodeType](./PathfindingNodeType.md) | The type of pathfinding nodes to find. |
 | `underWater` | `bool` | Include nodes that are located under water? |
 
-[return: PathfindingNode[]]
+[return: [PathfindingNode](./PathfindingNode.md)[]]
 
 ### FindNodes
 
@@ -33,7 +33,7 @@ Finds all infantry pathfinding nodes within the given sphere.
 | `center` | `Vector3` | The center of the sphere. |
 | `radius` | `float` | The radius of the sphere. |
 
-[return: PathfindingNode[]]
+[return: [PathfindingNode](./PathfindingNode.md)[]]
 
 ### FindNearestNode
 
@@ -42,10 +42,10 @@ Finds the pathfinding node nearest to the given position.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `position` | `Vector3` | The position to search from. |
-| `type` | `PathfindingNodeType` | The type of pathfinding nodes to find. |
+| `type` | [PathfindingNodeType](./PathfindingNodeType.md) | The type of pathfinding nodes to find. |
 | `underWater` | `bool` | Include nodes that are located under water? |
 
-[return: PathfindingNode?]
+[return: [PathfindingNode](./PathfindingNode.md)?]
 A pathfinding node or nil if none is found.
 
 ### FindNearestNode
@@ -56,7 +56,7 @@ Finds the pathfinding node nearest to the given position.
 |-----------|------|-------------|
 | `position` | `Vector3` | The position to search from. |
 
-[return: PathfindingNode?]
+[return: [PathfindingNode](./PathfindingNode.md)?]
 A pathfinding node or nil if none is found.
 
 ## Events

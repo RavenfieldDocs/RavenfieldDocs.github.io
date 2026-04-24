@@ -10,7 +10,7 @@ Represents data for a mutator entry, including its name, description, and config
 |----------|------|-------------|
 | `name` | `string` | The name of the mutator. |
 | `description` | `string` | The description of the mutator. |
-| `configuration` | `[ConfigurationData](./ConfigurationData.md)` | The configuration data for the mutator. |
+| `configuration` | [ConfigurationData](./ConfigurationData.md) | The configuration data for the mutator. |
 
 ## Methods
 
@@ -94,6 +94,6 @@ Retrieves a mutator entry by its name.
 |-----------|------|-------------|
 | `name` | `string` | The name of the mutator to find. |
 
-[return: MutatorEntryData?]
+[return: [MutatorEntryData](./MutatorEntryData.md)?]
 
 ## Enums

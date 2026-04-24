@@ -16,12 +16,12 @@ Contains information about a damage event, including the source, type, amount, a
 | `isPiercing` | `bool` | Whether this damage pierces through the target. |
 | `isSplashDamage` | `bool` | Whether this damage is from a splash (area of effect) source. |
 | `point` | `Vector3` | The world position where the damage occurred. |
-| `sourceActor` | `[Actor](./Actor.md)` or `nil` | The actor that caused the damage, or `nil` if there is no source actor. |
+| `sourceActor` | [Actor](./Actor.md) or `nil` | The actor that caused the damage, or `nil` if there is no source actor. |
 | `type` | `DamageInfo.DamageSourceType` | The type of damage source. |
 | `isPlayerSource` | `bool` | Whether the source of the damage is a player (not AI controlled). Read-only. |
 | `isScripted` | `bool` | Whether the damage type is `Scripted`. Read-only. |
-| `sourceWeapon` | `[Weapon](./Weapon.md)` or `nil` | The weapon that caused the damage, or `nil` if there is no source weapon. |
-| `sourceWeaponEntry` | `WeaponEntry` or `nil` | The weapon entry from the source weapon. Read-only. |
+| `sourceWeapon` | [Weapon](./Weapon.md) or `nil` | The weapon that caused the damage, or `nil` if there is no source weapon. |
+| `sourceWeaponEntry` | [WeaponEntry](./WeaponEntry.md) or `nil` | The weapon entry from the source weapon. Read-only. |
 
 ## Methods
 
@@ -31,8 +31,8 @@ Contains information about a damage event, including the source, type, amount, a
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `Default` | `DamageInfo` | A default damage info with type `Unknown` and no source. Read-only. |
-| `Explosion` | `DamageInfo` | A damage info with type `Explosion` and `isSplashDamage` set to `true`. Read-only. |
+| `Default` | [DamageInfo](./DamageInfo.md) | A default damage info with type `Unknown` and no source. Read-only. |
+| `Explosion` | [DamageInfo](./DamageInfo.md) | A damage info with type `Explosion` and `isSplashDamage` set to `true`. Read-only. |
 
 ## Static Methods
 
@@ -45,7 +45,7 @@ Evaluates the explosion damage at the specified point. Can optionally ignore lev
 | `point` | `Vector3` | The world position to evaluate explosion damage at. |
 | `ignoreLevelGeometry` | `bool` | Whether to ignore level geometry when evaluating the explosion damage. |
 
-[return: DamageInfo]
+[return: [DamageInfo](./DamageInfo.md)]
 The evaluated explosion damage info, or a default value if no explosion occurred.
 
 ## Enums
@@ -55,7 +55,7 @@ The evaluated explosion damage info, or a default value if no explosion occurred
 | Value | Description |
 |-------|-------------|
 | `Unknown` | Unknown damage source. |
-| `Projectile` | Damage from a projectile. |
+| [Projectile](./Projectile.md) | Damage from a projectile. |
 | `Melee` | Damage from a melee attack. |
 | `Explosion` | Damage from an explosion. |
 | `StickyExplosive` | Damage from a sticky explosive. |

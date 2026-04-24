@@ -20,9 +20,9 @@ Spawns a turret for the specified team. This will throw an error if the turret s
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to spawn the turret for. |
+| `team` | [Team](./Team.md) | The team to spawn the turret for. |
 
-[return: Vehicle]
+[return: [Vehicle](./Vehicle.md)]
 The spawned turret vehicle.
 
 ### SpawnTurret
@@ -31,12 +31,12 @@ Spawns a turret of the specified type at the given position and rotation.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to spawn the turret for. |
+| `team` | [Team](./Team.md) | The team to spawn the turret for. |
 | `type` | `TurretSpawnType` | The type of turret to spawn. |
 | `position` | `Vector3` | The position to spawn at. |
 | `rotation` | `Quaternion` | The rotation to spawn with. |
 
-[return: Vehicle]
+[return: [Vehicle](./Vehicle.md)]
 The spawned turret vehicle.
 
 ### SpawnTurret
@@ -45,13 +45,13 @@ Spawns a turret of the specified type and rarity tier at the given position and 
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to spawn the turret for. |
+| `team` | [Team](./Team.md) | The team to spawn the turret for. |
 | `type` | `TurretSpawnType` | The type of turret to spawn. |
 | `position` | `Vector3` | The position to spawn at. |
 | `rotation` | `Quaternion` | The rotation to spawn with. |
 | `tier` | `RarityTier` | The rarity tier of the turret to spawn. |
 
-[return: Vehicle]
+[return: [Vehicle](./Vehicle.md)]
 The spawned turret vehicle.
 
 ## Static Fields
@@ -68,10 +68,10 @@ Gets the prefab GameObject for a turret of the specified type and team.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to get the prefab for. |
+| `team` | [Team](./Team.md) | The team to get the prefab for. |
 | `type` | `TurretSpawnType` | The type of turret. |
 
-[return: GameObject]
+[return: [GameObject](./GameObject.md)]
 The turret prefab, or `nil`.
 
 ### GetPrefabVehicle
@@ -80,10 +80,10 @@ Gets the Vehicle component from the prefab for a turret of the specified type an
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to get the prefab for. |
+| `team` | [Team](./Team.md) | The team to get the prefab for. |
 | `type` | `TurretSpawnType` | The type of turret. |
 
-[return: Vehicle]
+[return: [Vehicle](./Vehicle.md)]
 The turret vehicle prefab, or `nil`.
 
 ## Enums

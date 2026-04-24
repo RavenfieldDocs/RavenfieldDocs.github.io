@@ -9,10 +9,10 @@ Represents a weapon entry in the weapon manager, containing metadata about a wea
 | Property | Type | Description |
 |----------|------|-------------|
 | `distance` | `Distance` | The effective combat distance for this weapon. |
-| `prefab` | `GameObject` | The weapon prefab. |
-| `prefabWeapon` | `[Weapon](./Weapon.md)` or `nil` | The Weapon component on the prefab, or `nil` if not found. |
+| `prefab` | [GameObject](./GameObject.md) | The weapon prefab. |
+| `prefabWeapon` | [Weapon](./Weapon.md) or `nil` | The Weapon component on the prefab, or `nil` if not found. |
 | `name` | `string` | The name of this weapon. |
-| `slot` | `WeaponSlot` | The equipment slot this weapon belongs to. |
+| `slot` | [WeaponSlot](./WeaponSlot.md) | The equipment slot this weapon belongs to. |
 | `tags` | `string[]` | The list of weapon tags, such as ``Assault``, ``Marksman`` etc. |
 | `mainRole` | `WeaponRole` | The main weapon role generated from the weapon's stats. |
 | `type` | `LoadoutType` | The loadout type of this weapon entry. |
@@ -40,7 +40,7 @@ Instantiates an imposter object of the weapon prefab. The imposter object contai
 | `position` | `Vector3` | The world position for the imposter. |
 | `rotation` | `Quaternion` | The world rotation for the imposter. |
 
-[return: `GameObject`]
+[return: [GameObject](./GameObject.md)]
 
 ## Events
 

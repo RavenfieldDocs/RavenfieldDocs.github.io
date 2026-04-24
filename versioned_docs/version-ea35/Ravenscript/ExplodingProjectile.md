@@ -8,7 +8,7 @@ A projectile that explodes on impact, dealing area damage. Extends [Projectile](
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `explosionConfiguration` | `ExplosionConfiguration` | The configuration defining the explosion's damage, range, force, and falloff behavior. |
+| `explosionConfiguration` | [ExplosionConfiguration](./ExplosionConfiguration.md) | The configuration defining the explosion's damage, range, force, and falloff behavior. |
 
 ## Methods
 
@@ -51,7 +51,7 @@ Creates an explosion configuration with a linear falloff. Typically useful for s
 | `balanceDamageRange` | `float` | Radius of balance damage. |
 | `force` | `float` | Explosion force. |
 
-[return: ExplosionConfiguration]
+[return: [ExplosionConfiguration](./ExplosionConfiguration.md)]
 
 ### CreateSharpFalloff
 
@@ -65,7 +65,7 @@ Creates an explosion configuration with sharp falloff. Typically useful for larg
 | `balanceDamageRange` | `float` | Radius of balance damage. |
 | `force` | `float` | Explosion force. |
 
-[return: ExplosionConfiguration]
+[return: [ExplosionConfiguration](./ExplosionConfiguration.md)]
 
 ### CreateSmoothStepFalloff
 
@@ -79,4 +79,4 @@ Creates an explosion configuration with smooth step falloff. Typically useful fo
 | `balanceDamageRange` | `float` | Radius of balance damage. |
 | `force` | `float` | Explosion force. |
 
-[return: ExplosionConfiguration]
+[return: [ExplosionConfiguration](./ExplosionConfiguration.md)]

@@ -8,7 +8,7 @@ Represents a transform (position, rotation, and scale) in 3D space.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `asRectTransform` | `RectTransform` or `nil` | Returns this transform as a rect transform. If unavailable, returns nil. |
+| `asRectTransform` | [RectTransform](./RectTransform.md) or `nil` | Returns this transform as a rect transform. If unavailable, returns nil. |
 
 ## Methods
 

@@ -40,7 +40,7 @@ Creates a new mean filter with the specified number of taps.
 |-----------|------|-------------|
 | `taps` | `int` | The number of samples to average over. |
 
-[return: MeanFilterVector3]
+[return: [MeanFilterVector3](./MeanFilterVector3.md)]
 A new `MeanFilterVector3` instance.
 
 ## Enums

@@ -13,9 +13,9 @@ Contains metadata about a map, including its display name, suggested bot count, 
 | `hasBuiltInGameMode` | `bool` | Whether the map has a built-in game mode. |
 | `hasGroundVehicles` | `bool` | Whether the map has ground vehicles. |
 | `hasNavalVehicles` | `bool` | Whether the map has naval vehicles. |
-| `mapBiome` | `[MapBiome](#mapbiome)` | The biome type of the map. |
-| `mapDecorator` | `[MapDecorator](#mapdecorator)` | The decorator type of the map. |
-| `mapTerrain` | `[MapTerrain](#mapterrain)` | The terrain type of the map. |
+| `mapBiome` | [MapBiome](#mapbiome) | The biome type of the map. |
+| `mapDecorator` | [MapDecorator](#mapdecorator) | The decorator type of the map. |
+| `mapTerrain` | [MapTerrain](#mapterrain) | The terrain type of the map. |
 | `suggestedBots` | `int` | The suggested number of bots for this map. |
 
 ## Methods

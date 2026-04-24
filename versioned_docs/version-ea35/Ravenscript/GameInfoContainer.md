@@ -8,7 +8,7 @@ Represents game configuration including team info and active mutators. Exposed a
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `mutators` | `MutatorEntryData[]` | The active mutators. |
+| `mutators` | [MutatorEntryData](./MutatorEntryData.md)[] | The active mutators. |
 
 ## Methods
 
@@ -18,7 +18,7 @@ Adds a mutator to the active mutators.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `mutator` | `MutatorEntryData` | The mutator to add. |
+| `mutator` | [MutatorEntryData](./MutatorEntryData.md) | The mutator to add. |
 
 ### ClearMutators
 
@@ -30,9 +30,9 @@ Gets team info for the specified team.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to get info for (Blue or Red). |
+| `team` | [Team](./Team.md) | The team to get info for (Blue or Red). |
 
-[return: TeamInfo]
+[return: [TeamInfo](./TeamInfo.md)]
 The team info for the specified team.
 
 ### SetTeamInfo
@@ -41,8 +41,8 @@ Sets team info for the specified team.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to set info for (Blue or Red). |
-| `teamInfo` | `[TeamInfo](./TeamInfo.md)` | The team info to set. |
+| `team` | [Team](./Team.md) | The team to set info for (Blue or Red). |
+| `teamInfo` | [TeamInfo](./TeamInfo.md) | The team info to set. |
 
 ## Events
 
@@ -64,23 +64,23 @@ Clones an existing GameInfoContainer.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `original` | `GameInfoContainer` | The GameInfoContainer to clone. |
+| `original` | [GameInfoContainer](./GameInfoContainer.md) | The GameInfoContainer to clone. |
 
-[return: GameInfoContainer]
+[return: [GameInfoContainer](./GameInfoContainer.md)]
 A clone of the GameInfoContainer.
 
 ### CreateEmpty
 
 Returns an empty GameInfoContainer.
 
-[return: GameInfoContainer]
+[return: [GameInfoContainer](./GameInfoContainer.md)]
 An empty GameInfoContainer.
 
 ### GetDefault
 
 Returns the default GameInfoContainer for the current loaded mods.
 
-[return: GameInfoContainer]
+[return: [GameInfoContainer](./GameInfoContainer.md)]
 The default GameInfoContainer.
 
 ## Enums

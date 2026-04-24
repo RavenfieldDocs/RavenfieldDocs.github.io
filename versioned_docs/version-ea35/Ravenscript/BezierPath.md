@@ -9,7 +9,7 @@ Represents a bezier spline path defined by a sequence of segments. Supports eval
 | Property | Type | Description |
 |----------|------|-------------|
 | `relativeToContainer` | `bool` | Whether the path is evaluated relative to its container transform. |
-| `segments` | `BezierSegment[]` | The array of bezier segments that define the path. |
+| `segments` | [BezierSegment](./BezierSegment.md)[] | The array of bezier segments that define the path. |
 
 ## Methods
 
@@ -53,9 +53,9 @@ Creates a new bezier path from an array of segments.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `segments` | `BezierSegment[]` | The array of bezier segments that define the path. |
+| `segments` | [BezierSegment](./BezierSegment.md)[] | The array of bezier segments that define the path. |
 
-[return: BezierPath]
+[return: [BezierPath](./BezierPath.md)]
 A new bezier path constructed from the given segments.
 
 ### Evaluate
@@ -64,8 +64,8 @@ Statically evaluates the position on a bezier curve between two segments at para
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `from` | `BezierSegment` | The starting segment of the curve. |
-| `to` | `BezierSegment` | The ending segment of the curve. |
+| `from` | [BezierSegment](./BezierSegment.md) | The starting segment of the curve. |
+| `to` | [BezierSegment](./BezierSegment.md) | The ending segment of the curve. |
 | `t` | `float` | The interpolation parameter from 0 to 1. |
 
 [return: Vector3]
@@ -77,8 +77,8 @@ Statically evaluates the tangent (derivative) of a bezier curve between two segm
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `from` | `BezierSegment` | The starting segment of the curve. |
-| `to` | `BezierSegment` | The ending segment of the curve. |
+| `from` | [BezierSegment](./BezierSegment.md) | The starting segment of the curve. |
+| `to` | [BezierSegment](./BezierSegment.md) | The ending segment of the curve. |
 | `t` | `float` | The interpolation parameter from 0 to 1. |
 
 [return: Vector3]

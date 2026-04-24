@@ -26,7 +26,7 @@ Creates a new color with the specified RGBA components.
 | `b` | `float` | The blue component (0 to 1). |
 | `a` | `float` | The alpha component (0 to 1). |
 
-[return: Color]
+[return: [Color](./Color.md)]
 
 ### Color
 
@@ -38,7 +38,7 @@ Creates a new color with the specified RGB components and an alpha of 1.
 | `g` | `float` | The green component (0 to 1). |
 | `b` | `float` | The blue component (0 to 1). |
 
-[return: Color]
+[return: [Color](./Color.md)]
 
 ## Events
 
@@ -49,17 +49,17 @@ Creates a new color with the specified RGB components and an alpha of 1.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `black` | `Color` | Solid black (RGBA 0, 0, 0, 1). |
-| `blue` | `Color` | Solid blue (RGBA 0, 0, 1, 1). |
-| `clear` | `Color` | Transparent black (RGBA 0, 0, 0, 0). |
-| `cyan` | `Color` | Solid cyan (RGBA 0, 1, 1, 1). |
-| `gray` | `Color` | Solid gray (RGBA 0.5, 0.5, 0.5, 1). |
-| `green` | `Color` | Solid green (RGBA 0, 1, 0, 1). |
-| `grey` | `Color` | Solid grey (RGBA 0.5, 0.5, 0.5, 1). |
-| `magenta` | `Color` | Solid magenta (RGBA 1, 0, 1, 1). |
-| `red` | `Color` | Solid red (RGBA 1, 0, 0, 1). |
-| `white` | `Color` | Solid white (RGBA 1, 1, 1, 1). |
-| `yellow` | `Color` | Solid yellow (RGBA 1, 1, 0, 1). |
+| `black` | [Color](./Color.md) | Solid black (RGBA 0, 0, 0, 1). |
+| `blue` | [Color](./Color.md) | Solid blue (RGBA 0, 0, 1, 1). |
+| `clear` | [Color](./Color.md) | Transparent black (RGBA 0, 0, 0, 0). |
+| `cyan` | [Color](./Color.md) | Solid cyan (RGBA 0, 1, 1, 1). |
+| `gray` | [Color](./Color.md) | Solid gray (RGBA 0.5, 0.5, 0.5, 1). |
+| `green` | [Color](./Color.md) | Solid green (RGBA 0, 1, 0, 1). |
+| `grey` | [Color](./Color.md) | Solid grey (RGBA 0.5, 0.5, 0.5, 1). |
+| `magenta` | [Color](./Color.md) | Solid magenta (RGBA 1, 0, 1, 1). |
+| `red` | [Color](./Color.md) | Solid red (RGBA 1, 0, 0, 1). |
+| `white` | [Color](./Color.md) | Solid white (RGBA 1, 1, 1, 1). |
+| `yellow` | [Color](./Color.md) | Solid yellow (RGBA 1, 1, 0, 1). |
 
 ## Static Methods
 
@@ -69,7 +69,7 @@ Converts an RGB color to HSV representation.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `color` | `Color` | The color to convert. |
+| `color` | [Color](./Color.md) | The color to convert. |
 
 [return: Vector3]
 A Vector3 where x is hue (0-1), y is saturation (0-1), and z is value (0-1).
@@ -82,7 +82,7 @@ Converts an HSV color to RGB representation.
 |-----------|------|-------------|
 | `v` | `Vector3` | A Vector3 where x is hue (0-1), y is saturation (0-1), and z is value (0-1). |
 
-[return: Color]
+[return: [Color](./Color.md)]
 The converted RGB color.
 
 ## Enums

@@ -8,9 +8,9 @@ Represents a Unity UI Button component accessible from Ravenscript.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `onClick` | `ScriptEvent` | Fires when the button is clicked. |
-| `onPointerEnter` | `ScriptEvent` | Fires when the pointer enters the button area. |
-| `onPointerExit` | `ScriptEvent` | Fires when the pointer exits the button area. |
+| `onClick` | [ScriptEvent](./ScriptEvent.md) | Fires when the button is clicked. |
+| `onPointerEnter` | [ScriptEvent](./ScriptEvent.md) | Fires when the pointer enters the button area. |
+| `onPointerExit` | [ScriptEvent](./ScriptEvent.md) | Fires when the pointer exits the button area. |
 | `onPointerClick` | `ScriptEvent<int>` | Fires when the pointer clicks on the button. The callback receives the pointer button index (0=left, 1=right, 2=middle). |
 | `onPointerDown` | `ScriptEvent<int>` | Fires when the pointer is pressed down on the button. The callback receives the pointer button index. |
 | `onPointerUp` | `ScriptEvent<int>` | Fires when the pointer is released on the button. The callback receives the pointer button index. |
@@ -21,9 +21,9 @@ Represents a Unity UI Button component accessible from Ravenscript.
 
 | Event | Signature | Description |
 |-------|-----------|-------------|
-| `onClick` | `ScriptEvent` | Triggered when the button is clicked. |
-| `onPointerEnter` | `ScriptEvent` | Triggered when the pointer enters the button area. |
-| `onPointerExit` | `ScriptEvent` | Triggered when the pointer exits the button area. |
+| `onClick` | [ScriptEvent](./ScriptEvent.md) | Triggered when the button is clicked. |
+| `onPointerEnter` | [ScriptEvent](./ScriptEvent.md) | Triggered when the pointer enters the button area. |
+| `onPointerExit` | [ScriptEvent](./ScriptEvent.md) | Triggered when the pointer exits the button area. |
 | `onPointerClick` | `ScriptEvent<int>` | Triggered when the pointer clicks on the button. The callback receives the pointer button index (0=left, 1=right, 2=middle). |
 | `onPointerDown` | `ScriptEvent<int>` | Triggered when the pointer is pressed down on the button. The callback receives the pointer button index. |
 | `onPointerUp` | `ScriptEvent<int>` | Triggered when the pointer is released on the button. The callback receives the pointer button index. |

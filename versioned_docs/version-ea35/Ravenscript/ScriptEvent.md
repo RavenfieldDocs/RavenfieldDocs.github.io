@@ -17,7 +17,7 @@ Adds ``script.methodName`` as an event handler. This handler is called every tim
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `script` | `ScriptedBehaviour` | The script containing the callback method. |
+| `script` | [ScriptedBehaviour](./ScriptedBehaviour.md) | The script containing the callback method. |
 | `methodName` | `string` | The name of the method to call when the event fires. |
 
 ### AddListener
@@ -26,7 +26,7 @@ Adds ``script.methodName`` as an event handler with a data argument. This handle
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `script` | `ScriptedBehaviour` | The script containing the callback method. |
+| `script` | [ScriptedBehaviour](./ScriptedBehaviour.md) | The script containing the callback method. |
 | `methodName` | `string` | The name of the method to call when the event fires. |
 | `listenerData` | `DynValue` | Custom data passed to the listener, accessible via ``CurrentEvent.listenerData``. |
 
@@ -36,7 +36,7 @@ Removes ``script.methodName`` from the list of event handlers.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `script` | `ScriptedBehaviour` | The script containing the callback method. |
+| `script` | [ScriptedBehaviour](./ScriptedBehaviour.md) | The script containing the callback method. |
 | `methodName` | `string` | The name of the method to remove. |
 
 ## Events

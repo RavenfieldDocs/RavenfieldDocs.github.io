@@ -26,9 +26,9 @@ Starts a match with the given map entry, game info, and game mode parameters.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `mapEntry` | `MapEntry` | The map entry to load. |
-| `info` | `GameInfo` | The game info settings. |
-| `parameters` | `GameModeParameters` | The game mode parameters. |
+| `mapEntry` | [MapEntry](./MapEntry.md) | The map entry to load. |
+| `info` | [GameInfo](./GameInfo.md) | The game info settings. |
+| `parameters` | [GameModeParameters](./GameModeParameters.md) | The game mode parameters. |
 
 ### LoadCampaignLobby
 

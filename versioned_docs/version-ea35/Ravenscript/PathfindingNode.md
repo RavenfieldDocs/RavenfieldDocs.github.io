@@ -20,7 +20,7 @@ Creates a new PathfindingNode from a GraphNode.
 |-----------|------|-------------|
 | `node` | `GraphNode` | The underlying graph node. |
 
-[return: PathfindingNode]
+[return: [PathfindingNode](./PathfindingNode.md)]
 
 ### RandomPointOnSurface
 

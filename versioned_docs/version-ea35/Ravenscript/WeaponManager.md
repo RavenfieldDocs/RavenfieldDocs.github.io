@@ -8,7 +8,7 @@ Manages weapons loaded into the game and provides AI weapon picking functionalit
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `allWeapons` | `[WeaponEntry](./WeaponEntry.md)[]` | All weapons loaded into the game. |
+| `allWeapons` | [WeaponEntry](./WeaponEntry.md)[] | All weapons loaded into the game. |
 
 ## Methods
 
@@ -18,8 +18,8 @@ Picks a primary weapon based on the loadout pick strategy. Only picks weapons th
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `strategy` | `[LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy)` | The loadout pick strategy to use. |
-| `team` | `[WTeam](./WTeam.md)` | The team to pick the weapon for. |
+| `strategy` | [LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy) | The loadout pick strategy to use. |
+| `team` | ``WTeam`` | The team to pick the weapon for. |
 
 [return: [WeaponEntry](./WeaponEntry.md)]
 The picked weapon entry.
@@ -30,8 +30,8 @@ Picks a secondary weapon based on the loadout pick strategy. Only picks weapons 
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `strategy` | `[LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy)` | The loadout pick strategy to use. |
-| `team` | `[WTeam](./WTeam.md)` | The team to pick the weapon for. |
+| `strategy` | [LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy) | The loadout pick strategy to use. |
+| `team` | ``WTeam`` | The team to pick the weapon for. |
 
 [return: [WeaponEntry](./WeaponEntry.md)]
 The picked weapon entry.
@@ -42,8 +42,8 @@ Picks a gear item based on the loadout pick strategy. Only picks weapons that ar
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `strategy` | `[LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy)` | The loadout pick strategy to use. |
-| `team` | `[WTeam](./WTeam.md)` | The team to pick the weapon for. |
+| `strategy` | [LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy) | The loadout pick strategy to use. |
+| `team` | ``WTeam`` | The team to pick the weapon for. |
 
 [return: [WeaponEntry](./WeaponEntry.md)]
 The picked weapon entry.
@@ -54,8 +54,8 @@ Picks a large gear item based on the loadout pick strategy. Only picks weapons t
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `strategy` | `[LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy)` | The loadout pick strategy to use. |
-| `team` | `[WTeam](./WTeam.md)` | The team to pick the weapon for. |
+| `strategy` | [LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy) | The loadout pick strategy to use. |
+| `team` | ``WTeam`` | The team to pick the weapon for. |
 
 [return: [WeaponEntry](./WeaponEntry.md)]
 The picked weapon entry.
@@ -66,8 +66,8 @@ Picks a small gear item based on the loadout pick strategy. Only picks weapons t
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `strategy` | `[LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy)` | The loadout pick strategy to use. |
-| `team` | `[WTeam](./WTeam.md)` | The team to pick the weapon for. |
+| `strategy` | [LoadoutPickStrategy](./AiActorController.md#LoadoutPickStrategy) | The loadout pick strategy to use. |
+| `team` | ``WTeam`` | The team to pick the weapon for. |
 
 [return: [WeaponEntry](./WeaponEntry.md)]
 The picked weapon entry.
@@ -76,8 +76,8 @@ The picked weapon entry.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `entry` | `[WeaponEntry](./WeaponEntry.md)` | The weapon entry to check. |
-| `team` | `[WTeam](./WTeam.md)` | The team to check availability for. |
+| `entry` | [WeaponEntry](./WeaponEntry.md) | The weapon entry to check. |
+| `team` | ``WTeam`` | The team to check availability for. |
 
 [return: `bool`]
 True if the weapon is available to the team.

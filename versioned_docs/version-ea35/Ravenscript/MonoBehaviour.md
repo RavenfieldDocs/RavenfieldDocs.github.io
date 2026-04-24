@@ -8,8 +8,8 @@ The base class for Unity scripts in Ravenscript. Provides access to the Transfor
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `transform` | `Transform` | The Transform component attached to this MonoBehaviour's GameObject. Read-only. |
-| `gameObject` | `[GameObject](./GameObject.md)` | The GameObject this MonoBehaviour is attached to. Read-only. |
+| `transform` | [Transform](./Transform.md) | The Transform component attached to this MonoBehaviour's GameObject. Read-only. |
+| `gameObject` | [GameObject](./GameObject.md) | The GameObject this MonoBehaviour is attached to. Read-only. |
 
 ## Methods
 

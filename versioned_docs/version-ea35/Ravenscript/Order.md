@@ -45,10 +45,10 @@ Creates a new Order instance.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `type` | `OrderType` | The type of order to create. |
-| `source` | `SpawnPoint` | The source spawn point. |
-| `target` | `SpawnPoint` | The target spawn point. |
+| `source` | [SpawnPoint](./SpawnPoint.md) | The source spawn point. |
+| `target` | [SpawnPoint](./SpawnPoint.md) | The target spawn point. |
 
-[return: Order]
+[return: [Order](./Order.md)]
 The newly created order.
 
 ### Create
@@ -58,11 +58,11 @@ Creates a new Order instance with an override target position.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `type` | `OrderType` | The type of order to create. |
-| `source` | `SpawnPoint` | The source spawn point. |
-| `target` | `SpawnPoint` | The target spawn point. |
+| `source` | [SpawnPoint](./SpawnPoint.md) | The source spawn point. |
+| `target` | [SpawnPoint](./SpawnPoint.md) | The target spawn point. |
 | `overridePosition` | `Vector3` | The override target position. |
 
-[return: Order]
+[return: [Order](./Order.md)]
 The newly created order.
 
 ### CreateMoveOrder
@@ -73,7 +73,7 @@ Convenience function that creates a move order to the specified override target 
 |-----------|------|-------------|
 | `targetPosition` | `Vector3` | The target position for the move order. |
 
-[return: Order]
+[return: [Order](./Order.md)]
 The newly created move order.
 
 ## Enums

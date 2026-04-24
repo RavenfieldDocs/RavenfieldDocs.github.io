@@ -9,8 +9,8 @@ All Ravenscript's are executed and managed by a ScriptedBehaviour component. Thi
 | Property | Type | Description |
 |----------|------|-------------|
 | `self` | `table` | Gets the script's Lua table aka. ``self``. |
-| `mutator` | `[Mutator](./Mutator.md)` or `nil` | The mutator associated with this ScriptedBehaviour. Returns `nil` if no mutator is associated with this script. |
-| `modSaveData` | `SaveData` or `nil` | The mod save data associated with this ScriptedBehaviour. Returns `nil` if no mod is associated. |
+| `mutator` | [Mutator](./Mutator.md) or `nil` | The mutator associated with this ScriptedBehaviour. Returns `nil` if no mutator is associated with this script. |
+| `modSaveData` | [SaveData](./SaveData.md) or `nil` | The mod save data associated with this ScriptedBehaviour. Returns `nil` if no mod is associated. |
 
 ## Methods
 
@@ -34,9 +34,9 @@ Finds and returns the first ScriptedBehaviour on the GameObject. Equivalent to `
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `go` | `GameObject` | The GameObject to find the script on. |
+| `go` | [GameObject](./GameObject.md) | The GameObject to find the script on. |
 
-[return: ScriptedBehaviour?]
+[return: [ScriptedBehaviour](./ScriptedBehaviour.md)?]
 The ScriptedBehaviour on the GameObject, or `nil` if none is found.
 
 ## Enums

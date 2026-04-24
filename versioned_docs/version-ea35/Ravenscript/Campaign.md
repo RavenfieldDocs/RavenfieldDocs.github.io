@@ -9,9 +9,9 @@ Use these methods to access campaign state.
 | Property | Type | Description |
 |----------|------|-------------|
 | `isActive` | `bool` | Returns `true` if a campaign is currently active. |
-| `saveData` | `SaveData` | The campaign save data, or `nil` if no campaign is active. |
-| `userGameInfo` | `GameInfoContainer` | The user's game info for the active campaign, or `nil` if no campaign is active. |
-| `userMapPool` | `MapEntryData[]` | The user's map pool for the active campaign, or `nil` if no campaign is active. |
+| `saveData` | [SaveData](./SaveData.md) | The campaign save data, or `nil` if no campaign is active. |
+| `userGameInfo` | [GameInfoContainer](./GameInfoContainer.md) | The user's game info for the active campaign, or `nil` if no campaign is active. |
+| `userMapPool` | [MapEntryData](./MapEntryData.md)[] | The user's map pool for the active campaign, or `nil` if no campaign is active. |
 | `guid` | `string` | The GUID of the active campaign, or `nil` if no campaign is active. |
 | `name` | `string` | The name of the active campaign, or `nil` if no campaign is active. |
 

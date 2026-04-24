@@ -8,8 +8,8 @@ Provides access to data assets stored in a mod's data container.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `gameObject` | `[GameObject](./GameObject.md)` | The underlying `GameObject` of the data container. |
-| `transform` | `[Transform](./Transform.md)` | The underlying `Transform` of the data container. |
+| `gameObject` | [GameObject](./GameObject.md) | The underlying [GameObject](./GameObject.md) of the data container. |
+| `transform` | [Transform](./Transform.md) | The underlying [Transform](./Transform.md) of the data container. |
 
 ## Methods
 
@@ -21,7 +21,7 @@ Gets an actor skin asset by its ID.
 |-----------|------|-------------|
 | `id` | `string` | The asset ID. |
 
-[return: ActorSkin?]
+[return: [ActorSkin](./ActorSkin.md)?]
 The actor skin, or `nil` if not found.
 
 ### GetActorSkinArray
@@ -32,7 +32,7 @@ Gets an array of actor skin assets by their ID.
 |-----------|------|-------------|
 | `id` | `string` | The asset ID. |
 
-[return: ActorSkin[]]
+[return: [ActorSkin](./ActorSkin.md)[]]
 An array of actor skins.
 
 ### GetAnimationCurve
@@ -87,7 +87,7 @@ Gets a bezier path asset by its ID.
 |-----------|------|-------------|
 | `id` | `string` | The asset ID. |
 
-[return: BezierPath?]
+[return: [BezierPath](./BezierPath.md)?]
 The bezier path, or `nil` if not found.
 
 ### GetBezierPathArray
@@ -98,7 +98,7 @@ Gets an array of bezier path assets by their ID.
 |-----------|------|-------------|
 | `id` | `string` | The asset ID. |
 
-[return: BezierPath[]]
+[return: [BezierPath](./BezierPath.md)[]]
 An array of bezier paths.
 
 ### GetBool
@@ -281,7 +281,7 @@ An array of materials.
 
 Gets all prefab GameObjects in the data container.
 
-[return: GameObject[]]
+[return: [GameObject](./GameObject.md)[]]
 An enumerable of prefab GameObjects.
 
 ### GetRotation

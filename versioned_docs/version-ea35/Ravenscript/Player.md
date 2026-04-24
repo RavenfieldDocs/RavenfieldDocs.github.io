@@ -8,8 +8,8 @@ Use these methods to get the player state.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `team` | `Team` | The player's team. |
-| `enemyTeam` | `Team` | The enemy team. |
+| `team` | [Team](./Team.md) | The player's team. |
+| `enemyTeam` | [Team](./Team.md) | The enemy team. |
 | `isSpectator` | `bool` | Returns `true` if the player is spectating. |
 | `nightvisionEnabled` | `bool` | Returns `true` if night vision is enabled. |
 | `allowMouseLook` | `bool` | Setting this value to `false` prevents the player from looking around. |
@@ -72,7 +72,7 @@ Sets the player's selected loadout.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `loadout` | `LoadoutSet` | The loadout to set. |
+| `loadout` | [LoadoutSet](./LoadoutSet.md) | The loadout to set. |
 
 ### SetAllowAutoWaveRespawn
 
@@ -158,14 +158,14 @@ Controls if player can exit vehicles.
 
 Returns the player's team.
 
-[return: Team]
+[return: [Team](./Team.md)]
 `Team`
 
 ### GetEnemyTeam
 
 Returns the enemy team.
 
-[return: Team]
+[return: [Team](./Team.md)]
 `Team`
 
 ### GetIsSpectator
@@ -200,14 +200,14 @@ Returns whether mouse look is allowed.
 
 Get the player squad.
 
-[return: Squad]
+[return: [Squad](./Squad.md)]
 `Squad`
 
 ### GetActor
 
 Get the player actor. This is the same as using `ActorManager.playerActor`.
 
-[return: Actor]
+[return: [Actor](./Actor.md)]
 `Actor`
 
 ### GetActorIsGrounded
@@ -228,7 +228,7 @@ Returns whether helicopter auto-hover mode is enabled.
 
 Returns the player's currently selected loadout.
 
-[return: LoadoutSet]
+[return: [LoadoutSet](./LoadoutSet.md)]
 `LoadoutSet`
 
 ### GetAllowAutoWaveRespawn

@@ -10,7 +10,7 @@ Represents a weapon in the game. Handles shooting, reloading, ammo, recoil, spre
 |----------|------|-------------|
 | `user` | [Actor](./Actor.md) | The actor currently using this weapon. |
 | `killCredit` | [Actor](./Actor.md) | The actor that gets damage/kill credits from this weapon. Automatically set to whoever equips this weapon, but can be overridden if required. |
-| `weaponEntry` | `WeaponEntry` | The weapon entry this weapon was instantiated from. |
+| `weaponEntry` | [WeaponEntry](./WeaponEntry.md) | The weapon entry this weapon was instantiated from. |
 | `useMaxAmmoPerReload` | `bool` | Whether maxAmmoPerReload is applied when reloading. |
 | `maxAmmoPerReload` | `int` | Max ammo that can be added when reloading. Requires useMaxAmmoPerReload to be true to be applied. |
 | `maxAmmo` | `int` | The maximum loaded ammo capacity of this weapon. |
@@ -33,8 +33,8 @@ Represents a weapon in the game. Handles shooting, reloading, ammo, recoil, spre
 | `isEmpty` | `bool` | Returns `true` if the loaded ammo is zero. |
 | `hasSpareAmmo` | `bool` | Returns `true` if the weapon has any spare ammo. |
 | `hasLoadedAmmo` | `bool` | Returns `true` if the weapon has any loaded ammo. |
-| `currentMuzzleTransform` | `Transform` | The muzzle transform that the next projectile will fire from. |
-| `muzzleTransforms` | `Transform[]` | All muzzle transforms on this weapon. |
+| `currentMuzzleTransform` | [Transform](./Transform.md) | The muzzle transform that the next projectile will fire from. |
+| `muzzleTransforms` | [Transform](./Transform.md)[] | All muzzle transforms on this weapon. |
 | `currentMuzzleIndex` | `int` | The index of the currently active muzzle. |
 | `animator` | `Animator` | Get the weapon animator. Please note that weapons carried by the AI never have animators. Only player carried weapons and MountedWeapons can have animators. |
 | `currentSpreadMagnitude` | `float` | The current spread magnitude of a weapon. The spread magnitude is the radius of a sphere 1 meter in front of the muzzle. The projectile may fire towards a random point inside that sphere. |
@@ -84,7 +84,7 @@ Represents a weapon in the game. Handles shooting, reloading, ammo, recoil, spre
 | `thirdPersonOffset` | `Vector3` | The offset of the third person weapon model. |
 | `thirdPersonRotation` | `Quaternion` | The rotation of the third person weapon model. |
 | `thirdPersonScale` | `float` | The scale of the third person weapon model. |
-| `scopeAimObject` | `GameObject` | The scope aim object that is shown when aiming down sights. |
+| `scopeAimObject` | [GameObject](./GameObject.md) | The scope aim object that is shown when aiming down sights. |
 
 ## Methods
 
@@ -140,7 +140,7 @@ Add a subweapon to this parent weapon, returning the subweapon index.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `subWeapon` | `Weapon` | The sub weapon to add. |
+| `subWeapon` | [Weapon](./Weapon.md) | The sub weapon to add. |
 
 [return: int]
 The index of the added sub weapon.
@@ -159,7 +159,7 @@ Removes a subweapon from this parent weapon.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `subWeapon` | `Weapon` | The sub weapon to remove. |
+| `subWeapon` | [Weapon](./Weapon.md) | The sub weapon to remove. |
 
 ### NextSightMode
 
@@ -188,7 +188,7 @@ The matched weapon role.
 
 Returns the weapon's projectile prefab.
 
-[return: GameObject]
+[return: [GameObject](./GameObject.md)]
 The projectile prefab.
 
 ### SetProjectilePrefab
@@ -197,7 +197,7 @@ Sets the weapon's projectile prefab.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `prefab` | `GameObject` | The projectile prefab to use. |
+| `prefab` | [GameObject](./GameObject.md) | The projectile prefab to use. |
 
 ## Events
 

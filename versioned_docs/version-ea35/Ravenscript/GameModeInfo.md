@@ -25,12 +25,12 @@ Represents a game mode, such as Battle, Domination, or Skirmish.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `officialBattle` | `GameModeInfo` | The official Battle game mode. |
-| `officialDomination` | `GameModeInfo` | The official Domination game mode. |
-| `officialHaunted` | `GameModeInfo` | The official Haunted game mode. |
-| `officialPointMatch` | `GameModeInfo` | The official Point Match game mode. |
-| `officialSkirmish` | `GameModeInfo` | The official Skirmish game mode. |
-| `officialSpecOps` | `GameModeInfo` | The official Spec Ops game mode. |
+| `officialBattle` | [GameModeInfo](./GameModeInfo.md) | The official Battle game mode. |
+| `officialDomination` | [GameModeInfo](./GameModeInfo.md) | The official Domination game mode. |
+| `officialHaunted` | [GameModeInfo](./GameModeInfo.md) | The official Haunted game mode. |
+| `officialPointMatch` | [GameModeInfo](./GameModeInfo.md) | The official Point Match game mode. |
+| `officialSkirmish` | [GameModeInfo](./GameModeInfo.md) | The official Skirmish game mode. |
+| `officialSpecOps` | [GameModeInfo](./GameModeInfo.md) | The official Spec Ops game mode. |
 
 ## Static Methods
 

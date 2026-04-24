@@ -29,7 +29,7 @@ Converts a `PathfindingNodeType` to a `PathfindingBox.Type`.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `self` | `PathfindingNodeType` | The pathfinding node type to convert. |
+| `self` | [PathfindingNodeType](./PathfindingNodeType.md) | The pathfinding node type to convert. |
 
 [return: PathfindingBoxType]
 The converted pathfinding box type.

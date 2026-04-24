@@ -9,7 +9,7 @@ Represents a map entry containing map metadata and related information.
 | Property | Type | Description |
 |----------|------|-------------|
 | `displayName` | `string` | The display name of the map. Use this when displaying the map name. This is the same as accessing the map metadata display name. |
-| `metaData` | `[MapMetaData](./MapMetaData.md)` | The map metadata. |
+| `metaData` | [MapMetaData](./MapMetaData.md) | The map metadata. |
 
 ## Methods
 
@@ -45,7 +45,7 @@ Attempts to resolve the map entry by name.
 |-----------|------|-------------|
 | `name` | `string` | The name of the map to resolve. |
 
-[return: `MapEntry?`]
+[return: [MapEntry](./MapEntry.md)?]
 Returns the map entry if found, or `nil` if no map with the name is found.
 
 ## Enums

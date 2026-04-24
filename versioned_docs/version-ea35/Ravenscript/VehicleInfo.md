@@ -21,7 +21,7 @@ Gets the `VehicleInfo` associated with a given prefab.
 |-----------|------|-------------|
 | `prefab` | [GameObject](./GameObject.md) | The prefab to look up. |
 
-[return: VehicleInfo?]
+[return: [VehicleInfo](./VehicleInfo.md)?]
 The `VehicleInfo` for the prefab, or `nil` if the prefab has no vehicle.
 
 ### GetHashCode

@@ -20,7 +20,7 @@ Draws a line in the scene. Only works in test mode.
 |-----------|------|-------------|
 | `from` | `Vector3` | The start point of the line. |
 | `to` | `Vector3` | The end point of the line. |
-| `color` | `Color` | The color of the line. |
+| `color` | [Color](./Color.md) | The color of the line. |
 
 ### DrawLine
 
@@ -28,7 +28,7 @@ Draws a line in the scene. Only works in test mode.
 |-----------|------|-------------|
 | `from` | `Vector3` | The start point of the line. |
 | `to` | `Vector3` | The end point of the line. |
-| `color` | `Color` | The color of the line. |
+| `color` | [Color](./Color.md) | The color of the line. |
 | `duration` | `float` | How long the line should be visible, in seconds. |
 
 ### DrawLine
@@ -37,7 +37,7 @@ Draws a line in the scene. Only works in test mode.
 |-----------|------|-------------|
 | `from` | `Vector3` | The start point of the line. |
 | `to` | `Vector3` | The end point of the line. |
-| `color` | `Color` | The color of the line. |
+| `color` | [Color](./Color.md) | The color of the line. |
 | `duration` | `float` | How long the line should be visible, in seconds. |
 | `localToWorldMatrix` | `Matrix4x4` | A transformation matrix to apply to the line. |
 
@@ -48,14 +48,14 @@ Draws a path (connected line segments) in the scene. Only works in test mode.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `vertices` | `Vector3[]` | An array of points defining the path. |
-| `color` | `Color` | The color of the path. |
+| `color` | [Color](./Color.md) | The color of the path. |
 
 ### DrawPath
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `vertices` | `Vector3[]` | An array of points defining the path. |
-| `color` | `Color` | The color of the path. |
+| `color` | [Color](./Color.md) | The color of the path. |
 | `duration` | `float` | How long the path should be visible, in seconds. |
 
 ### DrawPath
@@ -63,7 +63,7 @@ Draws a path (connected line segments) in the scene. Only works in test mode.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `vertices` | `Vector3[]` | An array of points defining the path. |
-| `color` | `Color` | The color of the path. |
+| `color` | [Color](./Color.md) | The color of the path. |
 | `duration` | `float` | How long the path should be visible, in seconds. |
 | `localToWorldMatrix` | `Matrix4x4` | A transformation matrix to apply to the path. |
 
@@ -75,7 +75,7 @@ Draws a ray (a line with a start point and direction) in the scene. Only works i
 |-----------|------|-------------|
 | `from` | `Vector3` | The start point of the ray. |
 | `direction` | `Vector3` | The direction of the ray. |
-| `color` | `Color` | The color of the ray. |
+| `color` | [Color](./Color.md) | The color of the ray. |
 
 ### DrawRay
 
@@ -83,7 +83,7 @@ Draws a ray (a line with a start point and direction) in the scene. Only works i
 |-----------|------|-------------|
 | `from` | `Vector3` | The start point of the ray. |
 | `direction` | `Vector3` | The direction of the ray. |
-| `color` | `Color` | The color of the ray. |
+| `color` | [Color](./Color.md) | The color of the ray. |
 | `duration` | `float` | How long the ray should be visible, in seconds. |
 
 ### DrawRay
@@ -92,7 +92,7 @@ Draws a ray (a line with a start point and direction) in the scene. Only works i
 |-----------|------|-------------|
 | `from` | `Vector3` | The start point of the ray. |
 | `direction` | `Vector3` | The direction of the ray. |
-| `color` | `Color` | The color of the ray. |
+| `color` | [Color](./Color.md) | The color of the ray. |
 | `duration` | `float` | How long the ray should be visible, in seconds. |
 | `localToWorldMatrix` | `Matrix4x4` | A transformation matrix to apply to the ray. |
 

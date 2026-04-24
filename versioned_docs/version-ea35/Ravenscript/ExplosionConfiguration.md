@@ -31,7 +31,7 @@ Creates a new configuration with linear falloff curves.
 | `balanceDamageRange` | `float` | The balance damage range. |
 | `force` | `float` | The explosion force. |
 
-[return: ExplosionConfiguration]
+[return: [ExplosionConfiguration](./ExplosionConfiguration.md)]
 
 ### CreateSharpFalloff
 
@@ -45,7 +45,7 @@ Creates a new configuration with sharp falloff curves.
 | `balanceDamageRange` | `float` | The balance damage range. |
 | `force` | `float` | The explosion force. |
 
-[return: ExplosionConfiguration]
+[return: [ExplosionConfiguration](./ExplosionConfiguration.md)]
 
 ### CreateSmoothStepFalloff
 
@@ -59,7 +59,7 @@ Creates a new configuration with smooth step falloff curves.
 | `balanceDamageRange` | `float` | The balance damage range. |
 | `force` | `float` | The explosion force. |
 
-[return: ExplosionConfiguration]
+[return: [ExplosionConfiguration](./ExplosionConfiguration.md)]
 
 ## Events
 
@@ -71,6 +71,6 @@ Creates a new configuration with smooth step falloff curves.
 
 Creates a new `ExplosionConfiguration` instance. Called via `()`.
 
-[return: ExplosionConfiguration]
+[return: [ExplosionConfiguration](./ExplosionConfiguration.md)]
 
 ## Enums

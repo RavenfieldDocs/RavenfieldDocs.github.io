@@ -43,7 +43,7 @@ Gets the closest helicopter landing zone to the target position. Does not return
 |-----------|------|-------------|
 | `position` | `Vector3` | The position to search from. |
 
-[return: HelicopterLandingZone?]
+[return: [HelicopterLandingZone](./HelicopterLandingZone.md)?]
 The closest unclaimed landing zone, or nil if none is found.
 
 ## Enums

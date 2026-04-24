@@ -8,9 +8,9 @@ Represents hit information containing references to an actor, vehicle, or destru
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `actor` | `[Actor](./Actor.md)` | The actor that was hit, or `nil`. |
-| `destructible` | `[Destructible](./Destructible.md)` | The destructible that was hit, or `nil`. |
-| `vehicle` | `[Vehicle](./Vehicle.md)` | The vehicle that was hit, or `nil`. |
+| `actor` | [Actor](./Actor.md) | The actor that was hit, or `nil`. |
+| `destructible` | [Destructible](./Destructible.md) | The destructible that was hit, or `nil`. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle that was hit, or `nil`. |
 
 ## Methods
 
@@ -35,33 +35,33 @@ A string describing the hit info.
 
 ### Call
 
-Creates a new `HitInfo` instance. Can be called with an `[Actor](./Actor.md)`, `[Vehicle](./Vehicle.md)`, `[Destructible](./Destructible.md)`, or no arguments.
+Creates a new `HitInfo` instance. Can be called with an [Actor](./Actor.md), [Vehicle](./Vehicle.md), [Destructible](./Destructible.md), or no arguments.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `[Actor](./Actor.md)` | The actor that was hit. |
+| `actor` | [Actor](./Actor.md) | The actor that was hit. |
 
-[return: HitInfo]
+[return: [HitInfo](./HitInfo.md)]
 A new `HitInfo` wrapping the given actor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `[Vehicle](./Vehicle.md)` | The vehicle that was hit. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle that was hit. |
 
-[return: HitInfo]
+[return: [HitInfo](./HitInfo.md)]
 A new `HitInfo` wrapping the given vehicle.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `destructible` | `[Destructible](./Destructible.md)` | The destructible that was hit. |
+| `destructible` | [Destructible](./Destructible.md) | The destructible that was hit. |
 
-[return: HitInfo]
+[return: [HitInfo](./HitInfo.md)]
 A new `HitInfo` wrapping the given destructible.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
 
-[return: HitInfo]
+[return: [HitInfo](./HitInfo.md)]
 A new empty `HitInfo`.
 
 ## Enums

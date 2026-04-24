@@ -30,5 +30,5 @@ Enum representing the different types of pathfinding nodes used for AI navigatio
 | Value | Description |
 |-------|-------------|
 | `Infantry` | Node type for infantry units. |
-| `Car` | Node type for car/ground vehicles. |
-| `Boat` | Node type for boat/water vehicles. |
+| [Car](./Car.md) | Node type for car/ground vehicles. |
+| [Boat](./Boat.md) | Node type for boat/water vehicles. |

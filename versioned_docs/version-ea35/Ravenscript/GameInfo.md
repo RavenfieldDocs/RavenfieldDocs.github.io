@@ -18,9 +18,9 @@ Gets team info for the specified team.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to get info for (Blue or Red). |
+| `team` | [Team](./Team.md) | The team to get info for (Blue or Red). |
 
-[return: TeamInfo]
+[return: [TeamInfo](./TeamInfo.md)]
 The team info for the specified team.
 
 ### SetTeamInfo
@@ -29,14 +29,14 @@ Sets team info for the specified team.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to set info for (Blue or Red). |
-| `teamInfo` | `TeamInfo` | The team info to set. |
+| `team` | [Team](./Team.md) | The team to set info for (Blue or Red). |
+| `teamInfo` | [TeamInfo](./TeamInfo.md) | The team info to set. |
 
 ### GetMutators
 
 Gets the active mutators.
 
-[return: MutatorEntryData[]]
+[return: [MutatorEntryData](./MutatorEntryData.md)[]]
 The active mutators.
 
 ### SetMutators
@@ -45,7 +45,7 @@ Sets the active mutators.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `mutators` | `MutatorEntryData[]` | The mutators to set as active. |
+| `mutators` | [MutatorEntryData](./MutatorEntryData.md)[] | The mutators to set as active. |
 
 ### ClearMutators
 
@@ -57,7 +57,7 @@ Adds a mutator to the active mutators.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `mutator` | `MutatorEntryData` | The mutator to add. |
+| `mutator` | [MutatorEntryData](./MutatorEntryData.md) | The mutator to add. |
 
 ## Events
 
@@ -77,7 +77,7 @@ Adds a mutator to the active mutators.
 
 Returns the default GameInfo for the current loaded mods.
 
-[return: GameInfo]
+[return: [GameInfo](./GameInfo.md)]
 The default GameInfo.
 
 ### Clone
@@ -86,16 +86,16 @@ Clones an existing GameInfo.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `original` | `GameInfo` | The GameInfo to clone. |
+| `original` | [GameInfo](./GameInfo.md) | The GameInfo to clone. |
 
-[return: GameInfo]
+[return: [GameInfo](./GameInfo.md)]
 A clone of the GameInfo.
 
 ### CreateEmpty
 
 Returns an empty GameInfo.
 
-[return: GameInfo]
+[return: [GameInfo](./GameInfo.md)]
 An empty GameInfo.
 
 ## Enums

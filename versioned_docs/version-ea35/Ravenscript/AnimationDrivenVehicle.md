@@ -10,12 +10,12 @@ Represents a vehicle driven by animations rather than physics, with all the stan
 |----------|------|-------------|
 | `inputSmoothness` | `int` | The smoothness of input interpolation. |
 | `planeInput` | `bool` | Whether to use airplane-style input. |
-| `gameObject` | `GameObject` | The underlying GameObject. |
-| `transform` | `Transform` | The underlying Transform. |
+| `gameObject` | [GameObject](./GameObject.md) | The underlying GameObject. |
+| `transform` | [Transform](./Transform.md) | The underlying Transform. |
 | `avoidanceRadius` | `float` | The radius of the vehicle's specified avoidance size. |
 | `canSeePlayer` | `bool` | Returns `true` if there is a line of sight between the vehicle's lock on point and the player camera. |
 | `driver` | [Actor](./Actor.md) | The actor currently driving this vehicle. |
-| `engine` | `Engine` | The vehicle's engine component. |
+| `engine` | [Engine](./Engine.md) | The vehicle's engine component. |
 | `hasCountermeasures` | `bool` | Whether the vehicle has countermeasures available. |
 | `health` | `float` | Current health. |
 | `isAirplane` | `bool` | Returns `true` if this vehicle is an Airplane. |
@@ -34,17 +34,17 @@ Represents a vehicle driven by animations rather than physics, with all the stan
 | `playerDistance` | `float` | The distance from this vehicle to the nearest player. |
 | `playerIsInside` | `bool` | Whether a player is inside this vehicle. |
 | `rigidbody` | `Rigidbody` | The vehicle's rigidbody component. |
-| `seats` | `Seat[]` | Array of seats on this vehicle. |
+| `seats` | [Seat](./Seat.md)[] | Array of seats on this vehicle. |
 | `spotChanceMultiplier` | `float` | Multiplier for the chance this vehicle is spotted by AI. |
 | `team` | `int` | The team index this vehicle belongs to. |
-| `vehicleInfo` | `VehicleInfo` | The vehicle's info asset. |
+| `vehicleInfo` | [VehicleInfo](./VehicleInfo.md) | The vehicle's info asset. |
 | `hasDriver` | `bool` | Whether the vehicle has a driver. |
 | `isDead` | `bool` | Whether the vehicle is destroyed. |
 | `isEmpty` | `bool` | Whether all seats are empty. |
 | `isFull` | `bool` | Whether all seats are occupied. |
 | `isInWater` | `bool` | Whether the vehicle is in water. |
-| `onClaimDropped` | `ScriptEvent<Squad>` | Invoked whenever a squad drops their claim over this vehicle. |
-| `onClaimedBySquad` | `ScriptEvent<Squad>` | Invoked whenever a squad claims this vehicle. |
+| `onClaimDropped` | ScriptEvent\<[Squad](./Squad.md)\> | Invoked whenever a squad drops their claim over this vehicle. |
+| `onClaimedBySquad` | ScriptEvent\<[Squad](./Squad.md)\> | Invoked whenever a squad claims this vehicle. |
 
 ## Methods
 
@@ -79,13 +79,13 @@ Gets the first available empty seat in the vehicle.
 |-----------|------|-------------|
 | `allowDriverSeat` | `bool` | Whether to allow returning the driver seat. |
 
-[return: Seat]
+[return: [Seat](./Seat.md)]
 
 ### GetTrackingMissiles
 
 Returns all missile projectiles that are currently tracking this vehicle.
 
-[return: TargetSeekingMissile[]]
+[return: [TargetSeekingMissile](./TargetSeekingMissile.md)[]]
 
 ### Repair
 
@@ -108,8 +108,8 @@ Returns a string representation of the vehicle.
 
 | Event | Signature | Description |
 |-------|-----------|-------------|
-| `onClaimedBySquad` | `ScriptEvent<Squad>` | Invoked whenever a squad claims this vehicle. |
-| `onClaimDropped` | `ScriptEvent<Squad>` | Invoked whenever a squad drops their claim over this vehicle. |
+| `onClaimedBySquad` | ScriptEvent\<[Squad](./Squad.md)\> | Invoked whenever a squad claims this vehicle. |
+| `onClaimDropped` | ScriptEvent\<[Squad](./Squad.md)\> | Invoked whenever a squad drops their claim over this vehicle. |
 
 ## Static Fields
 

@@ -12,7 +12,7 @@ Use this class to control the loadout and deployment UI.
 | `hasBeenOpen` | `bool` | True if the UI has been open at least once this game. |
 | `hasBeenClosed` | `bool` | True if the UI has been closed at least once this game. |
 | `playerCanSelectSpawnPoint` | `bool` | True if the player can select their spawn point from the loadout minimap. |
-| `selectedSpawnPoint` | `[SpawnPoint](./SpawnPoint.md)` |  |
+| `selectedSpawnPoint` | [SpawnPoint](./SpawnPoint.md) |  |
 
 ## Methods
 
@@ -50,7 +50,7 @@ Override the loadout section of the UI.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `loadout` | `GameObject` |  |
+| `loadout` | [GameObject](./GameObject.md) |  |
 
 ### SetMinimapOverride
 
@@ -58,7 +58,7 @@ Override the minimap section of the UI.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `minimap` | `GameObject` |  |
+| `minimap` | [GameObject](./GameObject.md) |  |
 
 ### SetSelectedSpawnPoint
 
@@ -66,13 +66,13 @@ Sets the player selected spawn point. If set to nil, the player will not automat
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `spawnPoint` | `[SpawnPoint](./SpawnPoint.md)` |  |
+| `spawnPoint` | [SpawnPoint](./SpawnPoint.md) |  |
 
 ### GetSelectedSpawnPoint
 
 Returns the player selected spawn point.
 
-[return: `[SpawnPoint](./SpawnPoint.md)?`]
+[return: [SpawnPoint](./SpawnPoint.md)?]
 
 ## Events
 

@@ -8,19 +8,19 @@ Represents a spawn point in the game world. Handles spawning of vehicles, turret
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `gameObject` | `GameObject` | The GameObject attached to this SpawnPoint. |
-| `transform` | `Transform` | The Transform of this SpawnPoint. |
+| `gameObject` | [GameObject](./GameObject.md) | The GameObject attached to this SpawnPoint. |
+| `transform` | [Transform](./Transform.md) | The Transform of this SpawnPoint. |
 | `capturePoint` | [CapturePoint](./CapturePoint.md) | Returns the CapturePoint if this SpawnPoint is one, otherwise nil. |
-| `defaultOwner` | `Team` | The default owning team of this spawn point. |
+| `defaultOwner` | [Team](./Team.md) | The default owning team of this spawn point. |
 | `name` | `string` | The short name of this spawn point (maps to `shortName` in C#). |
 | `neighours` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors connected to this point, ignoring one way connections. |
 | `neighoursIncoming` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can attack this point, respecting one way connections. |
 | `neighoursOutgoing` | [SpawnPoint](./SpawnPoint.md)[] | Gets all neighbors that can be attacked from point, respecting one way connections. |
-| `owner` | `Team` | The current owning team of this spawn point. |
-| `spawnpointContainer` | `Transform` | Container transform for spawn point positions. |
+| `owner` | [Team](./Team.md) | The current owning team of this spawn point. |
+| `spawnpointContainer` | [Transform](./Transform.md) | Container transform for spawn point positions. |
 | `spawnPosition` | `Vector3` | The spawn position of this point. |
-| `turretSpawners` | `TurretSpawner[]` | Turret spawners associated with this spawn point. |
-| `vehicleSpawners` | `VehicleSpawner[]` | Vehicle spawners associated with this spawn point. |
+| `turretSpawners` | [TurretSpawner](./TurretSpawner.md)[] | Turret spawners associated with this spawn point. |
+| `vehicleSpawners` | [VehicleSpawner](./VehicleSpawner.md)[] | Vehicle spawners associated with this spawn point. |
 | `landingZones` | `LandingZone[]` | Landing zones associated with this spawn point. |
 | `isCapturePoint` | `bool` | Returns true if this is a CapturePoint. |
 
@@ -32,7 +32,7 @@ Adds a spawn point as an incoming neighbor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `spawn` | `SpawnPoint` | The spawn point to add as an incoming neighbor. |
+| `spawn` | [SpawnPoint](./SpawnPoint.md) | The spawn point to add as an incoming neighbor. |
 
 ### AddOutgoingNeighbor
 
@@ -40,7 +40,7 @@ Adds a spawn point as an outgoing neighbor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `spawn` | `SpawnPoint` | The spawn point to add as an outgoing neighbor. |
+| `spawn` | [SpawnPoint](./SpawnPoint.md) | The spawn point to add as an outgoing neighbor. |
 
 ### AddNeighbor
 
@@ -48,7 +48,7 @@ Adds a spawn point as a bidirectional neighbor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `spawn` | `SpawnPoint` | The spawn point to add as a neighbor. |
+| `spawn` | [SpawnPoint](./SpawnPoint.md) | The spawn point to add as a neighbor. |
 
 ### FindNearbyStuff
 
@@ -95,7 +95,7 @@ Gets an available vehicle matching the filter.
 | `filter` | `VehicleFilter` | Filter to apply to vehicles. |
 | `passengers` | `int` | Required number of passenger seats (default: -1). |
 
-[return: Vehicle]
+[return: [Vehicle](./Vehicle.md)]
 The available vehicle matching the filter, or nil.
 
 ### GetAvailableVehicle
@@ -125,7 +125,7 @@ Returns true if the vehicle is a valid defense turret for this spawn point.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `Vehicle` | The vehicle to check. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle to check. |
 
 [return: bool]
 `true` if the vehicle is a valid defense turret.
@@ -144,7 +144,7 @@ Returns true if the given transform faces an enemy spawn.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `transform` | `Transform` | The transform to check. |
+| `transform` | [Transform](./Transform.md) | The transform to check. |
 
 [return: bool]
 `true` if the transform faces an enemy spawn.
@@ -167,7 +167,7 @@ Gets the number of spawn points in a container.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `container` | `Transform` | The container to count spawn points in. |
+| `container` | [Transform](./Transform.md) | The container to count spawn points in. |
 
 [return: int]
 The number of spawn points in the container.
@@ -178,7 +178,7 @@ Gets a random position from a spawn point container.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `container` | `Transform` | The container to pick a random spawn point from. |
+| `container` | [Transform](./Transform.md) | The container to pick a random spawn point from. |
 
 [return: Vector3]
 A random spawn position from the container.
@@ -266,7 +266,7 @@ Returns true if the other spawn point is a neighbor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `other` | `SpawnPoint` | The other spawn point to check. |
+| `other` | [SpawnPoint](./SpawnPoint.md) | The other spawn point to check. |
 
 [return: bool]
 `true` if the other spawn point is a neighbor.

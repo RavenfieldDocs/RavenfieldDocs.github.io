@@ -8,10 +8,10 @@ A collection of audio clips that can be played back through an audio source, wit
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `audioSource` | `[AudioSource](./AudioSource.md)` or `nil` | The audio source used to play sounds from this bank. |
-| `clips` | `AudioClip[]` | The array of audio clips in this sound bank. |
-| `gameObject` | `[GameObject](./GameObject.md)` | The game object this sound bank is attached to. |
-| `transform` | `[Transform](./Transform.md)` | The transform of the game object this sound bank is attached to. |
+| `audioSource` | [AudioSource](./AudioSource.md) or `nil` | The audio source used to play sounds from this bank. |
+| `clips` | [AudioClip](./AudioClip.md)[] | The array of audio clips in this sound bank. |
+| `gameObject` | [GameObject](./GameObject.md) | The game object this sound bank is attached to. |
+| `transform` | [Transform](./Transform.md) | The transform of the game object this sound bank is attached to. |
 
 ## Methods
 

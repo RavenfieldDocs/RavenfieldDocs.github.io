@@ -8,7 +8,7 @@ Represents an airplane vehicle in the game.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `vehicle` | `[Vehicle](./Vehicle.md)` | Returns this airplane as a base `Vehicle`. |
+| `vehicle` | [Vehicle](./Vehicle.md) | Returns this airplane as a base [Vehicle](./Vehicle.md). |
 
 ## Methods
 

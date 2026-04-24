@@ -12,7 +12,7 @@ Get the portrait sprite for the runtime generated actor portrait.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `[Team](./Team.md)` | The team to get the portrait for. |
+| `team` | [Team](./Team.md) | The team to get the portrait for. |
 
 [return: Sprite]
 The portrait sprite.
@@ -23,7 +23,7 @@ Renders a portrait using the specified team skin.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `[Team](./Team.md)` | The team to render the portrait for. |
+| `team` | [Team](./Team.md) | The team to render the portrait for. |
 
 [return: Texture]
 The rendered portrait texture.
@@ -37,7 +37,7 @@ Renders a portrait using the specified skin.
 | `mesh` | `Mesh` | The mesh of the skin. |
 | `materials` | `Material[]` | The materials of the skin. |
 | `teamMaterialIndex` | `int` | The material index for team colors. |
-| `team` | `[Team](./Team.md)` | The team to render the portrait for. |
+| `team` | [Team](./Team.md) | The team to render the portrait for. |
 
 [return: Texture]
 The rendered portrait texture.

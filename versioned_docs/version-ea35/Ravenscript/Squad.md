@@ -14,12 +14,12 @@ Represents a squad of actors in the game world. Handles squad orders, formations
 | `leader` | [Actor](./Actor.md) | The current leader of this squad. |
 | `hasPlayerLeader` | `bool` | Returns `true` if the squad leader is a player. |
 | `squadVehicle` | [Vehicle](./Vehicle.md) | The vehicle claimed by this squad. |
-| `claimedLandingZone` | `HelicopterLandingZone` | The landing zone currently claimed by this squad. |
+| `claimedLandingZone` | [HelicopterLandingZone](./HelicopterLandingZone.md) | The landing zone currently claimed by this squad. |
 | `hasLandingZoneClaim` | `bool` | Returns `true` if this squad has a landing zone claim. |
 | `isPerformingLanding` | `bool` | Returns `true` if the squad is performing a landing or has landed a helicopter. Also see `hasLanded`. |
 | `hasLanded` | `bool` | Returns `true` if the squad has landed their helicopter. |
 | `autoDropTransportedPassengers` | `bool` | When set to true while in transport vehicle, will automatically drop passengers when close to attack point destination. |
-| `onIssueOrderMovement` | `ScriptEvent<Order>` | Invoked whenever the squad leader wants to go to the order objective. Consuming this event prevents the default squad leader movement. |
+| `onIssueOrderMovement` | ScriptEvent\<[Order](./Order.md)\> | Invoked whenever the squad leader wants to go to the order objective. Consuming this event prevents the default squad leader movement. |
 
 ## Methods
 
@@ -29,7 +29,7 @@ Assigns a new order to this squad.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `order` | `Order` | The order to assign. |
+| `order` | [Order](./Order.md) | The order to assign. |
 
 ### SetFormation
 
@@ -66,7 +66,7 @@ Assign a new member to this squad.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `newMember` | `Actor` | The actor to add to the squad. |
+| `newMember` | [Actor](./Actor.md) | The actor to add to the squad. |
 
 ### RemoveMember
 
@@ -74,7 +74,7 @@ Removes a member from this squad.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `member` | `Actor` | The actor to remove from the squad. |
+| `member` | [Actor](./Actor.md) | The actor to remove from the squad. |
 
 ### SplitSquad
 
@@ -84,7 +84,7 @@ Removes a number of actors from this squad. The removed actors will form their o
 |-----------|------|-------------|
 | `count` | `int` | The number of members to remove from the squad. |
 
-[return: Squad]
+[return: [Squad](./Squad.md)]
 The newly created squad.
 
 ### SplitSquad
@@ -93,9 +93,9 @@ Removes the specified actors from this squad. The removed actors will form their
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `membersToDrop` | `Actor[]` | The actors to remove from the squad. |
+| `membersToDrop` | [Actor](./Actor.md)[] | The actors to remove from the squad. |
 
-[return: Squad]
+[return: [Squad](./Squad.md)]
 The newly created squad.
 
 ### ClaimLandingZone
@@ -104,7 +104,7 @@ Claims the LZ. Any claimed landing zones will not be used by other squads.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `lz` | `HelicopterLandingZone` | The landing zone to claim. |
+| `lz` | [HelicopterLandingZone](./HelicopterLandingZone.md) | The landing zone to claim. |
 
 ### ReleaseLandingZoneClaim
 
@@ -116,7 +116,7 @@ Lands at LZ and claims it. Any claimed landing zones will not be used by other s
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `lz` | `HelicopterLandingZone` | The landing zone to land at and claim. |
+| `lz` | [HelicopterLandingZone](./HelicopterLandingZone.md) | The landing zone to land at and claim. |
 
 ### LandHelicopterAndClaimLandingZone
 
@@ -124,7 +124,7 @@ Lands at LZ and claims it and calls function when landing completes. Any claimed
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `lz` | `HelicopterLandingZone` | The landing zone to land at and claim. |
+| `lz` | [HelicopterLandingZone](./HelicopterLandingZone.md) | The landing zone to land at and claim. |
 | `onLandFunctionName` | `string` | The name of the callback function to invoke when landing completes. |
 
 ### LandHelicopterAtPosition
@@ -166,7 +166,7 @@ Cancels a landing and takes off.
 
 Drops all transported passengers. Any passengers on mounted weapons will stay in the vehicle. Returns the dropped passengers.
 
-[return: AiActorController[]]
+[return: [AiActorController](./AiActorController.md)[]]
 The dropped passengers.
 
 ## Static Methods
@@ -179,7 +179,7 @@ Creates a new squad with the specified actors. NOTE: The Player actor will be ig
 |-----------|------|-------------|
 | `actors` | Actor[] | The actors to include in the new squad. |
 
-[return: Squad]
+[return: [Squad](./Squad.md)]
 The newly created squad.
 
 ## Enums

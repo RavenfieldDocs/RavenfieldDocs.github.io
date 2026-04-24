@@ -8,8 +8,8 @@ Use these methods to set the game result and end the match.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `winningTeam` | `Team` | The team that won the match. |
-| `resultDetails` | `ConfigurationData` | The detailed result data from the battle. |
+| `winningTeam` | [Team](./Team.md) | The team that won the match. |
+| `resultDetails` | [ConfigurationData](./ConfigurationData.md) | The detailed result data from the battle. |
 
 ## Methods
 
@@ -17,7 +17,7 @@ Use these methods to set the game result and end the match.
 
 Returns the winning team.
 
-[return: Team]
+[return: [Team](./Team.md)]
 The team that won the match.
 
 ### SetWinningTeam
@@ -26,7 +26,7 @@ Sets the winning team.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to set as the winner. |
+| `team` | [Team](./Team.md) | The team to set as the winner. |
 
 ### SetRemainingCampaignArmies
 
@@ -34,7 +34,7 @@ Set number of remaining campaign armies.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to set armies for. |
+| `team` | [Team](./Team.md) | The team to set armies for. |
 | `armies` | `int` | The number of remaining armies. |
 
 ### GetRemainingCampaignArmies
@@ -43,7 +43,7 @@ The remaining campaign armies from the battle.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to get armies for. |
+| `team` | [Team](./Team.md) | The team to get armies for. |
 
 [return: int]
 The remaining campaign armies.
@@ -54,7 +54,7 @@ The change in campaign armies from the battle (usually negative!).
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to get the army change for. |
+| `team` | [Team](./Team.md) | The team to get the army change for. |
 
 [return: int]
 The change in campaign armies.
@@ -65,7 +65,7 @@ Sets winning team for game modes that do not support conquest armies.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `winningTeam` | `Team` | The team to set as the winner. |
+| `winningTeam` | [Team](./Team.md) | The team to set as the winner. |
 
 ### SetStandardCampaignVictory
 
@@ -73,7 +73,7 @@ Sets winning team and remaining conquest armies.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `winningTeam` | `Team` | The team to set as the winner. |
+| `winningTeam` | [Team](./Team.md) | The team to set as the winner. |
 | `blueRemainingArmies` | `int` | Remaining armies for the blue team. |
 | `redRemainingArmies` | `int` | Remaining armies for the red team. |
 
@@ -89,7 +89,7 @@ Ends the game with the currently set result. Allows the game to continue when ne
 
 Returns the detailed result data.
 
-[return: ConfigurationData]
+[return: [ConfigurationData](./ConfigurationData.md)]
 The result details configuration data.
 
 ## Events

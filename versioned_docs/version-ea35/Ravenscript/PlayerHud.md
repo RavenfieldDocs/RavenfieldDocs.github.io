@@ -44,9 +44,9 @@ Makes the rectElement automatically follow the transform position. This is done 
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `transform` | `Transform` | The transform to follow. |
-| `rectElement` | `RectTransform` | The UI element to track. |
-| `activateWhenVisible` | `GameObject` | GameObject to activate when the element is visible. |
+| `transform` | [Transform](./Transform.md) | The transform to follow. |
+| `rectElement` | [RectTransform](./RectTransform.md) | The UI element to track. |
+| `activateWhenVisible` | [GameObject](./GameObject.md) | GameObject to activate when the element is visible. |
 
 [return: `int`]
 
@@ -56,10 +56,10 @@ Makes the rectElement automatically follow the transform position with an offset
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `transform` | `Transform` | The transform to follow. |
+| `transform` | [Transform](./Transform.md) | The transform to follow. |
 | `localOffset` | `Vector3` | Local offset from the transform position. |
-| `rectElement` | `RectTransform` | The UI element to track. |
-| `activateWhenVisible` | `GameObject` | GameObject to activate when the element is visible. |
+| `rectElement` | [RectTransform](./RectTransform.md) | The UI element to track. |
+| `activateWhenVisible` | [GameObject](./GameObject.md) | GameObject to activate when the element is visible. |
 
 [return: `int`]
 
@@ -69,9 +69,9 @@ Makes the rectElement automatically follow the actor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `[Actor](./Actor.md)` | The actor to follow. |
-| `rectElement` | `RectTransform` | The UI element to track. |
-| `activateWhenVisible` | `GameObject` | GameObject to activate when the element is visible. |
+| `actor` | [Actor](./Actor.md) | The actor to follow. |
+| `rectElement` | [RectTransform](./RectTransform.md) | The UI element to track. |
+| `activateWhenVisible` | [GameObject](./GameObject.md) | GameObject to activate when the element is visible. |
 
 [return: `int`]
 
@@ -81,10 +81,10 @@ Makes the rectElement automatically follow the actor with a world offset.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `[Actor](./Actor.md)` | The actor to follow. |
+| `actor` | [Actor](./Actor.md) | The actor to follow. |
 | `worldOffset` | `Vector3` | World space offset from the actor position. |
-| `rectElement` | `RectTransform` | The UI element to track. |
-| `activateWhenVisible` | `GameObject` | GameObject to activate when the element is visible. |
+| `rectElement` | [RectTransform](./RectTransform.md) | The UI element to track. |
+| `activateWhenVisible` | [GameObject](./GameObject.md) | GameObject to activate when the element is visible. |
 
 [return: `int`]
 
@@ -95,8 +95,8 @@ Makes the rectElement automatically follow the worldPosition.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `worldPosition` | `Vector3` | The world position to follow. |
-| `rectElement` | `RectTransform` | The UI element to track. |
-| `activateWhenVisible` | `GameObject` | GameObject to activate when the element is visible. |
+| `rectElement` | [RectTransform](./RectTransform.md) | The UI element to track. |
+| `activateWhenVisible` | [GameObject](./GameObject.md) | GameObject to activate when the element is visible. |
 
 [return: `int`]
 
@@ -108,8 +108,8 @@ Clamps the tracked element to the screen inside a border of size clampSize in pi
 |-----------|------|-------------|
 | `id` | `int` | The tracking ID returned by RegisterElementTracking. |
 | `clampSize` | `float` | The border size in pixels. |
-| `activateWhenClamped` | `GameObject` | GameObject to activate when the element is clamped. |
-| `deactivateWhenClamped` | `GameObject` | GameObject to deactivate when the element is clamped. |
+| `activateWhenClamped` | [GameObject](./GameObject.md) | GameObject to activate when the element is clamped. |
+| `deactivateWhenClamped` | [GameObject](./GameObject.md) | GameObject to deactivate when the element is clamped. |
 
 ### RemoveElementTracking
 
@@ -151,7 +151,7 @@ Removes tracking from the specified tracking ID. Returns true on successful remo
 | Value | Description |
 |-------|-------------|
 | `PlayerHealth` | The player health display. |
-| `VehicleInfo` | Vehicle information display. |
+| [VehicleInfo](./VehicleInfo.md) | Vehicle information display. |
 | `VehicleRepairInfo` | Vehicle repair information display. |
 | `SquadMemberInfo` | Squad member information display. |
 | `SquadOrderLabel` | Squad order label display. |

@@ -8,10 +8,10 @@ Represents a helicopter vehicle in the game world. Inherits all properties and m
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `seats` | `Seat[]` | Array of seats on this vehicle. |
+| `seats` | [Seat](./Seat.md)[] | Array of seats on this vehicle. |
 | `name` | `string` | The vehicle's display name. |
 | `minimapBlip` | `Texture` | The texture shown on the minimap for this vehicle. |
-| `ownerTeam` | `Team` | The team that owns this vehicle. |
+| `ownerTeam` | [Team](./Team.md) | The team that owns this vehicle. |
 | `isDead` | `bool` | Whether the vehicle is destroyed. |
 | `hasCountermeasures` | `bool` | Whether the vehicle has countermeasures available. |
 | `canSeePlayer` | `bool` | Returns `true` if there is a line of sight between the vehicle's lock on point and the player camera. |
@@ -35,9 +35,9 @@ Represents a helicopter vehicle in the game world. Inherits all properties and m
 | `isAirplane` | `bool` | Returns `true` if this vehicle is an Airplane. If `true`, you can safely access fields via the Airplane class API. |
 | `avoidanceRadius` | `float` | The radius of the vehicle's specified avoidance size. |
 | `spotChanceMultiplier` | `float` | Multiplier for the chance this vehicle is spotted by AI. |
-| `engine` | `Engine` | The vehicle's engine component. |
+| `engine` | [Engine](./Engine.md) | The vehicle's engine component. |
 | `isTransportVehicle` | `bool` | Returns `true` if AIType is set to transport. |
-| `vehicleInfo` | `VehicleInfo` | The vehicle's info asset. |
+| `vehicleInfo` | [VehicleInfo](./VehicleInfo.md) | The vehicle's info asset. |
 
 ## Methods
 
@@ -47,7 +47,7 @@ Damages the vehicle.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `source` | `Actor` | The actor that caused the damage. |
+| `source` | [Actor](./Actor.md) | The actor that caused the damage. |
 | `amount` | `float` | The amount of damage to deal. |
 
 ### Repair
@@ -81,8 +81,8 @@ Returns a string representation of the vehicle.
 
 | Event | Signature | Description |
 |-------|-----------|-------------|
-| `onClaimedBySquad` | `ScriptEvent<Squad>` | Invoked whenever a squad claims this vehicle. |
-| `onClaimDropped` | `ScriptEvent<Squad>` | Invoked whenever a squad drops their claim over this vehicle. |
+| `onClaimedBySquad` | ScriptEvent\<[Squad](./Squad.md)\> | Invoked whenever a squad claims this vehicle. |
+| `onClaimDropped` | ScriptEvent\<[Squad](./Squad.md)\> | Invoked whenever a squad drops their claim over this vehicle. |
 
 ## Engine
 
@@ -100,12 +100,12 @@ Represents the engine of a vehicle.
 |----------|------|-------------|
 | `controlAudio` | `bool` | Whether to control engine audio. |
 | `enabled` | `bool` | Whether the engine is enabled. |
-| `ignitionClip` | `AudioClip` | The ignition sound clip. |
+| `ignitionClip` | [AudioClip](./AudioClip.md) | The ignition sound clip. |
 | `pitchGainSpeed` | `float` | How quickly pitch changes with speed. |
 | `power` | `float` | Engine power. |
 | `powerGainSpeed` | `float` | How quickly power changes. |
-| `shiftForwardClip` | `AudioClip` | The shift forward sound clip. |
-| `shiftReverseClip` | `AudioClip` | The shift reverse sound clip. |
+| `shiftForwardClip` | [AudioClip](./AudioClip.md) | The shift forward sound clip. |
+| `shiftReverseClip` | [AudioClip](./AudioClip.md) | The shift reverse sound clip. |
 | `targetPitch` | `float` | Target engine pitch. |
 | `targetThrottle` | `float` | Target throttle value. |
 | `throttleGainSpeed` | `float` | How quickly throttle changes. |

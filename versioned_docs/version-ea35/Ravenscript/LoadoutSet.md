@@ -8,11 +8,11 @@ Represents a set of weapons assigned to different equipment slots, including pri
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `gear1` | `[WeaponEntry](./WeaponEntry.md)` or `nil` | The weapon assigned to gear slot 1. |
-| `gear2` | `[WeaponEntry](./WeaponEntry.md)` or `nil` | The weapon assigned to gear slot 2. |
-| `gear3` | `[WeaponEntry](./WeaponEntry.md)` or `nil` | The weapon assigned to gear slot 3. |
-| `primary` | `[WeaponEntry](./WeaponEntry.md)` or `nil` | The primary weapon. |
-| `secondary` | `[WeaponEntry](./WeaponEntry.md)` or `nil` | The secondary weapon. |
+| `gear1` | [WeaponEntry](./WeaponEntry.md) or `nil` | The weapon assigned to gear slot 1. |
+| `gear2` | [WeaponEntry](./WeaponEntry.md) or `nil` | The weapon assigned to gear slot 2. |
+| `gear3` | [WeaponEntry](./WeaponEntry.md) or `nil` | The weapon assigned to gear slot 3. |
+| `primary` | [WeaponEntry](./WeaponEntry.md) or `nil` | The primary weapon. |
+| `secondary` | [WeaponEntry](./WeaponEntry.md) or `nil` | The secondary weapon. |
 
 ## Methods
 
@@ -32,7 +32,7 @@ Represents a set of weapons assigned to different equipment slots, including pri
 
 Creates a new empty loadout set. This method is exposed as the `__call` metamethod, allowing it to be called like a constructor.
 
-[return: `LoadoutSet`]
+[return: [LoadoutSet](./LoadoutSet.md)]
 
 A new empty loadout set.
 

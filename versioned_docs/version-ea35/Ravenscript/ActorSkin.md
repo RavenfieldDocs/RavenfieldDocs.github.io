@@ -8,9 +8,9 @@ Represents the visual skin for an actor, including character, arm, and kick leg 
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `armSkin` | `[MeshSkin](./MeshSkin.md)` | The skin for the actor's arm model. |
-| `characterSkin` | `[MeshSkin](./MeshSkin.md)` | The skin for the actor's character model. |
-| `kickLegSkin` | `[MeshSkin](./MeshSkin.md)` | The skin for the actor's kick leg model. |
+| `armSkin` | ``MeshSkin`` | The skin for the actor's arm model. |
+| `characterSkin` | ``MeshSkin`` | The skin for the actor's character model. |
+| `kickLegSkin` | ``MeshSkin`` | The skin for the actor's kick leg model. |
 | `name` | `string` | The name of this actor skin. |
 
 ## Methods
@@ -19,7 +19,7 @@ Represents the visual skin for an actor, including character, arm, and kick leg 
 
 Creates a copy of this actor skin.
 
-[return: ActorSkin]
+[return: [ActorSkin](./ActorSkin.md)]
 
 ### ToString
 
@@ -45,8 +45,8 @@ Returns the first non-null mesh skin from the provided alternatives, falling bac
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `alt0` | `[MeshSkin](./MeshSkin.md)` | The first alternative mesh skin, or `nil`. |
-| `fallback` | `[MeshSkin](./MeshSkin.md)` | The fallback mesh skin if all alternatives are `nil`. |
+| `alt0` | ``MeshSkin`` | The first alternative mesh skin, or `nil`. |
+| `fallback` | ``MeshSkin`` | The fallback mesh skin if all alternatives are `nil`. |
 
 [return: MeshSkin]
 
@@ -56,9 +56,9 @@ Returns the first non-null mesh skin from the provided alternatives, falling bac
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `alt0` | `[MeshSkin](./MeshSkin.md)` | The first alternative mesh skin, or `nil`. |
-| `alt1` | `[MeshSkin](./MeshSkin.md)` | The second alternative mesh skin, or `nil`. |
-| `fallback` | `[MeshSkin](./MeshSkin.md)` | The fallback mesh skin if all alternatives are `nil`. |
+| `alt0` | ``MeshSkin`` | The first alternative mesh skin, or `nil`. |
+| `alt1` | ``MeshSkin`` | The second alternative mesh skin, or `nil`. |
+| `fallback` | ``MeshSkin`` | The fallback mesh skin if all alternatives are `nil`. |
 
 [return: MeshSkin]
 

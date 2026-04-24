@@ -33,8 +33,8 @@ Represents a ground vehicle with wheel-based physics. Extends [Vehicle](./Vehicl
 | `airAngularDrag` | `float` | Angular drag applied when airborne. |
 | `downforcePerSpeed` | `float` | Downward force applied proportional to forward speed. |
 | `inReverseGear` | `bool` | Whether the car is currently in reverse gear. |
-| `brakeSounds` | `[SoundBank](./SoundBank.md)` | Sound bank for brake sounds. |
-| `suspensionShiftSounds` | `[SoundBank](./SoundBank.md)` | Sound bank for suspension shift sounds. |
+| `brakeSounds` | [SoundBank](./SoundBank.md) | Sound bank for brake sounds. |
+| `suspensionShiftSounds` | [SoundBank](./SoundBank.md) | Sound bank for suspension shift sounds. |
 
 Inherits all properties from [Vehicle](./Vehicle.md).
 

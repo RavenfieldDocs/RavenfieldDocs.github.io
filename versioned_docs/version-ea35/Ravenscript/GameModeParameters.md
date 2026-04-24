@@ -8,8 +8,8 @@ Represents the parameters for a game mode, including team configuration, respawn
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `configuration` | `ConfigurationData` | The configuration data for this game mode. |
-| `gameMode` | `GameModeInfo` | The game mode info this parameters object was created for. |
+| `configuration` | [ConfigurationData](./ConfigurationData.md) | The configuration data for this game mode. |
+| `gameMode` | [GameModeInfo](./GameModeInfo.md) | The game mode info this parameters object was created for. |
 | `nightMode` | `bool` | Whether night mode is enabled. |
 | `playerHasAllWeapons` | `bool` | Whether the player has all weapons available. |
 | `playerTeam` | `WTeam` | The team the player is assigned to. |
@@ -22,9 +22,9 @@ Creates a new GameModeParameters instance for the specified game mode.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `info` | `GameModeInfo` | The game mode info to create parameters for. |
+| `info` | [GameModeInfo](./GameModeInfo.md) | The game mode info to create parameters for. |
 
-[return: GameModeParameters]
+[return: [GameModeParameters](./GameModeParameters.md)]
 A new GameModeParameters instance.
 
 ### GetCampaignArmies
@@ -77,7 +77,7 @@ Sets the team counts based on the map's suggested bot count.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `mapEntry` | `MapEntryData` | The map entry to get the suggested bot count from. |
+| `mapEntry` | [MapEntryData](./MapEntryData.md) | The map entry to get the suggested bot count from. |
 
 ### SetRecommendedTeamCount
 
@@ -85,7 +85,7 @@ Sets the team counts based on the map's suggested bot count, clamped to the spec
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `mapEntry` | `MapEntryData` | The map entry to get the suggested bot count from. |
+| `mapEntry` | [MapEntryData](./MapEntryData.md) | The map entry to get the suggested bot count from. |
 | `minCount` | `int` | The minimum team count. |
 | `maxCount` | `int` | The maximum team count. |
 

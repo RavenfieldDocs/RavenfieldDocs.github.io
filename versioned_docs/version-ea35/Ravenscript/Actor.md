@@ -16,7 +16,7 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `autoMoveActor` | `bool` | Whether this actor is automatically moved by the physics system. |
 | `hipRigidbody` | `Rigidbody` | The hip rigidbody of the ragdoll. |
 | `headRigidbody` | `Rigidbody` | The head rigidbody of the ragdoll. |
-| `parachuteParent` | `Transform` | The transform that the parachute is parented to. |
+| `parachuteParent` | [Transform](./Transform.md) | The transform that the parachute is parented to. |
 | `parachuteAnimation` | `Animation` | The parachute animation component. |
 | `parachuteRenderer` | `MeshRenderer` | The parachute renderer. |
 | `closestEnemyDistancePreShift` | `float` | Used for tracking enemy distance before a shift. |
@@ -53,7 +53,7 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `visibilityDistanceModifier` | `float` | Modifies the distance at which this actor can be seen. |
 | `attackersIgnoreEngagementRules` | `bool` | Whether attackers ignore normal engagement rules for this actor. |
 | `movementSpeedMultiplier` | `float` | Multiplier for movement speed (default 1). |
-| `ladder` | `Ladder` | The ladder the actor is currently on, or `nil`. |
+| `ladder` | [Ladder](./Ladder.md) | The ladder the actor is currently on, or `nil`. |
 | `ladderHeight` | `float` | Current height on the ladder. |
 | `activeWeapon` | [Weapon](./Weapon.md) | The currently unholstered weapon, or `nil`. |
 | `weapons` | [Weapon](./Weapon.md)[] | Array of 5 weapons in loadout slots. |
@@ -68,7 +68,7 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `smokeScreenSlot` | `int` | The slot index of the smoke screen. |
 | `aiControlled` | `bool` | Whether this actor is controlled by AI. |
 | `needsResupply` | `bool` | Whether the actor needs resupply (ammo low). |
-| `seat` | `Seat` | The seat the actor is currently occupying, or `nil`. |
+| `seat` | [Seat](./Seat.md) | The seat the actor is currently occupying, or `nil`. |
 | `skinnedRenderer` | `SkinnedMeshRenderer` | The skinned mesh renderer for the animated model. |
 | `skinnedRendererRagdoll` | `SkinnedMeshRenderer` | The skinned mesh renderer for the ragdoll model. |
 | `weaponImposterRenderers` | `Dictionary<Weapon, Renderer[]>` | Maps weapons to their imposter renderer arrays. |
@@ -78,13 +78,13 @@ Represents a soldier or actor in the game world. Handles movement, weapons, ragd
 | `isInvulnerable` | `bool` | Whether the actor is invulnerable to damage. |
 | `isScheduledToSpawn` | `bool` | Whether the actor is scheduled to spawn. |
 | `rigidbody` | `Rigidbody` | The main rigidbody component. |
-| `overrideActorSkin` | `ActorSkin` | Override skin for this actor. |
+| `overrideActorSkin` | [ActorSkin](./ActorSkin.md) | Override skin for this actor. |
 | `scoreboardEntry` | `ScoreboardActorEntry` | The scoreboard entry for this actor. |
 | `muteFootsteps` | `bool` | Whether footsteps are muted. |
 | `speedMultiplier` | `float` | Multiplier for movement speed (default 1). |
 | `hasHeroArmor` | `bool` | Whether the actor has hero armor that absorbs damage. |
-| `animatedBones` | `Transform[]` | Bone transforms of the animated skeleton. |
-| `ragdollBones` | `Transform[]` | Bone transforms of the ragdoll skeleton. |
+| `animatedBones` | [Transform](./Transform.md)[] | Bone transforms of the animated skeleton. |
+| `ragdollBones` | [Transform](./Transform.md)[] | Bone transforms of the ragdoll skeleton. |
 | `movingPlatformDelta` | `Vector3` | Movement delta from moving platforms. |
 | `ragdollExceedsFallingSpeed` | `bool` | Whether the ragdoll velocity exceeds the falling speed threshold. |
 
@@ -106,7 +106,7 @@ Kills the actor with the given damage info.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `info` | `DamageInfo` | The damage info that caused the death. |
+| `info` | [DamageInfo](./DamageInfo.md) | The damage info that caused the death. |
 
 ### KillSilently
 
@@ -242,7 +242,7 @@ Called when this actor gets a kill.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `target` | `Actor` | The actor that was killed. |
+| `target` | [Actor](./Actor.md) | The actor that was killed. |
 
 ### OnGotVehicleKill
 
@@ -251,7 +251,7 @@ Called when this actor destroys a vehicle.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `disabled` | `bool` | Whether the vehicle was disabled (true) or destroyed (false). |
-| `vehicle` | `Vehicle` | The vehicle that was destroyed. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle that was destroyed. |
 
 ### OnGotFlagCapture
 
@@ -287,7 +287,7 @@ Applies damage to the actor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `info` | `DamageInfo` | The damage info. |
+| `info` | [DamageInfo](./DamageInfo.md) | The damage info. |
 
 [return: bool]
 `true` if damage was applied, `false` if the actor was invulnerable or already dead.
@@ -386,7 +386,7 @@ Returns whether the actor is seated in a specific vehicle.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `Vehicle` | The vehicle to check. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle to check. |
 
 ### IsSeated
 
@@ -410,7 +410,7 @@ Attempts to enter a vehicle. Returns `true` if successful.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `Vehicle` | The vehicle to enter. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle to enter. |
 
 ### EnterSeat
 
@@ -418,7 +418,7 @@ Enters a specific seat, optionally kicking out the current occupant.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `seat` | `Seat` | The seat to enter. |
+| `seat` | [Seat](./Seat.md) | The seat to enter. |
 | `kickOutOccupant` | `bool` | Whether to kick out the current occupant. |
 
 ### LeaveSeat
@@ -561,7 +561,7 @@ Returns whether the actor can be damaged by a specific weapon.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `weapon` | `Weapon` | The weapon to check. |
+| `weapon` | [Weapon](./Weapon.md) | The weapon to check. |
 
 ### SetModelSkin
 
@@ -569,7 +569,7 @@ Sets an override skin for the actor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `skin` | `ActorSkin` | The skin to apply. |
+| `skin` | [ActorSkin](./ActorSkin.md) | The skin to apply. |
 
 ### ResetModelSkin
 
@@ -609,7 +609,7 @@ Gets the actor onto a ladder at the projected height.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `ladder` | `Ladder` | The ladder to get on. |
+| `ladder` | [Ladder](./Ladder.md) | The ladder to get on. |
 
 ### GetOnLadderAtHeight
 
@@ -617,7 +617,7 @@ Gets the actor onto a ladder at a specific height.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `ladder` | `Ladder` | The ladder to get on. |
+| `ladder` | [Ladder](./Ladder.md) | The ladder to get on. |
 | `height` | `float` | The height on the ladder. |
 
 ### CanExitLadderAtBottom
@@ -674,7 +674,7 @@ Returns whether the actor can be rammed by a vehicle.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `Vehicle` | The vehicle to check. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle to check. |
 
 ### GetPosition
 

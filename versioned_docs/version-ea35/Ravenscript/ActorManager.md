@@ -15,7 +15,7 @@ Manages all actors, vehicles, spawn points, squads, ladders, damage zones, and t
 | `player` | [Actor](./Actor.md) | The player-controlled actor. |
 | `actorData` | `ActorData[]` | Data associated with each actor. |
 | `squadsOnTeam` | [Squad](./Squad.md)[][] | Squads organized by team (index 0 or 1). |
-| `ladders` | `Ladder[]` | All ladders in the current level. |
+| `ladders` | [Ladder](./Ladder.md)[] | All ladders in the current level. |
 | `damageZones` | `DamageZone[]` | All damage zones in the current level. |
 | `speedLimitZones` | `SpeedLimitZone[]` | All speed limit zones in the current level. |
 | `activeTriggers` | `TriggerVolume.RuntimeData[]` | Active trigger volumes. |
@@ -35,7 +35,7 @@ Registers an actor with the actor manager. Called automatically when an actor sp
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to register. |
+| `actor` | [Actor](./Actor.md) | The actor to register. |
 
 ### Drop
 
@@ -43,7 +43,7 @@ Unregisters an actor from the actor manager.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to unregister. |
+| `actor` | [Actor](./Actor.md) | The actor to unregister. |
 
 ### RegisterTrigger
 
@@ -51,7 +51,7 @@ Registers a trigger volume and returns its index.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `volume` | `TriggerVolume` | The trigger volume to register. |
+| `volume` | [TriggerVolume](./TriggerVolume.md) | The trigger volume to register. |
 
 [return: int]
 The index of the registered trigger volume.
@@ -63,7 +63,7 @@ Attempts to find a built-in vehicle by name.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `name` | `string` | The name of the vehicle prefab. |
-| `result` | `VehicleInfo` | The resolved vehicle info, if found. |
+| `result` | [VehicleInfo](./VehicleInfo.md) | The resolved vehicle info, if found. |
 
 [return: bool]
 `true` if the vehicle was found, `false` otherwise.
@@ -98,8 +98,8 @@ Invokes the onVehicleDisabled event.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `Vehicle` | The disabled vehicle. |
-| `info` | `DamageInfo` | Damage information. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The disabled vehicle. |
+| `info` | [DamageInfo](./DamageInfo.md) | Damage information. |
 
 ### OnVehicleDestroyed
 
@@ -107,8 +107,8 @@ Invokes the onVehicleDestroyed event.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `Vehicle` | The destroyed vehicle. |
-| `info` | `DamageInfo` | Damage information. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The destroyed vehicle. |
+| `info` | [DamageInfo](./DamageInfo.md) | Damage information. |
 
 ### OnActorDied
 
@@ -116,8 +116,8 @@ Invokes the onActorDied event.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor that died. |
-| `belongedToSquad` | `Squad` | The squad the actor belonged to. |
+| `actor` | [Actor](./Actor.md) | The actor that died. |
+| `belongedToSquad` | [Squad](./Squad.md) | The squad the actor belonged to. |
 | `isSilentKill` | `bool` | Whether the kill was silent. |
 
 ### OnActorEnteredSeat
@@ -126,8 +126,8 @@ Invokes the onActorEnteredSeat event.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor that entered the seat. |
-| `seat` | `Seat` | The seat that was entered. |
+| `actor` | [Actor](./Actor.md) | The actor that entered the seat. |
+| `seat` | [Seat](./Seat.md) | The seat that was entered. |
 
 ### OnActorLeftSeat
 
@@ -135,8 +135,8 @@ Invokes the onActorLeftSeat event.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor that left the seat. |
-| `seat` | `Seat` | The seat that was left. |
+| `actor` | [Actor](./Actor.md) | The actor that left the seat. |
+| `seat` | [Seat](./Seat.md) | The seat that was left. |
 
 ## Static Methods
 
@@ -155,7 +155,7 @@ Sets the team color for a specific team.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
-| `color` | `Color` | The color to set. |
+| `color` | [Color](./Color.md) | The color to set. |
 
 ### RegisterSmokeTarget
 
@@ -218,8 +218,8 @@ Checks if two actors have line of sight to each other.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `a` | `Actor` | The first actor. |
-| `b` | `Actor` | The second actor. |
+| `a` | [Actor](./Actor.md) | The first actor. |
+| `b` | [Actor](./Actor.md) | The second actor. |
 
 [return: bool]
 `true` if both actors can see each other, `false` otherwise.
@@ -230,7 +230,7 @@ Checks if an actor can see the player.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `a` | `Actor` | The actor to check. |
+| `a` | [Actor](./Actor.md) | The actor to check. |
 
 [return: bool]
 `true` if the actor can see the player, `false` otherwise.
@@ -241,8 +241,8 @@ Gets the cached distance between two actors on opposing teams.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `a` | `Actor` | The first actor. |
-| `b` | `Actor` | The second actor. |
+| `a` | [Actor](./Actor.md) | The first actor. |
+| `b` | [Actor](./Actor.md) | The second actor. |
 
 [return: float]
 The distance between the two actors.
@@ -253,7 +253,7 @@ Gets the distance from an actor to the player.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `a` | `Actor` | The actor to check. |
+| `a` | [Actor](./Actor.md) | The actor to check. |
 
 [return: float]
 The distance from the actor to the player.
@@ -264,9 +264,9 @@ Gets the current target actor for an actor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to check. |
+| `actor` | [Actor](./Actor.md) | The actor to check. |
 
-[return: Actor?]
+[return: [Actor](./Actor.md)?]
 The target actor, or `nil` if no target.
 
 ### ApplyGlobalTeamSkin
@@ -275,7 +275,7 @@ Applies the global team skin to an actor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to apply the skin to. |
+| `actor` | [Actor](./Actor.md) | The actor to apply the skin to. |
 
 ### ApplyGlobalTeamSkin
 
@@ -292,8 +292,8 @@ Applies a custom skin override to an actor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to apply the skin to. |
-| `skin` | `ActorSkin` | The skin to apply. |
+| `actor` | [Actor](./Actor.md) | The actor to apply the skin to. |
+| `skin` | [ActorSkin](./ActorSkin.md) | The skin to apply. |
 | `team` | `int` | The team index (0 or 1). |
 
 ### ApplyOverrideActorSkin
@@ -303,8 +303,8 @@ Applies a custom skin override to a skinned mesh renderer.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `renderer` | `SkinnedMeshRenderer` | The renderer to apply the skin to. |
-| `bones` | `Transform[]` | The bone transforms. |
-| `skin` | `ActorSkin` | The skin to apply. |
+| `bones` | [Transform](./Transform.md)[] | The bone transforms. |
+| `skin` | [ActorSkin](./ActorSkin.md) | The skin to apply. |
 | `team` | `int` | The team index (0 or 1). |
 
 ### ApplyOverrideMeshSkin
@@ -323,9 +323,9 @@ Gets all bones recursively from a root bone.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `rootBone` | `Transform` | The root bone to start from. |
+| `rootBone` | [Transform](./Transform.md) | The root bone to start from. |
 
-[return: Transform[]]
+[return: [Transform](./Transform.md)[]]
 An array of all bone transforms found recursively.
 
 ### SetGlobalTeamSkin
@@ -335,7 +335,7 @@ Sets the global skin for a team and applies it to all actors on that team.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
-| `skin` | `ActorSkin` | The skin to set. |
+| `skin` | [ActorSkin](./ActorSkin.md) | The skin to set. |
 
 ### ActorCanHearEnemy
 
@@ -343,7 +343,7 @@ Checks if an actor can currently hear enemy actors.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to check. |
+| `actor` | [Actor](./Actor.md) | The actor to check. |
 
 [return: bool]
 `true` if the actor can hear enemy actors, `false` otherwise.
@@ -354,7 +354,7 @@ Marks an actor as alive.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to mark as alive. |
+| `actor` | [Actor](./Actor.md) | The actor to mark as alive. |
 
 ### SetDead
 
@@ -362,7 +362,7 @@ Marks an actor as dead.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to mark as dead. |
+| `actor` | [Actor](./Actor.md) | The actor to mark as dead. |
 
 ### AllActorsOnTeamAreDead
 
@@ -383,7 +383,7 @@ Gets all actors on a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Actor[]]
+[return: [Actor](./Actor.md)[]]
 A list of all actors on the specified team.
 
 ### AliveActorsOnTeam
@@ -394,14 +394,14 @@ Gets all alive actors on a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Actor[]]
+[return: [Actor](./Actor.md)[]]
 A list of all alive actors on the specified team.
 
 ### RandomSpawnPoint
 
 Gets a random spawn point.
 
-[return: SpawnPoint?]
+[return: [SpawnPoint](./SpawnPoint.md)?]
 A random spawn point, or `nil` if none exist.
 
 ### RandomSpawnPointForTeam
@@ -412,7 +412,7 @@ Gets a random spawn point owned by a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: SpawnPoint?]
+[return: [SpawnPoint](./SpawnPoint.md)?]
 A random spawn point owned by the specified team, or `nil` if none exist.
 
 ### RandomFrontlineSpawnPointForTeam
@@ -423,7 +423,7 @@ Gets a random spawn point on the frontline for a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: SpawnPoint?]
+[return: [SpawnPoint](./SpawnPoint.md)?]
 A random frontline spawn point for the specified team, or `nil` if none exist.
 
 ### TeamHasAnySpawnPoint
@@ -445,7 +445,7 @@ Gets the closest spawn point to a position.
 |-----------|------|-------------|
 | `position` | `Vector3` | The position to search from. |
 
-[return: SpawnPoint?]
+[return: [SpawnPoint](./SpawnPoint.md)?]
 The closest spawn point, or `nil` if none exist.
 
 ### ClosestLandingZone
@@ -468,7 +468,7 @@ Gets the closest spawn point owned by a specific team.
 | `position` | `Vector3` | The position to search from. |
 | `team` | `int` | The team index (0 or 1). |
 
-[return: SpawnPoint?]
+[return: [SpawnPoint](./SpawnPoint.md)?]
 The closest spawn point owned by the specified team, or `nil` if none exist.
 
 ### RandomEnemySpawnPoint
@@ -479,14 +479,14 @@ Gets a random spawn point not owned by a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: SpawnPoint?]
+[return: [SpawnPoint](./SpawnPoint.md)?]
 A random spawn point not owned by the specified team, or `nil` if none exist.
 
 ### AliveActors
 
 Gets all alive actors.
 
-[return: Actor[]]
+[return: [Actor](./Actor.md)[]]
 A list of all alive actors.
 
 ### AliveActorsInRange
@@ -498,7 +498,7 @@ Gets all alive actors within a range of a position.
 | `point` | `Vector3` | The position to search from. |
 | `range` | `float` | The search range. |
 
-[return: Actor[]]
+[return: [Actor](./Actor.md)[]]
 A list of all alive actors within range.
 
 ### ActorsInRange
@@ -510,7 +510,7 @@ Gets all actors (alive or dead) within a range of a position.
 | `point` | `Vector3` | The position to search from. |
 | `range` | `float` | The search range. |
 
-[return: Actor[]]
+[return: [Actor](./Actor.md)[]]
 A list of all actors within range.
 
 ### VehiclesInRange
@@ -522,7 +522,7 @@ Gets all vehicles within a range of a position.
 | `point` | `Vector3` | The position to search from. |
 | `range` | `float` | The search range. |
 
-[return: Vehicle[]]
+[return: [Vehicle](./Vehicle.md)[]]
 A list of all vehicles within range.
 
 ### RegisterProjectile
@@ -531,7 +531,7 @@ Registers a projectile and handles incoming fire detection for AI.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `p` | `Projectile` | The projectile to register. |
+| `p` | [Projectile](./Projectile.md) | The projectile to register. |
 
 ### PlayerTakeOverBot
 
@@ -539,7 +539,7 @@ Makes the player take control of a bot actor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `targetActor` | `Actor` | The bot actor to take over. |
+| `targetActor` | [Actor](./Actor.md) | The bot actor to take over. |
 
 ### CopyLoadoutOfActor
 
@@ -547,9 +547,9 @@ Copies the loadout from an actor.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to copy the loadout from. |
+| `actor` | [Actor](./Actor.md) | The actor to copy the loadout from. |
 
-[return: LoadoutSet]
+[return: [LoadoutSet](./LoadoutSet.md)]
 The copied loadout set.
 
 ### GetLadderWithNode
@@ -560,7 +560,7 @@ Finds a ladder that uses a specific graph node.
 |-----------|------|-------------|
 | `graphNode` | `GraphNode` | The graph node to search for. |
 
-[return: Ladder?]
+[return: [Ladder](./Ladder.md)?]
 The ladder using the specified graph node, or `nil` if not found.
 
 ### RegisterLadder
@@ -569,7 +569,7 @@ Registers a ladder with the actor manager.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `ladder` | `Ladder` | The ladder to register. |
+| `ladder` | [Ladder](./Ladder.md) | The ladder to register. |
 
 ### RegisterVehicle
 
@@ -577,7 +577,7 @@ Registers a vehicle with the actor manager.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `Vehicle` | The vehicle to register. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle to register. |
 
 ### SetVehicleTaken
 
@@ -585,7 +585,7 @@ Marks a vehicle as taken (removes it from available vehicles list).
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `Vehicle` | The vehicle to mark as taken. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle to mark as taken. |
 
 ### DropVehicle
 
@@ -593,7 +593,7 @@ Unregisters a vehicle from the actor manager.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `Vehicle` | The vehicle to unregister. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle to unregister. |
 
 ### CreateExplosionEffect
 
@@ -611,8 +611,8 @@ Creates an explosion at a position.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `source` | `Actor` | The actor that caused the explosion. |
-| `sourceWeapon` | `Weapon` | The weapon that caused the explosion. |
+| `source` | [Actor](./Actor.md) | The actor that caused the explosion. |
+| `sourceWeapon` | [Weapon](./Weapon.md) | The weapon that caused the explosion. |
 | `point` | `Vector3` | The position of the explosion. |
 | `configuration` | `ExplodingProjectile.ExplosionConfiguration` | The explosion configuration. |
 | `damageRating` | `Vehicle.ArmorRating` | The armor damage rating. |
@@ -627,7 +627,7 @@ Creates an explosion at a position using ExplosionInfo.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `info` | `ExplosionInfo` | The explosion information. |
+| `info` | [ExplosionInfo](./ExplosionInfo.md) | The explosion information. |
 | `reduceFriendlyDamage` | `bool` | Whether to reduce damage to friendly actors. |
 
 [return: bool]
@@ -639,11 +639,11 @@ Evaluates the damage from an explosion at a point.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `info` | `ExplosionInfo` | The explosion information. |
+| `info` | [ExplosionInfo](./ExplosionInfo.md) | The explosion information. |
 | `point` | `Vector3` | The point to evaluate damage at. |
 | `ignoreLevelGeometry` | `bool` | Whether to ignore level geometry blocking. |
 
-[return: DamageInfo]
+[return: [DamageInfo](./DamageInfo.md)]
 The evaluated damage info.
 
 ### EvaluateLastExplosionDamage
@@ -655,7 +655,7 @@ Evaluates damage from the last explosion at a point.
 | `point` | `Vector3` | The point to evaluate damage at. |
 | `ignoreLevelGeometry` | `bool` | Whether to ignore level geometry blocking. |
 
-[return: DamageInfo]
+[return: [DamageInfo](./DamageInfo.md)]
 The evaluated damage info.
 
 ### MakeActorsFleeFrom
@@ -676,7 +676,7 @@ Spawns an ammo reserve at an actor's position.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `actor` | `Actor` | The actor to spawn ammo reserve for. |
+| `actor` | [Actor](./Actor.md) | The actor to spawn ammo reserve for. |
 
 ### RegisterSquad
 
@@ -684,7 +684,7 @@ Registers a squad with the actor manager.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `squad` | `Squad` | The squad to register. |
+| `squad` | [Squad](./Squad.md) | The squad to register. |
 
 ### RemoveSquad
 
@@ -692,7 +692,7 @@ Unregisters a squad from the actor manager.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `squad` | `Squad` | The squad to unregister. |
+| `squad` | [Squad](./Squad.md) | The squad to unregister. |
 
 ### GetSquadsOnTeam
 
@@ -702,7 +702,7 @@ Gets all squads on a specific team.
 |-----------|------|-------------|
 | `team` | `int` | The team index (0 or 1). |
 
-[return: Squad[]]
+[return: [Squad](./Squad.md)[]]
 A list of all squads on the specified team.
 
 ### OnExitGameScene

@@ -55,7 +55,7 @@ Returns all SpawnPoint neighbours including disabled ones.
 |-----------|------|-------------|
 | `spawnPoint` | [SpawnPoint](./SpawnPoint.md) | The SpawnPoint to get neighbours for. |
 
-[return: SpawnPoint[]]
+[return: [SpawnPoint](./SpawnPoint.md)[]]
 All SpawnPoint neighbours including disabled ones.
 
 ## Enums

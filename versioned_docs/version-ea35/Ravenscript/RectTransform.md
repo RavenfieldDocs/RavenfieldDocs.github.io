@@ -8,7 +8,7 @@ Represents a Unity RectTransform component for UI layout.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `asTransform` | `[Transform](./Transform.md)` | Returns this RectTransform as a base `Transform`. |
+| `asTransform` | [Transform](./Transform.md) | Returns this RectTransform as a base [Transform](./Transform.md). |
 
 ## Methods
 

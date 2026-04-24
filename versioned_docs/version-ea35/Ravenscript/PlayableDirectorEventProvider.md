@@ -15,9 +15,9 @@ A MonoBehaviour that exposes Unity PlayableDirector events to scripting.
 
 | Event | Signature | Description |
 |-------|-----------|-------------|
-| `paused` | `ScriptEvent<PlayableDirector>` | Fired when the director is paused. |
-| `stopped` | `ScriptEvent<PlayableDirector>` | Fired when the director stops playing. |
-| `played` | `ScriptEvent<PlayableDirector>` | Fired when the director starts playing. |
+| `paused` | ScriptEvent\<[PlayableDirector](./PlayableDirector.md)\> | Fired when the director is paused. |
+| `stopped` | ScriptEvent\<[PlayableDirector](./PlayableDirector.md)\> | Fired when the director stops playing. |
+| `played` | ScriptEvent\<[PlayableDirector](./PlayableDirector.md)\> | Fired when the director starts playing. |
 
 ## Static Fields
 
@@ -32,9 +32,9 @@ Gets or creates a `PlayableDirectorEventProvider` for a given `PlayableDirector`
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `pd` | `PlayableDirector` | The PlayableDirector to get the event provider for. |
+| `pd` | [PlayableDirector](./PlayableDirector.md) | The PlayableDirector to get the event provider for. |
 
-[return: PlayableDirectorEventProvider]
+[return: [PlayableDirectorEventProvider](./PlayableDirectorEventProvider.md)]
 The event provider for the specified director.
 
 ## Enums

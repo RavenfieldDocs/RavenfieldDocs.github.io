@@ -26,7 +26,7 @@ Changes the color of all fade graphics over time.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `color` | `[Color](./Color.md)` | The target color to fade to. |
+| `color` | [Color](./Color.md) | The target color to fade to. |
 | `changeTime` | `float` | The time in seconds over which to change the color. |
 
 ### Clear
@@ -39,9 +39,9 @@ Fades the screen in from the specified color over the given duration.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `type` | `[FadeType](./EffectUi.md#fadetype)` | The type of fade effect to use. |
+| `type` | [FadeType](./EffectUi.md#fadetype) | The type of fade effect to use. |
 | `duration` | `float` | The duration of the fade in seconds. |
-| `color` | `[Color](./Color.md)` | The color to fade from. |
+| `color` | [Color](./Color.md) | The color to fade from. |
 
 ### FadeOut
 
@@ -49,9 +49,9 @@ Fades the screen out to the specified color over the given duration.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `type` | `[FadeType](./EffectUi.md#fadetype)` | The type of fade effect to use. |
+| `type` | [FadeType](./EffectUi.md#fadetype) | The type of fade effect to use. |
 | `duration` | `float` | The duration of the fade in seconds. |
-| `color` | `[Color](./Color.md)` | The color to fade to. |
+| `color` | [Color](./Color.md) | The color to fade to. |
 
 ## Enums
 

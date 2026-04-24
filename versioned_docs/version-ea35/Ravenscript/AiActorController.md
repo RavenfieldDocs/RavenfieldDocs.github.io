@@ -17,12 +17,12 @@ Controls AI behavior for an actor, including movement, combat, and vehicle inter
 | `hasPath` | `bool` | Returns true if the AI is traversing a path. |
 | `isEnteringVehicle` | `bool` | Returns true if the AI has a target vehicle, and is currently attempting to enter it. |
 | `hasTargetVehicle` | `bool` | Returns true if the AI has a target vehicle to enter, or that they are already seated in. |
-| `targetVehicle` | `[Vehicle](./Vehicle.md)` | Returns the target vehicle the AI is entering or is already seated in. |
+| `targetVehicle` | [Vehicle](./Vehicle.md) | Returns the target vehicle the AI is entering or is already seated in. |
 | `lastGotoPoint` | `Vector3` | The destination point of the last Goto() order. |
 | `lastWaypoint` | `Vector3` | The last reached path waypoint. |
 | `currentWaypoint` | `Vector3` | The current waypoint. |
 | `targetFlightAltitude` | `float` | The default altitude the AI will try to maintain in an Aircraft. This value is randomized every time a bot enters or exits an aircraft. |
-| `currentAttackTarget` | `[Actor](./Actor.md)` | The target this AI is currently attacking. |
+| `currentAttackTarget` | [Actor](./Actor.md) | The target this AI is currently attacking. |
 | `skillLevel` | `SkillLevel` | The skill level of this AI. |
 
 ## Methods
@@ -61,7 +61,7 @@ Orders the AI to enter the specified vehicle. Also sets the AI's target vehicle 
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `vehicle` | `[Vehicle](./Vehicle.md)` | The vehicle to enter. |
+| `vehicle` | [Vehicle](./Vehicle.md) | The vehicle to enter. |
 
 ### LeaveVehicle
 
@@ -73,7 +73,7 @@ Returns true if the target is inside this actor's field of view.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `targetActor` | `[Actor](./Actor.md)` | The actor to check. |
+| `targetActor` | [Actor](./Actor.md) | The actor to check. |
 
 [return: `bool`]
 

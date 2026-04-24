@@ -14,8 +14,8 @@ Represents a seat on a vehicle that can be occupied by an actor.
 | `isOccupied` | `bool` | Whether this seat is currently occupied. |
 | `hasWeapons` | `bool` | Whether this seat has any mounted weapons. |
 | `hasActiveWeapon` | `bool` | Whether this seat has an active mounted weapon. |
-| `activeWeapon` | `MountedWeapon` | The currently active mounted weapon, or `nil`. |
-| `weapons` | `MountedWeapon[]` | Array of all mounted weapons on this seat. |
+| `activeWeapon` | [MountedWeapon](./MountedWeapon.md) | The currently active mounted weapon, or `nil`. |
+| `weapons` | [MountedWeapon](./MountedWeapon.md)[] | Array of all mounted weapons on this seat. |
 | `cameraType` | `SeatCameraType` | The camera type for this seat. |
 | `firstPersonCamera` | `Camera` | The first person camera for this seat. |
 | `thirdPersonCamera` | `Camera` | The third person camera for this seat. |

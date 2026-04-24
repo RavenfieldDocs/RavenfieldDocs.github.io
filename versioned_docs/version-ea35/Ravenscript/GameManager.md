@@ -18,7 +18,7 @@ Use these methods to access game configuration.
 | `hudPlayerEnabled` | `bool` | Controls visibility of the player hud. |
 | `isPaused` | `bool` | Returns `true` if the game is currently paused. |
 | `currentGameModeName` | `string` | The name of the currently active game mode, or an empty string if not in a match. |
-| `gameModeParameters` | `GameModeParameters` | The parameters for the current game mode, or `nil` if not in a match. |
+| `gameModeParameters` | [GameModeParameters](./GameModeParameters.md) | The parameters for the current game mode, or `nil` if not in a match. |
 | `sceneName` | `string` | The name of the current active scene. |
 | `mapDisplayName` | `string` | The display name of the current or last map. |
 
@@ -30,7 +30,7 @@ Returns the team name.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to get the name for. |
+| `team` | [Team](./Team.md) | The team to get the name for. |
 
 [return: string]
 The team name.
@@ -41,7 +41,7 @@ Returns the team name with a rich text color tag. Example: ``<color=blue>EAGLE</
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to get the name for. |
+| `team` | [Team](./Team.md) | The team to get the name for. |
 | `variant` | `ColorVariant` | The color variant (Default, Bright, or Dark). |
 
 [return: string]
@@ -53,7 +53,7 @@ Sets the team name.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `team` | `Team` | The team to set the name for. |
+| `team` | [Team](./Team.md) | The team to set the name for. |
 | `name` | `string` | The new team name. |
 
 ### LoadSceneByName

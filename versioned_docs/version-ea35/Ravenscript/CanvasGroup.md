@@ -29,7 +29,7 @@ Fades the canvas group out to full transparency over the specified duration.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `self` | `CanvasGroup` | The canvas group to fade out. |
+| `self` | [CanvasGroup](./CanvasGroup.md) | The canvas group to fade out. |
 | `duration` | `float` | The duration of the fade out effect in seconds. |
 
 ### FadeIn
@@ -38,7 +38,7 @@ Fades the canvas group in to full opacity over the specified duration.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `self` | `CanvasGroup` | The canvas group to fade in. |
+| `self` | [CanvasGroup](./CanvasGroup.md) | The canvas group to fade in. |
 | `duration` | `float` | The duration of the fade in effect in seconds. |
 
 ## Enums

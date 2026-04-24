@@ -79,7 +79,7 @@ Retrieves a map entry from save data.
 |-----------|------|-------------|
 | `key` | `string` | The key to look up. |
 
-[return: `[MapEntryData](./MapEntryData.md)?`]
+[return: [MapEntryData](./MapEntryData.md)?]
 
 ### GetMapEntryArray
 
@@ -89,7 +89,7 @@ Retrieves an array of map entries from save data.
 |-----------|------|-------------|
 | `key` | `string` | The key to look up. |
 
-[return: `MapEntryData[]`]
+[return: [MapEntryData](./MapEntryData.md)[]]
 
 ### GetString
 
@@ -119,7 +119,7 @@ Retrieves a weapon entry from save data.
 |-----------|------|-------------|
 | `key` | `string` | The key to look up. |
 
-[return: `[WeaponEntry](./WeaponEntry.md)?`]
+[return: [WeaponEntry](./WeaponEntry.md)?]
 
 ### GetWeaponEntryArray
 
@@ -139,7 +139,7 @@ Retrieves vehicle info from save data.
 |-----------|------|-------------|
 | `key` | `string` | The key to look up. |
 
-[return: `[VehicleInfo](./VehicleInfo.md)?`]
+[return: [VehicleInfo](./VehicleInfo.md)?]
 
 ### GetVehicleInfoArray
 
@@ -149,7 +149,7 @@ Retrieves an array of vehicle info from save data.
 |-----------|------|-------------|
 | `key` | `string` | The key to look up. |
 
-[return: `VehicleInfo[]`]
+[return: [VehicleInfo](./VehicleInfo.md)[]]
 
 ### HasBool
 
@@ -282,7 +282,7 @@ Stores a map entry in save data.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `key` | `string` | The key to store under. |
-| `value` | `[MapEntryData](./MapEntryData.md)?` | The value to store. |
+| `value` | [MapEntryData](./MapEntryData.md)? | The value to store. |
 
 ### StoreMapEntryArray
 
@@ -291,7 +291,7 @@ Stores an array of map entries in save data.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `key` | `string` | The key to store under. |
-| `values` | `MapEntryData[]` | The values to store. |
+| `values` | [MapEntryData](./MapEntryData.md)[] | The values to store. |
 
 ### StoreString
 
@@ -318,7 +318,7 @@ Stores a weapon entry in save data.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `key` | `string` | The key to store under. |
-| `value` | `[WeaponEntry](./WeaponEntry.md)?` | The value to store. |
+| `value` | [WeaponEntry](./WeaponEntry.md)? | The value to store. |
 
 ### StoreWeaponEntryArray
 
@@ -336,7 +336,7 @@ Stores vehicle info in save data.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `key` | `string` | The key to store under. |
-| `value` | `[VehicleInfo](./VehicleInfo.md)?` | The value to store. |
+| `value` | [VehicleInfo](./VehicleInfo.md)? | The value to store. |
 
 ### StoreVehicleInfoArray
 
@@ -345,7 +345,7 @@ Stores an array of vehicle info in save data.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `key` | `string` | The key to store under. |
-| `values` | `VehicleInfo[]` | The values to store. |
+| `values` | [VehicleInfo](./VehicleInfo.md)[] | The values to store. |
 
 ## Events
 

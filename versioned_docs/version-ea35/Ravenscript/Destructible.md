@@ -17,8 +17,8 @@ Represents an object that can take damage and be destroyed.
 
 | Event | Signature | Description |
 |-------|-----------|-------------|
-| `onTakeDamage` | `ScriptEvent<DamageInfo>` | Invoked when the destructible takes damage. Consuming this event stops the destructible from taking damage. |
-| `onDeath` | `ScriptEvent<DamageInfo>` | Invoked when the destructible dies. |
+| `onTakeDamage` | ScriptEvent\<[DamageInfo](./DamageInfo.md)\> | Invoked when the destructible takes damage. Consuming this event stops the destructible from taking damage. |
+| `onDeath` | ScriptEvent\<[DamageInfo](./DamageInfo.md)\> | Invoked when the destructible dies. |
 
 ## Static Fields
 
